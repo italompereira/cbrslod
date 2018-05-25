@@ -25,8 +25,7 @@ import br.com.controller.InstanceNeighborhood;
 import br.com.controller.Node;
 import br.com.controller.Predicate;
 import br.com.controller.Term;
-import br.com.controller.TermZone;
-import br.com.controller.Teste;
+import br.com.controller.PredicateTerm;
 import br.com.tools.Util;
 
 public class Endpoint extends EndpointInterface{
@@ -42,7 +41,7 @@ public class Endpoint extends EndpointInterface{
 	private List<Predicate> predicateList = new ArrayList<>();
 	private HashSet<String> predicateSet = new HashSet<String>();
 	private List<Instance> instanceList = new ArrayList<>();
-	private HashSet<Term> termList = new HashSet<Term>();
+	private List<Term> termList = new ArrayList<Term>();
 	
 	/**
 	 * Parameters
@@ -230,8 +229,9 @@ public class Endpoint extends EndpointInterface{
      * 
      * @param resource Resource to find neighborhood
      * @param previousResource Resource used in the previous level
-     * @param instanceNeighborhoodList List of neigborhoods for the instance(Resource)
-     * @param previousNeighborhoodList List of neigborhoods for the instance(Resource) in the previous level
+     * @param previousPredicate Predicate of the previous resource
+     * @param instanceNeighborhoodList  List of neighborhoods for the instance(Resource)
+     * @param previousNeighborhood List of neighborhoods for the instance(Resource) in the previous level
      * @param level Number of the level
      */
     public void getInstanceNeighborhood(String resource, String previousResource, Resource previousPredicate, List<InstanceNeighborhood> instanceNeighborhoodList, List<Node> previousNeighborhood, int level){
@@ -261,9 +261,9 @@ public class Endpoint extends EndpointInterface{
 			if (level == 1 && !predicateSet.contains(predicate.toString())) {
 				continue;
 			} 
-
-			neighborhood.add(new Node(predicate.getURI(), predicate.getClass().getName())); 
-			neighborhood.add(new Node(node, object.getClass().getName()));
+			
+			neighborhood.add(new Node(predicate.getURI(), predicate.getClass().getSimpleName())); 
+			neighborhood.add(new Node(node, object.getClass().getSimpleName()));
 			
 			if (object instanceof Literal || level == this.numberOfLevels || predicate.toString().equals("http://dbpedia.org/ontology/location")) {
 				instanceNeighborhoodList.add(new InstanceNeighborhood(neighborhood));
@@ -279,6 +279,7 @@ public class Endpoint extends EndpointInterface{
      * 
      * @param resource Resource to find neighborhood
      * @param previousResource Resource used in the previous level
+     * @param previousPredicate Predicate of the previous resource
      * @return List<QuerySolution> List of neighborhood for the instance
      */
     public List<QuerySolution> queryInstanceNeighborhood(String resource, String previousResource, Resource previousPredicate, int page){
@@ -365,6 +366,7 @@ public class Endpoint extends EndpointInterface{
 	 * Gets only instances with this predicate
 	 * 
 	 * @param predicate The predicate
+	 * @param page Number of the page
 	 * @return List<Instance> Instances
 	 */
 	private List<Instance> getInstancesWithPredicate(String predicate, int page) {
@@ -443,7 +445,7 @@ public class Endpoint extends EndpointInterface{
 	}
 	
 	/**
-	 * Calculates the predicates stats.
+	 * Calculates the predicates statistics.
 	 * 
 	 * @return List<Predicate> The predicates list
 	 */
@@ -543,7 +545,9 @@ public class Endpoint extends EndpointInterface{
 	
 	
 	
-	
+	/**
+	 * Builds the inverted index list by zone
+	 */
 	public void calcZoneIndex(){
 		
 		if (getZoneIndexCache()) {
@@ -557,26 +561,56 @@ public class Endpoint extends EndpointInterface{
 				Node lastElement = n.getLastElement();
 				Node lastPredicate = n.getLastPredicate();
 				
-				int index = predicateList.indexOf(new Predicate(lastPredicate.getNode()));
-				Predicate predicate = predicateList.get(index);
-				
-				if (lastElement.getTypeOfNode().equals("org.apache.jena.rdf.model.impl.LiteralImpl")) {
+				if (lastElement.getTypeOfNode().equals("LiteralImpl")) {
 					String[] pieces = Util.split(lastElement.getNode(), " "); 
 					
 					for (String piece : pieces) {
 						
 						Term term = new Term(piece);
-						term.getInvertedIndex().add(new TermZone(instance, predicate));
+						if (!this.termList.contains(term)) {
+							termList.add(term);
+						} else {
+							int index = termList.indexOf(term);
+							term = termList.get(index);
+						}
 						
-						termList.add(term);
+						List<PredicateTerm> predicateList = term.getPredicateList();
+						PredicateTerm predicate = new PredicateTerm(lastPredicate.toString());
+						if (!predicateList.contains(predicate)) {
+							predicateList.add(predicate);
+						} else {
+							int index = predicateList.indexOf(predicate);
+							predicate = predicateList.get(index);
+						}
+						
+						List<Instance> instanceList = predicate.getInstanceList();
+						if (!instanceList.contains(instance)) {
+							instanceList.add(instance);
+						} 
 					}
-					
 				} else {
 					String piece = lastElement.getNode();
 					Term term = new Term(piece);
-					term.getInvertedIndex().add(new TermZone(instance, predicate));
+					if (!this.termList.contains(term)) {
+						termList.add(term);
+					} else {
+						int index = termList.indexOf(term);
+						term = termList.get(index);
+					}
 					
-					termList.add(term);
+					List<PredicateTerm> predicateList = term.getPredicateList();
+					PredicateTerm predicate = new PredicateTerm(lastPredicate.toString());
+					if (!predicateList.contains(predicate)) {
+						predicateList.add(predicate);
+					} else {
+						int index = predicateList.indexOf(predicate);
+						predicate = predicateList.get(index);
+					}
+					
+					List<Instance> instanceList = predicate.getInstanceList();
+					if (!instanceList.contains(instance)) {
+						instanceList.add(instance);
+					} 
 				}
 			}
 		}
@@ -585,36 +619,61 @@ public class Endpoint extends EndpointInterface{
 		saveZoneIndexCache();
 	}
 	
-	public void compareInstances(){
+	/**
+	 * Compare - Method 1
+	 */
+	public void compare1(){
 		
 		int numberInstances = instanceList.size();
 		double[][] simMatrix = new double[numberInstances][numberInstances];
 		
-		//saveSimMatrixCache(simMatrix);
-//		IntStream.range(0, numberInstances).parallel().forEach( i -> {
-//			for (int j = i; j < numberInstances; j++) {
-//				if (i == j) {
-//					simMatrix[i][j] = 1.0;
-//					continue;
-//				}
-//				simMatrix[i][j] = 0.0;
-//				simMatrix[j][i] = 0.0;
-//			}
-//		});		
-//		double teste = 0.30;
-//		predicateList = predicateList.stream()
-//				.filter(x -> x.getCoverage() <= teste)
-//				.collect(Collectors.toList());
+		long startTime = System.currentTimeMillis();
 		
-		//predicateList.stream().parallel().forEach(predicate -> {
 		for (Predicate predicate : predicateList) {
 			System.out.println(predicate.getURI());
 			List<Instance> instanceListAux = new ArrayList<Instance>(predicate.getTFInstances().keySet());
 			
 			IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
-			
-			//for (int i = 0; i < instanceListAux.size(); i++) {
+				Instance a = instanceListAux.get(i);
+				int indexA = this.instanceList.indexOf(a);
 				
+				for (int j = i+1; j < instanceListAux.size(); j++) {
+					Instance b = instanceListAux.get(j);
+					int indexB = this.instanceList.indexOf(b);
+					
+					if (simMatrix[indexA][indexB] != 0) {
+						continue;
+					}
+					double score = Compare.compare1B(a, b, predicateList);
+					
+					simMatrix[indexA][indexB] += score;
+					simMatrix[indexB][indexA] += simMatrix[indexA][indexB];
+				}
+			});
+		}
+		
+		long stopTime = System.currentTimeMillis();
+		long elapsedTime = (stopTime - startTime)/1000/60;
+		System.out.println(elapsedTime + "m");
+		
+		saveSimMatrixCache(simMatrix);
+	}
+	
+	/**
+	 * Compare - Method 2
+	 */
+	public void compare2(){
+		
+		int numberInstances = instanceList.size();
+		double[][] simMatrix = new double[numberInstances][numberInstances];
+		
+		long startTime = System.currentTimeMillis();
+		
+		for (Predicate predicate : predicateList) {
+			System.out.println(predicate.getURI());
+			List<Instance> instanceListAux = new ArrayList<Instance>(predicate.getTFInstances().keySet());
+			
+			IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
 				Instance a = instanceListAux.get(i);
 				int indexA = this.instanceList.indexOf(a);
 				
@@ -625,80 +684,90 @@ public class Endpoint extends EndpointInterface{
 					double tFIDFA = predicate.getTFIDF(a);
 					double tFIDFB = predicate.getTFIDF(b);
 					double average = (tFIDFA+tFIDFB)/2;
-					double score = average*Compare.compareByPredicate(a, b, predicate);
+					double score = average*Compare.compare2A(a, b, predicate);
 					
 					simMatrix[indexA][indexB] += score;
 					simMatrix[indexB][indexA] += simMatrix[indexA][indexB];
 				}
-			//}
 			});
 		}
-		//});
 		
-//		for (Predicate predicate : predicateList) {
-//			System.out.println(predicate.getURI());
-//			List<Instance> instanceListAux = new ArrayList<Instance>(predicate.getTFInstances().keySet());
-//			for (int i = 0; i < instanceListAux.size(); i++) {
-//				
-//				Instance a = instanceListAux.get(i);
-//				int indexA = this.instanceList.indexOf(a);
-//				
-//				for (int j = i+1; j < instanceListAux.size(); j++) {
-//					Instance b = instanceListAux.get(j);
-//					int indexB = this.instanceList.indexOf(b);
-//					
-//					double tFIDFA = predicate.getTFIDF(a);
-//					double tFIDFB = predicate.getTFIDF(b);
-//					double average = (tFIDFA+tFIDFB)/2;
-//					double score = average*Compare.compareByPredicate(a, b, predicate);
-//					
-//					simMatrix[indexA][indexB] += score;
-//					simMatrix[indexB][indexA] += simMatrix[indexA][indexB];
-//				}
-//			}
-//		}
+		long stopTime = System.currentTimeMillis();
+		long elapsedTime = (stopTime - startTime)/1000;
+		System.out.println(elapsedTime + "s");
 		
-		
-		
-//		IntStream.range(0, numberInstances).parallel().forEach( i -> {
-//			for (int j = i; j < numberInstances; j++) {
-//				if (i == j) {
-//					simMatrix[i][j] = 1.0;
-//					continue;
-//				}
-//				System.out.println("Compare  \t"+ instanceList.get(i) + " \t" + instanceList.get(j));
-//				
-//				simMatrix[i][j] = Compare.compare(instanceList.get(i), instanceList.get(j), this.predicateList);
-//				simMatrix[j][i] = simMatrix[i][j];
-//			}
-//		});
-//		
-//		for (int i = 0; i < numberInstances || i < numberInstances; i++) {
-//			System.out.println();
-//			for (int j = 0; j < numberInstances; j++) {
-//				System.out.print(String.format("%.3f", Utils.round(simMatrix[i][j], 3))  + "  ");
-//			}
-//		}
-//		
 		saveSimMatrixCache(simMatrix);
-		List<Teste> list = new ArrayList<>();
-		for (int j = 0; j < simMatrix[1779].length; j++) {
-			list.add(new Teste(instanceList.get(j), simMatrix[1779][j]));
+	}
+		
+	/**
+	 * Compare - Method 3
+	 */
+	public void compare3(){
+		
+		int numberInstances = instanceList.size();
+		double[][] simMatrix = new double[numberInstances][numberInstances];
+		
+		long startTime = System.currentTimeMillis();
+
+		
+		for (Term term : termList) {
+			
+			System.out.println(term);
+			List<PredicateTerm> predicateTermList = term.getPredicateList();
+			for (PredicateTerm predicateTerm : predicateTermList) {
+				
+				
+				List<Instance> instanceListAux = predicateTerm.getInstanceList();
+				
+				System.out.println("\t" + predicateTerm + " " + instanceListAux.size());
+				
+				IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
+				//for (int i = 0; i < instanceListAux.size(); i++) {
+					
+					Instance a = instanceListAux.get(i);
+					int indexA = this.instanceList.indexOf(a);
+
+					for (int j = i+1; j < instanceListAux.size(); j++) {
+						Instance b = instanceListAux.get(j);
+						int indexB = this.instanceList.indexOf(b);
+						
+						if (simMatrix[indexA][indexB] != 0) {
+							continue;
+						}
+						double score = Compare.compare1A(a, b, predicateList);
+						
+						simMatrix[indexA][indexB] += score;
+						simMatrix[indexB][indexA] += simMatrix[indexA][indexB];
+					}
+				//}
+				});	
+			}
 		}
 		
-		System.out.println();
-		Collections.sort(list, new Comparator<Teste>() {
-			public int compare(Teste a, Teste b) {
-				Double da = a.getScore();
-				Double db = b.getScore();
-				double diff = db.doubleValue()-da.doubleValue();
-				return diff>0 ? +1 : (diff<0? -1 : 0);
-			}
-		});
-		System.out.println(list);
-//		
-//		System.out.println();
+		long stopTime = System.currentTimeMillis();
+		long elapsedTime = (stopTime - startTime)/1000/60;
+		System.out.println(elapsedTime + "m");
+		
+		saveSimMatrixCache(simMatrix);
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	/**
 	 * Get the cache of predicates list
@@ -722,6 +791,9 @@ public class Endpoint extends EndpointInterface{
 		return false;
 	}
 	
+	/**
+	 * Save the predicate cache
+	 */
 	public void savePredicateCache(){
 		
 		if (!updatePredicateCache) {
@@ -763,6 +835,9 @@ public class Endpoint extends EndpointInterface{
 		return false;
 	}
 	
+	/**
+	 * Save isntance cache
+	 */
 	public void saveInstanceCache(){
 		
 		if (!updateInstanceCache) {
@@ -783,24 +858,32 @@ public class Endpoint extends EndpointInterface{
 		this.updateInstanceCache = false;
 	}
 	
-	@SuppressWarnings({"unchecked"})
-	private double[][] getSimMatrixCache() {
-		double[][] simMatrix = null;
-		try {
-			FileInputStream fis = new FileInputStream(this.domain.replace(":", "")+"Instance.ser");
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			simMatrix = (double[][]) ois.readObject();
-			ois.close();
-			fis.close();
-		} catch (IOException ioe) {
-			ioe.printStackTrace();
-		} catch (ClassNotFoundException c) {
-			System.out.println("Class not found");
-			c.printStackTrace();
-		}
-		return simMatrix;
-	}
+//	/**
+//	 * Gets the similarity matrix cache
+//	 * @return double[][]
+//	 */
+//	@SuppressWarnings({"unchecked"})
+//	private double[][] getSimMatrixCache() {
+//		double[][] simMatrix = null;
+//		try {
+//			FileInputStream fis = new FileInputStream(this.domain.replace(":", "")+"Instance.ser");
+//			ObjectInputStream ois = new ObjectInputStream(fis);
+//			simMatrix = (double[][]) ois.readObject();
+//			ois.close();
+//			fis.close();
+//		} catch (IOException ioe) {
+//			ioe.printStackTrace();
+//		} catch (ClassNotFoundException c) {
+//			System.out.println("Class not found");
+//			c.printStackTrace();
+//		}
+//		return simMatrix;
+//	}
 	
+	/**
+	 * Saves the similarity matrix cache
+	 * @param simMatrix
+	 */
 	public void saveSimMatrixCache(double[][] simMatrix){
 		try {
 			FileOutputStream fos = new FileOutputStream(this.domain.replace(":", "")+"SimMatrix.ser");
@@ -808,18 +891,22 @@ public class Endpoint extends EndpointInterface{
 			oos.writeObject(simMatrix);
 			oos.close();
 			fos.close();
-			System.out.printf("Serialized instance list data is saved in " + this.domain.replace(":", "")+"SimMatrix.ser");
+			System.out.printf("Serialized matrix similarity data is saved in " + this.domain.replace(":", "")+"SimMatrix.ser");
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
 	}
 	
+	/**
+	 * Gets the zone index cache
+	 * @return
+	 */
 	@SuppressWarnings({"unchecked"})
 	private boolean getZoneIndexCache() {
 		try {
 			FileInputStream fis = new FileInputStream(this.domain.replace(":", "")+"ZoneIndex.ser");
 			ObjectInputStream ois = new ObjectInputStream(fis);
-			this.termList = (HashSet<Term>) ois.readObject();
+			this.termList = (List<Term>) ois.readObject();
 			ois.close();
 			fis.close();
 			return true;
@@ -832,6 +919,9 @@ public class Endpoint extends EndpointInterface{
 		return false;
 	}
 	
+	/**
+	 * Saves the zone index cache
+	 */
 	public void saveZoneIndexCache(){
 		if (!updateZoneIndexCache) {
 			return;

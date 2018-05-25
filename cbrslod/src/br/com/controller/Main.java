@@ -26,7 +26,7 @@ public class Main {
 		dbpedia.calcZoneIndex();
 		
 		System.out.println("Comparing...");
-		dbpedia.compareInstances();
+		dbpedia.compare1();
 		
 		
 		
