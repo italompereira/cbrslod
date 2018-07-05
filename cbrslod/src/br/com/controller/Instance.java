@@ -1,9 +1,11 @@
 package br.com.controller;
 
 import java.io.Serializable;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.jena.rdf.model.Resource;
 
 public class Instance implements Serializable {
@@ -31,6 +33,16 @@ public class Instance implements Serializable {
 
 	public void setURI(String uri) {
 		this.uRI = uri;
+	}
+	
+	public String getShortURI(){
+		try {
+			URI myURI = new URI(this.uRI);
+			return FilenameUtils.getName(myURI.getPath()); 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	public int countPredicateOnNeighborhoodList(String predicate){

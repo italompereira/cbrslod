@@ -2,7 +2,6 @@ package br.com.model.DataSet;
 
 import java.io.File;
 import java.io.FilenameFilter;
-import java.util.stream.IntStream;
 
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.Query;
@@ -63,12 +62,14 @@ public class DataSetLoader {
 					dataset.commit();
 					System.out.println("Commit");
 					
-					if ((file.length() / (1024)) < 1000) {
+					if ((file.length() / (1024)) < 1000) {//10 seg
 						Thread.sleep(10000);
-					} else if ((file.length() / (1024)) < 1000000) {
-						Thread.sleep(300000);
+					} else if ((file.length() / (1024)) < 1000000) {//20 min
+						Thread.sleep(1200000);
+					} else if ((file.length() / (1024)) < 3000000) {
+						Thread.sleep(1800000);
 					} else {
-						Thread.sleep(600000);
+						Thread.sleep(3600000);
 					}
 					
 					System.out.println("Begin");

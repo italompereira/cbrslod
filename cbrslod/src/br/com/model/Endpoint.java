@@ -1,10 +1,12 @@
 package br.com.model;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -13,6 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Literal;
@@ -24,8 +27,9 @@ import br.com.controller.Instance;
 import br.com.controller.InstanceNeighborhood;
 import br.com.controller.Node;
 import br.com.controller.Predicate;
-import br.com.controller.Term;
 import br.com.controller.PredicateTerm;
+import br.com.controller.Rank;
+import br.com.controller.Term;
 import br.com.tools.Util;
 
 public class Endpoint extends EndpointInterface{
@@ -217,7 +221,7 @@ public class Endpoint extends EndpointInterface{
 //					}
 //					System.out.println();
 //				}
-			//System.out.print(" - " +instance.getInstanceNeighborhoodList().size()+"\n");	
+			System.out.print(instance + " - " +instance.getInstanceNeighborhoodList().size()+"\n");	
 		});
     	
     	//Updates the cache of Instances
@@ -624,39 +628,80 @@ public class Endpoint extends EndpointInterface{
 	 */
 	public void compare1(){
 		
-		int numberInstances = instanceList.size();
-		double[][] simMatrix = new double[numberInstances][numberInstances];
-		
-		long startTime = System.currentTimeMillis();
-		
-		for (Predicate predicate : predicateList) {
-			System.out.println(predicate.getURI());
-			List<Instance> instanceListAux = new ArrayList<Instance>(predicate.getTFInstances().keySet());
+		double[][] simMatrixCache = getSimMatrixCache();
+		double[][] simMatrix;
+		if (simMatrixCache != null) {
+			simMatrix = simMatrixCache;
+		} else {
+			int numberInstances = instanceList.size();
+			simMatrix = new double[numberInstances][numberInstances];
 			
-			IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
-				Instance a = instanceListAux.get(i);
-				int indexA = this.instanceList.indexOf(a);
+			long startTime = System.currentTimeMillis();
+			
+			for (Predicate predicate : predicateList) {
+				System.out.println(predicate.getURI());
+				List<Instance> instanceListAux = new ArrayList<Instance>(predicate.getTFInstances().keySet());
 				
-				for (int j = i+1; j < instanceListAux.size(); j++) {
-					Instance b = instanceListAux.get(j);
-					int indexB = this.instanceList.indexOf(b);
+				IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
+					Instance a = instanceListAux.get(i);
+					int indexA = this.instanceList.indexOf(a);
 					
-					if (simMatrix[indexA][indexB] != 0) {
-						continue;
+					for (int j = i+1; j < instanceListAux.size(); j++) {
+						Instance b = instanceListAux.get(j);
+						int indexB = this.instanceList.indexOf(b);
+						
+						if (simMatrix[indexA][indexB] != 0) {
+							continue;
+						}
+						double score = Compare.compare1A(a, b, predicateList);
+						
+						simMatrix[indexA][indexB] += score;
+						simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
 					}
-					double score = Compare.compare1B(a, b, predicateList);
-					
-					simMatrix[indexA][indexB] += score;
-					simMatrix[indexB][indexA] += simMatrix[indexA][indexB];
-				}
-			});
+				});
+			}
+			
+			long stopTime = System.currentTimeMillis();
+			long elapsedTime = (stopTime - startTime)/1000/60;
+			System.out.println(elapsedTime + "m");
+			
+			saveSimMatrixCache(simMatrix);
 		}
 		
-		long stopTime = System.currentTimeMillis();
-		long elapsedTime = (stopTime - startTime)/1000/60;
-		System.out.println(elapsedTime + "m");
-		
-		saveSimMatrixCache(simMatrix);
+		System.out.println("Building Rank list...");		
+		try {
+			File file = new File("museums.txt");
+	
+			List<String> lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
+			
+			int[] indexArray = new int[lines.size()];
+			for (int i = 0; i < lines.size(); i++) {
+				String instance = lines.get(i).replace(' ', '_');
+				int index = this.instanceList.indexOf(new Instance("http://dbpedia.org/resource/"+instance));
+				indexArray[i] = index;
+			}
+			
+			List<Rank> rankList = new ArrayList<>();
+			for (int i = 0; i < indexArray.length; i++) {
+				Rank rank = new Rank(this.instanceList.get(indexArray[i]).getShortURI());
+				
+				for (int j = 0; j < indexArray.length; j++) {
+					if(i == j)  continue;
+					
+					rank.addInstanceSim(this.instanceList.get(indexArray[j]).getShortURI(), simMatrix[indexArray[i]][indexArray[j]]);
+				}
+				
+				System.out.println(rank.getInstance());
+				System.out.println("\t"+rank.getUnrankedInstances());
+				System.out.println("\t"+rank.getRankedInstances()+"\n");
+				
+				rankList.add(rank);
+			}
+			
+			saveRank(rankList);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -687,7 +732,7 @@ public class Endpoint extends EndpointInterface{
 					double score = average*Compare.compare2A(a, b, predicate);
 					
 					simMatrix[indexA][indexB] += score;
-					simMatrix[indexB][indexA] += simMatrix[indexA][indexB];
+					simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
 				}
 			});
 		}
@@ -737,7 +782,7 @@ public class Endpoint extends EndpointInterface{
 						double score = Compare.compare1A(a, b, predicateList);
 						
 						simMatrix[indexA][indexB] += score;
-						simMatrix[indexB][indexA] += simMatrix[indexA][indexB];
+						simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
 					}
 				//}
 				});	
@@ -751,7 +796,29 @@ public class Endpoint extends EndpointInterface{
 		saveSimMatrixCache(simMatrix);
 	}
 	
-	
+    /**
+     * Gets the set of museums filtered
+     * 
+     * @return List<Instance>
+     */
+    public static List<Instance> getSetOfMuseumsFiltered() {
+    	
+    	List<Instance> list = new ArrayList<>();
+    	File file = new File("museums.txt");
+		List<String> lines;
+		try {
+			lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
+			for (int i = 0; i < lines.size(); i++) {
+				String instance = lines.get(i).replace(' ', '_');
+				list.add(new Instance(instance));
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	return list;
+    }
 	
 	
 	
@@ -858,27 +925,26 @@ public class Endpoint extends EndpointInterface{
 		this.updateInstanceCache = false;
 	}
 	
-//	/**
-//	 * Gets the similarity matrix cache
-//	 * @return double[][]
-//	 */
-//	@SuppressWarnings({"unchecked"})
-//	private double[][] getSimMatrixCache() {
-//		double[][] simMatrix = null;
-//		try {
-//			FileInputStream fis = new FileInputStream(this.domain.replace(":", "")+"Instance.ser");
-//			ObjectInputStream ois = new ObjectInputStream(fis);
-//			simMatrix = (double[][]) ois.readObject();
-//			ois.close();
-//			fis.close();
-//		} catch (IOException ioe) {
-//			ioe.printStackTrace();
-//		} catch (ClassNotFoundException c) {
-//			System.out.println("Class not found");
-//			c.printStackTrace();
-//		}
-//		return simMatrix;
-//	}
+	/**
+	 * Gets the similarity matrix cache
+	 * @return double[][]
+	 */
+	private double[][] getSimMatrixCache() {
+		double[][] simMatrix = null;
+		try {
+			FileInputStream fis = new FileInputStream(this.domain.replace(":", "")+"SimMatrix.ser");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			simMatrix = (double[][]) ois.readObject();
+			ois.close();
+			fis.close();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		} catch (ClassNotFoundException c) {
+			System.out.println("Class not found");
+			c.printStackTrace();
+		}
+		return simMatrix;
+	}
 	
 	/**
 	 * Saves the similarity matrix cache
@@ -938,5 +1004,44 @@ public class Endpoint extends EndpointInterface{
 			ioe.printStackTrace();
 		}
 		this.updateZoneIndexCache = false;
+	}
+	
+	/**
+	 * Gets the similarity matrix cache
+	 * @return double[][]
+	 */
+	@SuppressWarnings({"unchecked"})
+	public static List<Rank> getRank(String name) {
+		List<Rank> rankList = null;
+		try {
+			FileInputStream fis = new FileInputStream(name);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			rankList = (List<Rank>) ois.readObject();
+			ois.close();
+			fis.close();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		} catch (ClassNotFoundException c) {
+			System.out.println("Class not found");
+			c.printStackTrace();
+		}
+		return rankList;
+	}
+	
+	/**
+	 * Saves the similarity matrix cache
+	 * @param simMatrix
+	 */
+	public void saveRank(List<Rank> rankList){
+		try {
+			FileOutputStream fos = new FileOutputStream("Rank.ser");
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(rankList);
+			oos.close();
+			fos.close();
+			System.out.printf("Serialized Rank.ser");
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
 	}
 }

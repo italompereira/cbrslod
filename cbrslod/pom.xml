@@ -40,5 +40,11 @@
 			<artifactId>java-string-similarity</artifactId>
 			<version>RELEASE</version>
 		</dependency>
+		
+	    <dependency>
+	      <groupId>com.github.yannrichet</groupId>
+	      <artifactId>JMathPlot</artifactId>
+	      <version>1.0.1</version>
+	    </dependency>
 	</dependencies>
 </project>
