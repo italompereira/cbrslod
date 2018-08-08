@@ -14,11 +14,11 @@ public class NDCG1 {
 			int itemRelevance;
 			if (!realData.subList(0, k).contains(item)) { 
 				itemRelevance = 0;
-			} else	if (realData.get(i).equals(predictionData.get(i))) { 
-				itemRelevance = 2;
-			} else {
+			} else	/*if (realData.get(i).equals(predictionData.get(i)))*/ { 
 				itemRelevance = 1;
-			}
+			} /*else {
+				itemRelevance = 1;
+			}*/
 			
 			if (i == 0) {
 				dcg += itemRelevance;
@@ -32,7 +32,7 @@ public class NDCG1 {
 	
 	public static double calculateIDCG(int n) {
 		double idcg = 0;
-		int itemRelevance = 2;
+		int itemRelevance = 1;
 		
 		for (int i = 0; i < n; i++){
 			if (i == 0) {

@@ -626,9 +626,9 @@ public class Endpoint extends EndpointInterface{
 	/**
 	 * Compare - Method 1
 	 */
-	public void compare1(){
+	public void compare1A(){
 		
-		double[][] simMatrixCache = getSimMatrixCache();
+		double[][] simMatrixCache = getSimMatrixCache(this.domain.replace(":", "")+"SimMatrix.ser");
 		double[][] simMatrix;
 		if (simMatrixCache != null) {
 			simMatrix = simMatrixCache;
@@ -698,103 +698,199 @@ public class Endpoint extends EndpointInterface{
 				rankList.add(rank);
 			}
 			
-			saveRank(rankList);
+			saveRank(rankList,"Rank.ser");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	/**
-	 * Compare - Method 2
-	 */
-	public void compare2(){
-		
-		int numberInstances = instanceList.size();
-		double[][] simMatrix = new double[numberInstances][numberInstances];
-		
-		long startTime = System.currentTimeMillis();
-		
-		for (Predicate predicate : predicateList) {
-			System.out.println(predicate.getURI());
-			List<Instance> instanceListAux = new ArrayList<Instance>(predicate.getTFInstances().keySet());
-			
-			IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
-				Instance a = instanceListAux.get(i);
-				int indexA = this.instanceList.indexOf(a);
-				
-				for (int j = i+1; j < instanceListAux.size(); j++) {
-					Instance b = instanceListAux.get(j);
-					int indexB = this.instanceList.indexOf(b);
-					
-					double tFIDFA = predicate.getTFIDF(a);
-					double tFIDFB = predicate.getTFIDF(b);
-					double average = (tFIDFA+tFIDFB)/2;
-					double score = average*Compare.compare2A(a, b, predicate);
-					
-					simMatrix[indexA][indexB] += score;
-					simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
-				}
-			});
-		}
-		
-		long stopTime = System.currentTimeMillis();
-		long elapsedTime = (stopTime - startTime)/1000;
-		System.out.println(elapsedTime + "s");
-		
-		saveSimMatrixCache(simMatrix);
-	}
+//	/**
+//	 * Compare - Method 2
+//	 */
+//	public void compare2(){
+//		double[][] simMatrixCache = getSimMatrixCache("dboMuseumSimMatrix.compare1B.1124m.ser");
+//		double[][] simMatrix;
+//		if (simMatrixCache != null) {
+//			simMatrix = simMatrixCache;
+//		} else {
+//			int numberInstances = instanceList.size();
+//			simMatrix = new double[numberInstances][numberInstances];
+//			
+//			long startTime = System.currentTimeMillis();
+//			
+//			for (Predicate predicate : predicateList) {
+//				System.out.println(predicate.getURI());
+//				List<Instance> instanceListAux = new ArrayList<Instance>(predicate.getTFInstances().keySet());
+//				
+//				IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
+//					Instance a = instanceListAux.get(i);
+//					int indexA = this.instanceList.indexOf(a);
+//					
+//					for (int j = i+1; j < instanceListAux.size(); j++) {
+//						Instance b = instanceListAux.get(j);
+//						int indexB = this.instanceList.indexOf(b);
+//						
+//						double tFIDFA = predicate.getTFIDF(a);
+//						double tFIDFB = predicate.getTFIDF(b);
+//						double average = (tFIDFA+tFIDFB)/2;
+//						double score = average*Compare.compare2A(a, b, predicate);
+//						
+//						simMatrix[indexA][indexB] += score;
+//						simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
+//					}
+//				});
+//			}
+//			
+//			long stopTime = System.currentTimeMillis();
+//			long elapsedTime = (stopTime - startTime)/1000;
+//			System.out.println(elapsedTime + "s");
+//			
+//			saveSimMatrixCache(simMatrix);
+//		}
+//		
+//		System.out.println("Building Rank list...");		
+//		try {
+//			File file = new File("museums.txt");
+//	
+//			List<String> lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
+//			
+//			int[] indexArray = new int[lines.size()];
+//			for (int i = 0; i < lines.size(); i++) {
+//				String instance = lines.get(i).replace(' ', '_');
+//				int index = this.instanceList.indexOf(new Instance("http://dbpedia.org/resource/"+instance));
+//				indexArray[i] = index;
+//			}
+//			
+//			List<Rank> rankList = new ArrayList<>();
+//			for (int i = 0; i < indexArray.length; i++) {
+//				Rank rank = new Rank(this.instanceList.get(indexArray[i]).getShortURI());
+//				
+//				for (int j = 0; j < indexArray.length; j++) {
+//					if(i == j)  continue;
+//					
+//					rank.addInstanceSim(this.instanceList.get(indexArray[j]).getShortURI(), simMatrix[indexArray[i]][indexArray[j]]);
+//				}
+//				
+//				System.out.println(rank.getInstance());
+//				System.out.println("\t"+rank.getUnrankedInstances());
+//				System.out.println("\t"+rank.getRankedInstances()+"\n");
+//				
+//				rankList.add(rank);
+//			}
+//			
+//			saveRank(rankList,"Rank2.ser");
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
 		
 	/**
 	 * Compare - Method 3
 	 */
-	public void compare3(){
-		
-		int numberInstances = instanceList.size();
-		double[][] simMatrix = new double[numberInstances][numberInstances];
-		
-		long startTime = System.currentTimeMillis();
-
-		
-		for (Term term : termList) {
+	public void compare1B(){
+		double[][] simMatrixCache = getSimMatrixCache("dboMuseumSimMatrix.compare2A.644m.ser");
+		double[][] simMatrix;
+		if (simMatrixCache != null) {
+			simMatrix = simMatrixCache;
+		} else {
+			int numberInstances = instanceList.size();
+			simMatrix = new double[numberInstances][numberInstances];
 			
-			System.out.println(term);
-			List<PredicateTerm> predicateTermList = term.getPredicateList();
-			for (PredicateTerm predicateTerm : predicateTermList) {
+			long startTime = System.currentTimeMillis();
+	
+			
+			for (Term term : termList) {
 				
-				
-				List<Instance> instanceListAux = predicateTerm.getInstanceList();
-				
-				System.out.println("\t" + predicateTerm + " " + instanceListAux.size());
-				
-				IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
-				//for (int i = 0; i < instanceListAux.size(); i++) {
+				System.out.println(term);
+				List<PredicateTerm> predicateTermList = term.getPredicateList();
+				for (PredicateTerm predicateTerm : predicateTermList) {
 					
-					Instance a = instanceListAux.get(i);
-					int indexA = this.instanceList.indexOf(a);
-
-					for (int j = i+1; j < instanceListAux.size(); j++) {
-						Instance b = instanceListAux.get(j);
-						int indexB = this.instanceList.indexOf(b);
+					
+					List<Instance> instanceListAux = predicateTerm.getInstanceList();
+					
+					System.out.println("\t" + predicateTerm + " " + instanceListAux.size());
+					
+					IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
+					//for (int i = 0; i < instanceListAux.size(); i++) {
 						
-						if (simMatrix[indexA][indexB] != 0) {
-							continue;
+						Instance a = instanceListAux.get(i);
+						int indexA = this.instanceList.indexOf(a);
+	
+						for (int j = i+1; j < instanceListAux.size(); j++) {
+							Instance b = instanceListAux.get(j);
+							int indexB = this.instanceList.indexOf(b);
+							
+							if (simMatrix[indexA][indexB] != 0) {
+								continue;
+							}
+							double score = Compare.compare1B(a, b, predicateList);
+							
+							simMatrix[indexA][indexB] += score;
+							simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
 						}
-						double score = Compare.compare1A(a, b, predicateList);
-						
-						simMatrix[indexA][indexB] += score;
-						simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
-					}
-				//}
-				});	
+					//}
+					});	
+				}
 			}
+			
+			long stopTime = System.currentTimeMillis();
+			long elapsedTime = (stopTime - startTime)/1000/60;
+			System.out.println(elapsedTime + "m");
+			
+			saveSimMatrixCache(simMatrix);
 		}
 		
-		long stopTime = System.currentTimeMillis();
-		long elapsedTime = (stopTime - startTime)/1000/60;
-		System.out.println(elapsedTime + "m");
-		
-		saveSimMatrixCache(simMatrix);
+		System.out.println("Building Rank list...");		
+		try {
+			File file = new File("museums.txt");
+	
+			List<String> lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
+			
+			int[] indexArray = new int[lines.size()];
+			for (int i = 0; i < lines.size(); i++) {
+				String instance = lines.get(i).replace(' ', '_');
+				int index = this.instanceList.indexOf(new Instance("http://dbpedia.org/resource/"+instance));
+				indexArray[i] = index;
+			}
+			
+			List<Rank> rankList = new ArrayList<>();
+			for (int i = 0; i < indexArray.length; i++) {
+				Rank rank = new Rank(this.instanceList.get(indexArray[i]).getShortURI());
+				
+				for (int j = 0; j < indexArray.length; j++) {
+					if(i == j)  continue;
+					
+					rank.addInstanceSim(this.instanceList.get(indexArray[j]).getShortURI(), simMatrix[indexArray[i]][indexArray[j]]);
+				}
+				
+				System.out.println(rank.getInstance());
+				System.out.println("\t"+rank.getUnrankedInstances());
+				System.out.println("\t"+rank.getRankedInstances()+"\n");
+				
+				rankList.add(rank);
+			}
+			
+			saveRank(rankList,"Rank1B.ser");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
     /**
      * Gets the set of museums filtered
@@ -929,10 +1025,10 @@ public class Endpoint extends EndpointInterface{
 	 * Gets the similarity matrix cache
 	 * @return double[][]
 	 */
-	private double[][] getSimMatrixCache() {
+	private double[][] getSimMatrixCache(String name) {
 		double[][] simMatrix = null;
 		try {
-			FileInputStream fis = new FileInputStream(this.domain.replace(":", "")+"SimMatrix.ser");
+			FileInputStream fis = new FileInputStream(name);
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			simMatrix = (double[][]) ois.readObject();
 			ois.close();
@@ -1032,9 +1128,9 @@ public class Endpoint extends EndpointInterface{
 	 * Saves the similarity matrix cache
 	 * @param simMatrix
 	 */
-	public void saveRank(List<Rank> rankList){
+	public void saveRank(List<Rank> rankList, String name){
 		try {
-			FileOutputStream fos = new FileOutputStream("Rank.ser");
+			FileOutputStream fos = new FileOutputStream(name);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(rankList);
 			oos.close();
