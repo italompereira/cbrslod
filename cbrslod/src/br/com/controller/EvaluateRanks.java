@@ -43,8 +43,7 @@ public class EvaluateRanks {
 		int begin = 3;
 		int end = 8;
 		int size = end-begin+1;
-		
-	
+			
 		double[] x = new double[size];
 		
 		double[] p1Total = new double[size];
