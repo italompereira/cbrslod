@@ -1,4 +1,4 @@
-package br.com.controller;
+package br.com.model;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -9,6 +9,7 @@ public class Predicate implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private String uRI;
+	private int level;
 	private double discriminability;
 	private double predicateFrequency;
 	private double idf;
@@ -16,9 +17,10 @@ public class Predicate implements Serializable{
 	private boolean calcStats = false;
 	private boolean calcTermFreq = false;
 		
-	public Predicate(String predicate) {
+	public Predicate(String predicate, int level) {
 		super();
 		this.uRI = predicate;
+		this.level = level;
 	}
 
 	public String getURI() {
@@ -29,6 +31,14 @@ public class Predicate implements Serializable{
 		this.uRI = predicate;
 	}
 	
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
+	}
+
 	public double getDiscriminability() {
 		return discriminability;
 	}
@@ -81,7 +91,7 @@ public class Predicate implements Serializable{
 	public boolean equals(Object o){
 	    if(o instanceof Predicate){
 	    	Predicate toCompare = (Predicate) o;
-	        return this.uRI.equals(toCompare.uRI);
+	        return (this.uRI.equals(toCompare.uRI) && (this.level == toCompare.level));
 	    }
 	    return false;
 	}
@@ -94,8 +104,9 @@ public class Predicate implements Serializable{
 	@Override
 	public String toString() {
 		return "Dis: " + String.format("%.6f", this.discriminability) 
-			+ "  |  PrF: " + String.format("%.6f", this.predicateFrequency) 
+			+ "  |  PrF: " + String.format("%.3f", this.predicateFrequency) 
 			+ "  |  IDF: " +  String.format("%.6f", this.idf)
+			+ "  |  Level: " + this.level
 			+ "  |  " + this.uRI;
 		
 		

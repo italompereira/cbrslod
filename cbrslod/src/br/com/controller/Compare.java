@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import com.wcohen.ss.SoftTFIDF;
 
+import br.com.model.Instance;
+import br.com.model.InstanceNeighborhood;
+import br.com.model.Node;
+import br.com.model.Predicate;
 import info.debatty.java.stringsimilarity.Cosine;
 
 public class Compare {
@@ -56,7 +60,7 @@ public class Compare {
 			}
 			
 			//Apply the tf-idf weight to adjust the score
-			int index = predicateList.indexOf(new Predicate(inA.getNeighborhood().get(0).toString()));
+			int index = predicateList.indexOf(new Predicate(inA.getLastPredicate().toString(), inA.getNeighborhood().size()/2));
 			
 			double tFIDFA = predicateList.get(index).getTFIDF(a);
 			double tFIDFB = predicateList.get(index).getTFIDF(b);
@@ -116,7 +120,7 @@ public class Compare {
 			}
 			
 			//Apply the tf-idf weight to adjust the score
-			int index = predicateList.indexOf(new Predicate(inA.getNeighborhood().get(0).toString()));
+			int index = predicateList.indexOf(new Predicate(inA.getLastPredicate().toString(), inA.getNeighborhood().size()/2));
 			
 			double tFIDFA = predicateList.get(index).getTFIDF(a);
 			double tFIDFB = predicateList.get(index).getTFIDF(b);

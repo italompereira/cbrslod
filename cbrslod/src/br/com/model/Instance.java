@@ -1,4 +1,4 @@
-package br.com.controller;
+package br.com.model;
 
 import java.io.Serializable;
 import java.net.URI;
@@ -45,13 +45,14 @@ public class Instance implements Serializable {
 		return null;
 	}
 
-	public int countPredicateOnNeighborhoodList(String predicate){
+	public int countPredicateOnNeighborhoodList(Predicate predicate){
 		int qt = 0;
+		int index = (predicate.getLevel()*2)-2;
 		for (InstanceNeighborhood instanceNeighborhood : instanceNeighborhoodList) {
-			for (Node node : instanceNeighborhood.getNeighborhood()) {
-				if (node.getNode().equals(predicate)) {
-					qt++;
-				}
+			int size = instanceNeighborhood.getNeighborhood().size();
+			
+			if (index < size && instanceNeighborhood.getNeighborhood().get(index).toString().equals(predicate.getURI())) {
+				qt++;
 			}
 		}
 		return qt;

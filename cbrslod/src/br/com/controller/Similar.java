@@ -1,5 +1,5 @@
 package br.com.controller;
-import br.com.controller.Instance;
+import br.com.model.Instance;
 
 public class Similar {
 	public Instance instance;

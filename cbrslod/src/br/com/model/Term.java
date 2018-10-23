@@ -1,4 +1,4 @@
-package br.com.controller;
+package br.com.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

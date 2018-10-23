@@ -9,6 +9,9 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 
 public class EndpointInterface {
+	
+	private Query query;
+	private QueryExecution qexec;
 	/**
      * Query an Endpoint using the given SPARQl query
      * @param szQuery
@@ -17,11 +20,17 @@ public class EndpointInterface {
      */
     public ResultSet queryEndpoint(String szQuery, String szEndpoint) throws Exception
     {
-        Query query = QueryFactory.create(szQuery);
-        QueryExecution qexec = QueryExecutionFactory.sparqlService(szEndpoint, query);
-        ((QueryEngineHTTP)qexec).addParam("timeout", "500000");
-        return qexec.execSelect();
+        query = QueryFactory.create(szQuery);
+        qexec = QueryExecutionFactory.sparqlService(szEndpoint, query);
+        ((QueryEngineHTTP)qexec).addParam("timeout", "1000000");
+        
+        ResultSet result = qexec.execSelect();
+        return result;
     } 
+    
+    public void close(){
+    	qexec.close();
+    }
     
 	/**
      * Query an Endpoint using the given SPARQl query
@@ -31,7 +40,7 @@ public class EndpointInterface {
      */
     public Model constructEndpoint(String szQuery, String szEndpoint) throws Exception
     {
-		Query query = QueryFactory.create(szQuery);
+		query = QueryFactory.create(szQuery);
 		QueryEngineHTTP qexec = new QueryEngineHTTP(szEndpoint, query);
 		qexec.setTimeout(60000L);
 		Model model = null;

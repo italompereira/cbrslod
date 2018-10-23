@@ -11,7 +11,7 @@ import org.math.plot.Plot2DPanel;
 import org.math.plot.plotObjects.BaseLabel;
 
 import br.com.model.DBPediaEndpoint;
-import br.com.tools.NDCG;
+import br.com.model.Instance;
 import br.com.tools.NDCG1;
 import br.com.tools.Round;
 
@@ -34,7 +34,7 @@ public class EvaluateRanks {
 		
 		String format = "%s%-30s";
 		System.out.printf(format,"","Rank 1A");
-		//System.out.printf(format,"","Rank 1B");
+		System.out.printf(format,"","Rank 1B");
 		System.out.printf(format,"","selectorRank095");
 		System.out.printf(format,"","selectorRank098");
 		System.out.printf(format,"","smartHistoryRank");
@@ -67,20 +67,20 @@ public class EvaluateRanks {
 			Instance museum = museumsList.get(k);
 		
 			Rank rank1A = rank1AList.get(rank1AList.indexOf(new Rank(museum.toString())));
-			Rank rank1B = rank1AList.get(rank1BList.indexOf(new Rank(museum.toString())));
+			Rank rank1B = rank1BList.get(rank1BList.indexOf(new Rank(museum.toString())));
 			Rank selectorRank095 = selectorRank095List.get(selectorRank095List.indexOf(new Rank(museum.toString())));
 			Rank selectorRank098 = selectorRank098List.get(selectorRank098List.indexOf(new Rank(museum.toString())));
 			Rank smartHistoryRank = smartHistoryRankList.get(smartHistoryRankList.indexOf(new Rank(museum.toString())));
 			
 			System.out.printf(format,"",rank1A);
-			//System.out.printf(format,"",rank1B);
+			System.out.printf(format,"",rank1B);
 			System.out.printf(format,"",selectorRank095);
 			System.out.printf(format,"",selectorRank098);
 			System.out.printf(format,"",smartHistoryRank);
 			System.out.println();			
 			for (int i = 0; i < 15; i++) {
 				System.out.printf(format,"",rank1A.getRankedInstances().get(i));
-				//System.out.printf(format,"",rank1B.getRankedInstances().get(i));
+				System.out.printf(format,"",rank1B.getRankedInstances().get(i));
 				System.out.printf(format,"",selectorRank095.getRankedInstances().get(i));
 				System.out.printf(format,"",selectorRank098.getRankedInstances().get(i));
 				System.out.printf(format,"",smartHistoryRank.getRankedInstances().get(i));
@@ -123,7 +123,7 @@ public class EvaluateRanks {
 				
 				i++;
 				System.out.printf(format,"",rank1ANDCG);
-				//System.out.printf(format,"",rank1BNDCG);
+				System.out.printf(format,"",rank1BNDCG);
 				System.out.printf(format,"",selectorRank095NDCG);
 				System.out.printf(format,"",selectorRank098NDCG);
 				System.out.println();
@@ -146,7 +146,7 @@ public class EvaluateRanks {
 			
 			// add a line plot to the PlotPanel
 			plot.addLinePlot("Proposto", dark, x, p1);
-			//plot.addLinePlot("Proposto 1B", x, p2);
+			plot.addLinePlot("Proposto 1B", x, p2);
 			plot.addLinePlot("SELEcTor 0.95", gray, x, s1);
 			plot.addLinePlot("SELEcTor 0.98", light, x, s2);
 			
@@ -180,13 +180,13 @@ public class EvaluateRanks {
 		
 		System.out.println("Média");
 		System.out.println(Arrays.toString(p1Total));
-		//System.out.println(Arrays.toString(p2Total));
+		System.out.println(Arrays.toString(p2Total));
 		System.out.println(Arrays.toString(s1Total));
 		System.out.println(Arrays.toString(s2Total));
 		
 		// add a line plot to the PlotPanel
 		plot.addLinePlot("Proposto", dark, x, p1Total);
-		//plot.addLinePlot("Proposto 1B", x, p2Total);
+		plot.addLinePlot("Proposto 1B", x, p2Total);
 		plot.addLinePlot("SELEcTor 0.95", gray, x, s1Total);
 		plot.addLinePlot("SELEcTor 0.98", light, x, s2Total);
 		
@@ -221,13 +221,13 @@ public class EvaluateRanks {
 		
 		System.out.println("Desvio Padrão");
 		System.out.println(Arrays.toString(p1Total));
-		//System.out.println(Arrays.toString(p2Total));
+		System.out.println(Arrays.toString(p2Total));
 		System.out.println(Arrays.toString(s1Total));
 		System.out.println(Arrays.toString(s2Total));
 		
 		// add a line plot to the PlotPanel
 		plotDP.addLinePlot("Proposto", dark, x, p1Total);
-		//plot.addLinePlot("Proposto 1B", x, p2Total);
+		plot.addLinePlot("Proposto 1B", x, p2Total);
 		plotDP.addLinePlot("SELEcTor 0.95", gray, x, s1Total);
 		plotDP.addLinePlot("SELEcTor 0.98", light, x, s2Total);
 		

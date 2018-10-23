@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Literal;
@@ -23,13 +24,7 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 
 import br.com.controller.Compare;
-import br.com.controller.Instance;
-import br.com.controller.InstanceNeighborhood;
-import br.com.controller.Node;
-import br.com.controller.Predicate;
-import br.com.controller.PredicateTerm;
 import br.com.controller.Rank;
-import br.com.controller.Term;
 import br.com.tools.Util;
 
 public class Endpoint extends EndpointInterface{
@@ -37,13 +32,16 @@ public class Endpoint extends EndpointInterface{
 	 * endPoint address and domain
 	 */
 	private String endPoint;
-	private String domain;
+	private String graph;
+	private String domain;	
+	public String instanceFilter;
+	private int limitEndpoint = 10000;
 	
 	/**
 	 * Instances and predicates
 	 */
 	private List<Predicate> predicateList = new ArrayList<>();
-	private HashSet<String> predicateSet = new HashSet<String>();
+	private HashSet<Predicate> predicateSet = new HashSet<Predicate>();
 	private List<Instance> instanceList = new ArrayList<>();
 	private List<Term> termList = new ArrayList<Term>();
 	
@@ -53,8 +51,7 @@ public class Endpoint extends EndpointInterface{
 	private int numberOfLevels;
 	private double thresholdCoverage;
 	private double thresholdDiscriminability;
-	private int limitEndpoint = 10000;
-	
+		
 	private boolean updatePredicateCache = false;
 	private boolean updateInstanceCache = false;
 	private boolean updateZoneIndexCache = false;
@@ -64,33 +61,41 @@ public class Endpoint extends EndpointInterface{
 	 * 
 	 * @param domain Domain of the instances
 	 */
-    public Endpoint(String domain, String endPoint) {
+    public Endpoint(String endPoint, String graph, String domain, String instanceFilter, int numberOfLevels, double thresholdCoverage, double thresholdDiscriminability) {
 		super();
-		this.domain = domain;
+		
+		/**
+		 * Parameters
+		 */
 		this.endPoint = endPoint;
+		this.graph = graph;
+		this.domain = domain;
+		this.instanceFilter = instanceFilter;
+		this.numberOfLevels = numberOfLevels;
+		this.thresholdCoverage = thresholdCoverage;
+		this.thresholdDiscriminability = thresholdDiscriminability;
 		
 		//Make a cache of instances
 		if (!getInstanceCache()) {
-			this.getSetOfInstances(0);
+			this.getSetOfInstances();
 			this.updateInstanceCache = true;
 			this.saveInstanceCache();
 		}
 		
 		//Make a cache of predicates
 		if (!getPredicateCache()) {
-			this.getSetOfPredicates(0);
+			for (int i = 1; i <= this.numberOfLevels; i++) {
+				this.getSetOfPredicates(i);	
+			}
 			this.updatePredicateCache = true;
 			this.savePredicateCache();
 		}
-		
-		/**
-		 * Parameters
-		 */
-		this.numberOfLevels = 1;
-		this.thresholdCoverage = 0.01;
-		this.thresholdDiscriminability = 1;
 	}
 
+    public void getSetOfInstances() {
+    	getSetOfInstances(0);
+    }
+    
 	/**
      * Gets the set of instances
      * 
@@ -105,9 +110,12 @@ public class Endpoint extends EndpointInterface{
 		int offset = page * limit;
 		
 		szQuery = " PREFIX dbo: <http://dbpedia.org/ontology/> "
+				+ " PREFIX : <http://dbpedia.org/resource/> "
 				+ " SELECT ?instance "
+				+ (graph == null ? "" : "FROM <" + this.graph + ">")
 				+ " WHERE { "
-				+ "    ?instance a "+ this.domain +" ; "
+				+ " 	?instance a "+ this.domain +" ; "
+				+ (this.instanceFilter == null ? null : " 	FILTER(?instance IN ("+ this.instanceFilter +")) ")
 				+ " } LIMIT " + limit + " OFFSET " + offset ;
 
 		// Query Endpoint
@@ -126,64 +134,141 @@ public class Endpoint extends EndpointInterface{
 					System.out.print("Result " + iCount + ": ");
 					System.out.println("[ Instance ]: " + instance.toString());
 				}
+				this.close();
 				this.getSetOfInstances(++page);
-			} 
+			} else {
+				this.close();
+			}
 			
 		} catch (Exception ex) {
 			System.err.println(ex);
 		}
-	}    
-    
+	}  
+  
 	/**
-	 * Get all predicates inside the RDF graph by the domain (Books, movies, museums, etc)
+	 * Get the set of predicates based on level
 	 * 
-	 * @param page Get the page base on limit and offset
-	 * @return ResultSet
+	 * @param level
 	 */
-	public void getSetOfPredicates(int page) {
-		
-		// Query
+	public void getSetOfPredicates(int level) {
+		String unions = this.buildUnionsQuery(level);
 		String szQuery = null;
+		szQuery = " PREFIX dbo: <http://dbpedia.org/ontology/> "
+				+ " PREFIX : <http://dbpedia.org/resource/> "
+				+ " SELECT DISTINCT ?p" + level + " "
+				+ (graph == null ? "" : "FROM <" + this.graph + ">")
+				+ " WHERE "
+				+ " { "
+				+ unions
+				+ (this.instanceFilter == null ? "" : " 	FILTER(?i IN ("+ this.instanceFilter +")) ")
+				+ (level == 1 ? "" : " 	FILTER(?p" + level + " != <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>) ")
+				+ " } ";	
+		
+		this.getSetOfPredicatesFromLevel(0, level, szQuery);
+	}
+	
+	/**
+	 * Get the set of predicates based on level
+	 * 
+	 * @param page
+	 * @param level
+	 * @param query
+	 */
+	private void getSetOfPredicatesFromLevel(int page, int level, String query) {
+
+		// Query
 		int limit = limitEndpoint;
 		int offset = page * limit;
-		
-		szQuery = " PREFIX dbo: <http://dbpedia.org/ontology/> "
-				+ " SELECT distinct ?predicate "
-				+ " WHERE { "
-				+ "  { "
-				+ "    ?instance a "+ this.domain +" . "
-				+ "    ?instance ?predicate ?o1 . "
-				+ "  } "
-				+ "  UNION "
-				+ "  { "
-				+ "    ?instance a "+ this.domain +" . "
-				+ "    ?s1 ?predicate ?instance . "
-				+ "  } "
-				//+ " FILTER(regex(?predicate, \"^http://dbpedia.org/ontology/\")  || (?predicate = \"http://purl.org/dc/terms/subject\")) "
-				+ " } LIMIT " + limit + " OFFSET " + offset ;
-		
+		String szQuery = query;
+		szQuery += " LIMIT " + limit + " OFFSET " + offset;
+
 		// Query Endpoint
 		try {
 			ResultSet results = this.queryEndpoint(szQuery, endPoint);
 			if (results.hasNext()) {
-				int iCount = (page*limit) + 0;
+				int iCount = (page * limit) + 0;
 				while (results.hasNext()) {
 					// Get Result
 					QuerySolution qs = results.next();
-					Resource predicate = qs.getResource("predicate");
-					
-					predicateList.add(new Predicate(predicate.toString()));
-					
+					Resource predicate = qs.getResource("p"+level);
+					predicateList.add(new Predicate(predicate.toString(), level));
+
 					// Count
 					iCount++;
 					System.out.print("Result " + iCount + ": ");
 					System.out.println("[ Predicate ]: " + predicate);
 				}
-				getSetOfPredicates(++page);
+				this.close();
+				this.getSetOfPredicatesFromLevel(++page, level, query);
+			} else {
+				this.close();
 			}
 		} catch (Exception ex) {
 			System.err.println(ex);
 		}
+	}
+
+	/**
+	 * Builds the unions based on quantity of levels
+	 * 
+	 * @param level
+	 * @return String with union
+	 */
+	private String buildUnionsQuery(int level){
+		String subject = "?s";
+		String predicate = "?p";
+		String object = "?o";
+		
+		List<String> levels = new ArrayList<String>();
+		
+		if (level == 1) {
+			levels.add("?i a "+this.domain+" . "
+					+ "?i ?p1 ?leaf . ");
+			levels.add("?i a "+this.domain+" . "
+					+ "?leaf ?p1 ?i . ");	
+		} else {
+			levels.add("?i a "+this.domain+" . "
+					+ "?i ?p1 ?o1 . ");
+			levels.add("?i a "+this.domain+" . "
+					+ "?s1 ?p1 ?i . ");
+		}
+		
+		for (int i = 2; i <= level; i++) {
+			List<String> levelsAux = new ArrayList<String>();
+			for (int j = 0; j < levels.size(); j++) {
+				String query = levels.get(j);
+		
+				if (j%2==0) {
+					if (level == i) {
+						levelsAux.add(query + object+(i-1) +" "+ predicate+(i) + " ?leaf . ");	
+						levelsAux.add(query + " ?leaf " + predicate+(i) +" "+ object+(i-1) +" . "
+								+ "FILTER(!isLiteral("+ object+(i-1) +"))"
+								//+ "FILTER(regex("+ predicate+(i-1) +", \"^http://dbpedia.org/ontology/\") || ("+ predicate+(i-1) +" = \"http://purl.org/dc/terms/subject\"))"
+								);	
+					} else {
+						levelsAux.add(query + object+(i-1) +" "+ predicate+(i) +" "+ object+(i) +" . ");
+						levelsAux.add(query + subject+(i) +" "+ predicate+(i) +" "+ object+(i-1) +" . ");
+					}
+				} else {
+					if (level == i) {
+						levelsAux.add(query + subject+(i-1) +" "+ predicate+(i) + " ?leaf . ");
+						levelsAux.add(query + " ?leaf " + predicate+(i) +" "+ subject+(i-1) +" . "
+								+ "FILTER(!isLiteral("+ subject+(i-1) +"))"
+								//+ "FILTER(regex("+ predicate+(i-1) +", \"^http://dbpedia.org/ontology/\") || ("+ predicate+(i-1) +" = \"http://purl.org/dc/terms/subject\"))"
+								);
+					} else {
+						levelsAux.add(query + subject+(i-1) +" "+ predicate+(i) +" "+ object+(i) +" . ");
+						levelsAux.add(query + subject+(i) +" "+ predicate+(i) +" "+ subject+(i-1) +" . ");
+					}
+				}
+			}
+			levels = new ArrayList<>(levelsAux);
+			levelsAux.clear();
+		}
+		
+		String unions = " { " + StringUtils.join(levels, " } UNION {") + " } ";
+		
+		return unions;  
 	}
     
     /**
@@ -205,24 +290,31 @@ public class Endpoint extends EndpointInterface{
 //		System.out.print(" - " +instanceT.getInstanceNeighborhoodList().size()+"\n");
 //		instanceT.getInstanceNeighborhoodList();
     	
-    	instanceList.stream().parallel().forEach( instance -> {
+    	
+    	for (Instance instance : instanceList) {
+			
+		
+    	//instanceList.stream().parallel().forEach( instance -> {
     		if (instance.getInstanceNeighborhoodList().size() > 0) {
-				return;
+				continue;
+    			//return;
 			}
     		this.updateInstanceCache = true;
     		
 	    	instance.getInstanceNeighborhoodList().clear();
 	    	System.out.println(instance.toString());
 			this.getInstanceNeighborhood(instance.getURI(), null, null, instance.getInstanceNeighborhoodList(), new ArrayList<>(), 1);
-			
-//				for (InstanceNeighborhood instanceNeighborhood : instance.getInstanceNeighborhoodList()) {
-//					for (Node node : instanceNeighborhood.getNeighborhood()) {
-//						System.out.print(" \t" + node.getNode().substring(0, (node.getNode().length() > 70 ? 70: node.getNode().length())));
-//					}
-//					System.out.println();
-//				}
+				
+			System.out.println();
+			for (InstanceNeighborhood instanceNeighborhood : instance.getInstanceNeighborhoodList()) {
+				for (Node node : instanceNeighborhood.getNeighborhood()) {
+					System.out.print(" \t" + node.getNode().substring(0, (node.getNode().length() > 70 ? 70: node.getNode().length())));
+				}
+				System.out.println();
+			}
 			System.out.print(instance + " - " +instance.getInstanceNeighborhoodList().size()+"\n");	
-		});
+		//});
+    	}
     	
     	//Updates the cache of Instances
     	saveInstanceCache();
@@ -243,11 +335,24 @@ public class Endpoint extends EndpointInterface{
     
     	List<Node> neighborhood;
 
+    	if (level == 1) {
+			System.out.print(qsList.size());
+		}
+    	
     	for (QuerySolution qs : qsList) {
 			neighborhood = new ArrayList<>(previousNeighborhood);	
 			
+			if (level == 1) {
+				System.out.print(" " + qsList.indexOf(qs));
+			}
+			
 			Resource predicate = qs.getResource("predicate");
 			RDFNode object = qs.get("object");
+			
+			//Check if the predicate is present on predicates list
+			if (!predicateSet.contains(new Predicate(predicate.toString(), level))) {
+				continue;
+			} 
 			
 			/**
 			 * Clean literal values
@@ -262,9 +367,6 @@ public class Endpoint extends EndpointInterface{
 				node = object.toString();
 			}
 			
-			if (level == 1 && !predicateSet.contains(predicate.toString())) {
-				continue;
-			} 
 			
 			neighborhood.add(new Node(predicate.getURI(), predicate.getClass().getSimpleName())); 
 			neighborhood.add(new Node(node, object.getClass().getSimpleName()));
@@ -294,7 +396,9 @@ public class Endpoint extends EndpointInterface{
 		int offset = page * limit;
 		
 		// Query
-		szQuery = " SELECT ?predicate ?object "
+		szQuery = " PREFIX dbo: <http://dbpedia.org/ontology/> "
+				+ " SELECT ?predicate ?object "
+				+ (graph == null ? "" : "FROM <" + this.graph + ">")
 				+ " WHERE { " 
 				+ " { <" + resource + "> ?predicate ?object . } "
 				+ " UNION " 
@@ -302,6 +406,7 @@ public class Endpoint extends EndpointInterface{
 					+ "?object ?predicate <" + resource + "> . "
 					+ (previousPredicate == null ? "" : " FILTER(str(?predicate) != \""+ previousPredicate.toString() +"\") ")
 				+ " }  "
+				+ " FILTER (!regex(?object, \"http://www.wikidata.org/entity\",\"i\")) . "
 				//+ " FILTER(regex(?predicate, \"^http://dbpedia.org/ontology/\") || (?predicate = \"http://purl.org/dc/terms/subject\")) "
 				+ " FILTER(str(?predicate) != \"http://dbpedia.org/ontology/wikiPageWikiLink\" ) "
 				+ " FILTER(!isLiteral(?object) || lang(?object) = \"\" || langMatches(lang(?object), \"EN\"))"
@@ -315,6 +420,7 @@ public class Endpoint extends EndpointInterface{
 				while (results.hasNext()) {
 					querySolutionList.add(results.nextSolution());
 				}
+				//this.close();
 				querySolutionList.addAll(this.queryInstanceNeighborhood(resource, previousResource, previousPredicate, ++page));
 			}
 
@@ -326,29 +432,63 @@ public class Endpoint extends EndpointInterface{
     }
 	
 	/**
+	 * Count all instances in domain
+	 * 
+	 * @return Integer Number of instances
+	 */
+	private int countInstance() {
+
+		// Query
+		String szQuery = null;
+		
+		szQuery = " PREFIX dbo: <http://dbpedia.org/ontology/> "
+				+ " PREFIX : <http://dbpedia.org/resource/> "
+				+ " SELECT (COUNT(?i)  as ?qt)"
+				+ (graph == null ? "" : "FROM <" + this.graph + ">")
+				+ " WHERE { "
+				+ " 	?i a "+ this.domain +" ; "
+				+ (this.instanceFilter == null ? "" : " 	FILTER(?i IN ("+ this.instanceFilter +")) ")
+				+ " } ";
+
+		int qt = 0;
+		try {
+			ResultSet results = this.queryEndpoint(szQuery, endPoint);
+			if (results.hasNext()) {
+				QuerySolution qsol = results.nextSolution();
+				Literal qtNode = qsol.getLiteral("qt");
+				qt = Integer.parseInt(qtNode.getString());
+			}
+			//this.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return qt;
+	}
+	
+	/**
 	 * Count triples with this predicate
 	 * 
 	 * @param predicate The predicate
 	 * @param distinct If will be distinct or not
 	 * @return double Number of triples
 	 */
-	private double countTripesWithPredicate(String predicate, boolean distinct) {
+	private double countTripesWithPredicate(Predicate predicate, boolean distinct) {
 
 		// Query
 		String szQuery = null;
 		
+		int level = predicate.getLevel();
+		String unions = this.buildUnionsQuery(level);
+		unions = unions.replace("?p"+level, "<"+predicate.getURI()+">");
+				
 		szQuery = " PREFIX dbo: <http://dbpedia.org/ontology/> "
-				+ " SELECT (COUNT(" + (distinct ? "DISTINCT" : "") + " ?o1) as ?qt) "
+				+ " PREFIX : <http://dbpedia.org/resource/> "
+				+ " SELECT (COUNT(" + (distinct ? "DISTINCT" : "") + " ?leaf) as ?qt) "
+				+ (graph == null ? "" : "FROM <" + this.graph + ">")
 				+ " WHERE { "
-				+ "   { "
-				+ "     ?instance a "+ this.domain +" . "
-				+ "     ?instance <" + predicate + "> ?o1 . "
-				+ "   } "
-				+ "   UNION "
-				+ "   { "
-				+ "     ?instance a "+ this.domain +" . "
-				+ "     ?o1 <" + predicate + "> ?instance . "
-				+ "   } "
+				+ unions
+				+ (this.instanceFilter == null ? "" : " 	FILTER(?i IN ("+ this.instanceFilter +")) ")
 				+ " }";
 
 		double qt = 0;
@@ -359,7 +499,9 @@ public class Endpoint extends EndpointInterface{
 				Literal qtNode = qsol.getLiteral("qt");
 				qt = Double.parseDouble(qtNode.getString());
 			}
+			//this.close();
 		} catch (Exception e) {
+			System.out.println("Exception: " + predicate);
 			e.printStackTrace();
 		}
 
@@ -373,7 +515,7 @@ public class Endpoint extends EndpointInterface{
 	 * @param page Number of the page
 	 * @return List<Instance> Instances
 	 */
-	private List<Instance> getInstancesWithPredicate(String predicate, int page) {
+	private List<Instance> getInstancesWithPredicate(Predicate predicate, int page) {
 
 		// Query
 		String szQuery = null;
@@ -381,18 +523,17 @@ public class Endpoint extends EndpointInterface{
 		int limit = 10000;
 		int offset = page * limit;
 		
+		int level = predicate.getLevel();
+		String unions = this.buildUnionsQuery(level);
+		unions = unions.replace("?p"+level, "<"+predicate.getURI()+">");
+		
 		szQuery = " PREFIX dbo: <http://dbpedia.org/ontology/> "
-				+ " SELECT distinct ?instance "
+				+ " PREFIX : <http://dbpedia.org/resource/> "
+				+ " SELECT DISTINCT ?i "
+				+ (graph == null ? "" : "FROM <" + this.graph + ">")
 				+ " WHERE { "
-				+ "   { "
-				+ "     ?instance a "+ this.domain +" . "
-				+ "     ?instance <" + predicate + "> ?ro1 . "
-				+ "   } "
-				+ "   UNION "
-				+ "   { "
-				+ "     ?instance a "+ this.domain +" . "
-				+ "     ?lo1 <" + predicate + "> ?instance . "
-				+ "   } "
+				+ unions
+				+ (this.instanceFilter == null ? "" : " 	FILTER(?i IN ("+ this.instanceFilter +")) ")
 				+ " } LIMIT " + limit + " OFFSET " + offset ;
 
 		List<Instance> instanceWithPredicate = new ArrayList<>();
@@ -402,13 +543,14 @@ public class Endpoint extends EndpointInterface{
 			if (results.hasNext()) {
 				while (results.hasNext()) {
 					QuerySolution qs = results.nextSolution();
-					Resource instance = qs.getResource("instance");
+					Resource instance = qs.getResource("i");
 					instanceWithPredicate.add(new Instance(instance));
 				}	
+				//this.close();
 				instanceWithPredicate.addAll(this.getInstancesWithPredicate(predicate, ++page));
+			} else {
+				//this.close();
 			}
-			
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -420,11 +562,13 @@ public class Endpoint extends EndpointInterface{
 	 * Calculates the predicate frequency for each predicate on instance
 	 */
 	public void calcPredicateFrequencyOnInstance() {
-
-		predicateList.stream().parallel().forEach( predicate -> {
-			
+		List<Instance> isntanceURIList = null;
+		
+		//predicateList.stream().parallel().forEach( predicate -> {
+		for (Predicate predicate : predicateList) {
 			if (predicate.isCalcTermFreq()) {
-				return;
+				//return;
+				continue;
 			}
 			this.updatePredicateCache = true;
 			
@@ -434,15 +578,16 @@ public class Endpoint extends EndpointInterface{
 			double qtPredicate = 0.0;
 			double qtPredicates = 0.0;
 			
-			List<Instance> isntanceURIList = new ArrayList<Instance>(predicate.getTFInstances().keySet());
+			isntanceURIList = new ArrayList<Instance>(predicate.getTFInstances().keySet());
 			for (Instance instance : isntanceURIList) {
-				qtPredicate = instance.countPredicateOnNeighborhoodList(predicate.getURI());
+				qtPredicate = instance.countPredicateOnNeighborhoodList(predicate);
 				qtPredicates = instance.getInstanceNeighborhoodList().size();
 				predicate.getTFInstances().put(instance, qtPredicate/qtPredicates);
 			}
 			
 			predicate.setCalcTermFreq(true);
-		});
+		}
+		//});
 		
 		//Updates the cache of Instances
 		savePredicateCache();
@@ -455,22 +600,24 @@ public class Endpoint extends EndpointInterface{
 	 */
 	public List<Predicate> calcPredicateStats() {
 		
-		int qtInstances = this.instanceList.size();
+		int qtInstances = this.countInstance();
 //		Double maxDiscrinability = 0.0;
 //		Double maxPredicateFrequency = 0.0;
 		
-		predicateList.stream().parallel().forEach(	predicate -> {
-
+		for (Predicate predicate : predicateList) {
+//		predicateList.stream().parallel().forEach(	predicate -> {
 			if (predicate.isCalcStats()) {
-				return;
-			} 
+				continue;
+//				return;
+			}
+			System.out.print("Starting - " + predicate.getURI() + ". Level - " + predicate.getLevel());
 			this.updatePredicateCache = true;
 			
 	       	/**
 	    	 * Calculates the discriminability
 	    	 */
-			double qtDistinctWithPredicate = this.countTripesWithPredicate(predicate.getURI(), true);
-			double qtWithPredicate = this.countTripesWithPredicate(predicate.getURI(), false);
+			double qtWithPredicate = this.countTripesWithPredicate(predicate, false);
+			double qtDistinctWithPredicate = this.countTripesWithPredicate(predicate, true);
 			double discriminability = qtDistinctWithPredicate / qtWithPredicate;
 			predicate.setDiscriminability(discriminability);
 //			if (discriminability > maxDiscrinability) {
@@ -480,7 +627,7 @@ public class Endpoint extends EndpointInterface{
 	    	/**
 	    	 * Calculates the predicate frequency
 	    	 */
-			List<Instance> instanceWithPredicate = this.getInstancesWithPredicate(predicate.getURI(),0);
+			List<Instance> instanceWithPredicate = this.getInstancesWithPredicate(predicate,0);
 			int qtInstancesWithPredicate = instanceWithPredicate.size();
 			double predicateFrequency = (double)qtInstancesWithPredicate / qtInstances;
 			predicate.setPredicateFrequency(predicateFrequency);
@@ -512,8 +659,9 @@ public class Endpoint extends EndpointInterface{
 			
 			predicate.setCalcStats(true);
 			
-			System.out.println(predicate);
-		});
+			System.out.println(" --> " + predicate);
+//		});
+		}
 
 //		// Normalize discriminability and coverage by max
 //		for (Predicate predicate : predicateList) {
@@ -529,19 +677,26 @@ public class Endpoint extends EndpointInterface{
 			.filter(x -> x.getPredicateFrequency() >= this.thresholdCoverage && x.getDiscriminability() <= this.thresholdDiscriminability)
 			.collect(Collectors.toList());
 		
-		//Sort by discriminability
-		Collections.sort(predicateList, new Comparator<Predicate>() {
+	    Comparator<Predicate> comparator = Comparator.comparingInt(Predicate::getLevel).reversed();
+	    comparator = comparator.thenComparingDouble(Predicate::getIdf).reversed();
+
+		//Sort by level and discriminability
+		Collections.sort(predicateList, comparator/*new Comparator<Predicate>() {
 			public int compare(Predicate a, Predicate b) {
+				int la = a.getLevel();
+				int lb = b.getLevel();
 				Double da = a.getIdf();
 				Double db = b.getIdf();
+				int level = lb-la;
 				double diff = db.doubleValue()-da.doubleValue();
-				return diff>0 ? +1 : (diff<0? -1 : 0);
+				return diff > 0 ? +1 : (diff < 0 ? -1 : 0);
 			}
-		});
+		}*/);
 		
+		int i = 0;
 		for (Predicate predicate : predicateList) {
-			//System.out.println((++i) + " \t| " + predicate.toString());
-			predicateSet.add(predicate.getURI());
+			System.out.println((++i) + " \t| " + predicate.toString());
+			predicateSet.add(predicate);
 		}
 		
 		return predicateList;
@@ -810,8 +965,8 @@ public class Endpoint extends EndpointInterface{
 					
 					System.out.println("\t" + predicateTerm + " " + instanceListAux.size());
 					
-					IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
-					//for (int i = 0; i < instanceListAux.size(); i++) {
+					//IntStream.range(0, instanceListAux.size()).parallel().forEach( i -> {
+					for (int i = 0; i < instanceListAux.size(); i++) {
 						
 						Instance a = instanceListAux.get(i);
 						int indexA = this.instanceList.indexOf(a);
@@ -823,13 +978,15 @@ public class Endpoint extends EndpointInterface{
 							if (simMatrix[indexA][indexB] != 0) {
 								continue;
 							}
+							System.out.println("Compare " + a + " with " + b);
+							
 							double score = Compare.compare1B(a, b, predicateList);
 							
 							simMatrix[indexA][indexB] += score;
 							simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
 						}
-					//}
-					});	
+					}
+					//});	
 				}
 			}
 			
@@ -876,22 +1033,6 @@ public class Endpoint extends EndpointInterface{
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
     /**
      * Gets the set of museums filtered
      * 
@@ -915,24 +1056,8 @@ public class Endpoint extends EndpointInterface{
     	
     	return list;
     }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/**
+
+    /**
 	 * Get the cache of predicates list
 	 * @return boolean True if there is a cache
 	 */
