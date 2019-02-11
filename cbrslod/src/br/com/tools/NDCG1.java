@@ -23,7 +23,7 @@ public class NDCG1 {
 			if (i == 0) {
 				dcg += itemRelevance;
 			} else {
-				dcg += itemRelevance/Math.log(i+1)/Math.log(2);
+				dcg += itemRelevance/(Math.log(i+1)/Math.log(2));
 			}
 		}
 		
@@ -38,7 +38,7 @@ public class NDCG1 {
 			if (i == 0) {
 				idcg += itemRelevance;
 			} else {
-				idcg += itemRelevance/Math.log(i+1)/Math.log(2);
+				idcg += itemRelevance/(Math.log(i+1)/Math.log(2));
 			}
 		} 
 

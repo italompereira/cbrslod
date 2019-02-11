@@ -1,9 +1,14 @@
 package br.com.model.DataSet;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.ReadWrite;
 import org.apache.jena.rdf.model.Model;
@@ -20,11 +25,14 @@ public class DataSetCopy {
 	private Dataset dataset;
 	private String endpoint;
 	private String domain;
+	private String filter;
 	
-	public DataSetCopy(String endpoint, String domain){
+	public DataSetCopy(String endpoint, String domain, String filter){
 		
 		this.domain = domain;
 		this.endpoint = endpoint;
+		this.filter = filter;
+		
 		URL url = null;
 		try {
 			url = new URL(endpoint);
@@ -55,9 +63,9 @@ public class DataSetCopy {
 		try {
 			// Loads result of query on tdb
 			Model getModel;
-			int level = 2;
+			int level = 1;
 			while (level <= 2) {
-				int page = 2597;
+				int page = 0;
 				do {
 					if (page != 0 && page % 50 == 0) {
 						System.out.println("Commit");
@@ -106,6 +114,7 @@ public class DataSetCopy {
 					+ " WHERE { "
 					+ "    ?s a "+ this.domain +" ; "
 					+ "    ?p ?o "
+					+ (this.filter == null ? null : " FILTER(?s IN ("+ this.filter +")) ")
 					+ " } LIMIT " + limit + " OFFSET " + offset ;
 		} else if(level == 2){
 			szQuery = " PREFIX dbo: <http://dbpedia.org/ontology/> "
@@ -120,6 +129,7 @@ public class DataSetCopy {
 					+ "    ?subject ?predicate ?o . "
 					+ "    ?s ?p ?o "
 					+ " } "
+					+ (this.filter == null ? null : " FILTER(?s IN ("+ this.filter +")) ")
 					+ " } LIMIT " + limit + " OFFSET " + offset ;
 		}
 
@@ -136,7 +146,17 @@ public class DataSetCopy {
 	} 
     
     public static void main(String args[]) {
-    	DataSetCopy ds = new DataSetCopy(DBPediaEndpoint.ENDPOINT, "dbo:Museum");
+    	
+		File file = new File("museums.txt");
+		String musems = null;
+		try {
+			List<String> lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
+			musems = "<http://dbpedia.org/resource/"+StringUtils.join(lines, ">, <http://dbpedia.org/resource/") + ">";
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+    	DataSetCopy ds = new DataSetCopy(DBPediaEndpoint.ENDPOINT, "dbo:Museum", musems);
     	ds.copyDomain();
     }
 }

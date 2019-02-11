@@ -3,6 +3,8 @@ package br.com.controller;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import com.wcohen.ss.Levenstein;
 import com.wcohen.ss.SoftTFIDF;
 
 import br.com.model.Instance;
@@ -10,6 +12,8 @@ import br.com.model.InstanceNeighborhood;
 import br.com.model.Node;
 import br.com.model.Predicate;
 import info.debatty.java.stringsimilarity.Cosine;
+import info.debatty.java.stringsimilarity.Levenshtein;
+import info.debatty.java.stringsimilarity.WeightedLevenshtein;
 
 public class Compare {
 	
@@ -21,7 +25,7 @@ public class Compare {
 	 * @param predicateList Predicate List
 	 * @return double Score of similarity
 	 */
-	public static double compare1A(Instance a, Instance b, List<Predicate> predicateList){
+	public static double compareCosine(Instance a, Instance b, List<Predicate> predicateList){
 		
 		//score between two instances
 		double sim = 0.0;
@@ -37,6 +41,7 @@ public class Compare {
 			}
 			
 			Node lastElementA = inA.getLastElement();
+			//System.out.println("");
 			if (lastElementA.getTypeOfNode().equals("LiteralImpl")) {
 				
 				for (InstanceNeighborhood instanceNeighborhood : instanceNeighborhoodListAux) {
@@ -70,7 +75,10 @@ public class Compare {
 			
 		}
 		
-		return sim;
+		double jaccard = sim/(a.getInstanceNeighborhoodList().size() + b.getInstanceNeighborhoodList().size() - sim);
+		System.out.println("Score [" + sim + "] - Jaccard [" + jaccard + "]");
+		
+		return jaccard;
 	}
 	
 	/**
@@ -81,7 +89,7 @@ public class Compare {
 	 * @param predicateList Predicate List
 	 * @return double Score of similarity
 	 */
-	public static double compare1B(Instance a, Instance b, List<Predicate> predicateList){
+	public static double compareSoftTFIDF(Instance a, Instance b, List<Predicate> predicateList){
 		
 		//score between two instances
 		double sim = 0.0;
@@ -126,9 +134,74 @@ public class Compare {
 			double tFIDFB = predicateList.get(index).getTFIDF(b);
 			
 			sim += ((tFIDFA+tFIDFB)/2) * score;
-			
-			
 		}
+		
+		double jaccard = sim/(a.getInstanceNeighborhoodList().size() + b.getInstanceNeighborhoodList().size() - sim);
+		System.out.println("Score [" + sim + "] - Jaccard [" + jaccard + "]");
+		
+		return jaccard;
+	}
+	
+	/**
+	 * Compare - Method 1 B(SoftTFIDF)
+	 *
+	 * @param a Instance a
+	 * @param b Instance b
+	 * @param predicateList Predicate List
+	 * @return double Score of similarity
+	 */
+	public static double compareByTextCosine(Instance a, Instance b){
+		double sim = 0.0;
+		
+		StringBuilder nAS = new StringBuilder();
+		StringBuilder nBS = new StringBuilder();
+		
+		for (InstanceNeighborhood inA : a.getInstanceNeighborhoodList()) {
+			//nAS.append(inA.getLastPredicate() + " " + inA.getLastElement()+ " ");
+			
+			for (Node nA : inA.getNeighborhood()) {
+				nAS.append(nA.toString() + " ");
+			}
+		}
+		
+		for (InstanceNeighborhood inB : b.getInstanceNeighborhoodList()) {
+//			nBS.append(inB.getLastPredicate() + " " + inB.getLastElement()+ " ");
+			
+			for (Node nB : inB.getNeighborhood()) {
+				nBS.append(nB.toString() + " ");
+			}
+		}
+		
+		sim = cosine(nAS.toString(), nBS.toString());
+//		System.out.println(nAS.toString());
+//		System.out.println(nBS.toString());
+		
+		return sim;
+	}
+	
+	public static double compareByTextSoftTFIDF(Instance a, Instance b){
+		double sim = 0.0;
+		
+		StringBuilder nAS = new StringBuilder();
+		StringBuilder nBS = new StringBuilder();
+		
+		for (InstanceNeighborhood inA : a.getInstanceNeighborhoodList()) {
+			nAS.append(inA.getLastPredicate() + " " + inA.getLastElement()+ " ");
+			
+//			for (Node nA : inA.getNeighborhood()) {
+//				nAS.append(nA.toString() + " ");
+//			}
+		}
+		
+		for (InstanceNeighborhood inB : b.getInstanceNeighborhoodList()) {
+			nBS.append(inB.getLastPredicate() + " " + inB.getLastElement()+ " ");
+			
+//			for (Node nB : inB.getNeighborhood()) {
+//				nBS.append(nB.toString() + " ");
+//			}
+		}
+		
+		sim = softTFIDF(nAS.toString(), nBS.toString());
 		
 		return sim;
 	}
@@ -329,6 +402,18 @@ public class Compare {
 	private static Double cosine(String s1, String s2){
 		Cosine cosine = new Cosine();
 		return cosine.similarity(s1, s2);
+	}
+	
+	/**
+	 * Distance based on Levenshtein
+	 * 
+	 * @param s1 String 1
+	 * @param s2 String 2
+	 * @return Double score
+	 */
+	public static Double levenshtein(String s1, String s2){
+		Levenstein l = new Levenstein();
+		return l.score(s1, s2);
 	}
 	
 	/**

@@ -1,0 +1,1619 @@
+1|http://dbpedia.org/resource/Toy_Story|Toy Story|0000
+2|http://dbpedia.org/resource/GoldenEye|GoldenEye|0000
+3|http://dbpedia.org/resource/Four_Rooms|Four Rooms|0000
+4|http://dbpedia.org/resource/Get_Shorty_(film)|Get Shorty (film)|0000
+5|http://dbpedia.org/resource/Copycat_(film)|Copycat (film)|1995-10-27
+6|http://dbpedia.org/resource/Shanghai_Triad|Shanghai Triad|1995-12-22
+7|http://dbpedia.org/resource/12_Monkeys|12 Monkeys|0000
+8|http://dbpedia.org/resource/Babe_(film)|Babe (film)|0000
+9|http://dbpedia.org/resource/Dead_Man_Walking_(film)|Dead Man Walking (film)|0000
+10|http://dbpedia.org/resource/Richard_III_(1995_film)|Richard III (1995 film)|0000
+11|http://dbpedia.org/resource/Seven_(1995_film)|Seven (1995 film)|0000
+12|http://dbpedia.org/resource/The_Usual_Suspects|The Usual Suspects|0000
+13|http://dbpedia.org/resource/Mighty_Aphrodite|Mighty Aphrodite|0000
+14|http://dbpedia.org/resource/Il_Postino:_The_Postman|Il Postino: The Postman|0000
+15|http://dbpedia.org/resource/Mr._Holland's_Opus|Mr. Holland's Opus|0000
+16|http://dbpedia.org/resource/French_Twist_(film)|French Twist (film)|0000
+17|http://dbpedia.org/resource/From_Dusk_till_Dawn|From Dusk till Dawn|0000
+18|http://dbpedia.org/resource/The_White_Balloon|The White Balloon|0000
+19|http://dbpedia.org/resource/Antonia's_Line|Antonia's Line|0000
+20|http://dbpedia.org/resource/Angels_&_Insects|Angels & Insects|0000
+21|http://dbpedia.org/resource/Muppet_Treasure_Island|Muppet Treasure Island|0000
+22|http://dbpedia.org/resource/Braveheart|Braveheart|0000
+23|http://dbpedia.org/resource/Taxi_Driver|Taxi Driver|0000
+24|http://dbpedia.org/resource/Rumble_in_the_Bronx|Rumble in the Bronx|0000
+25|http://dbpedia.org/resource/The_Birdcage|The Birdcage|0000
+26|http://dbpedia.org/resource/The_Brothers_McMullen|The Brothers McMullen|0000
+27|http://dbpedia.org/resource/Bad_Boys_(1995_film)|Bad Boys (1995 film)|0000
+28|http://dbpedia.org/resource/Apollo_13_(film)|Apollo 13 (film)|0000
+29|http://dbpedia.org/resource/Batman_Forever|Batman Forever|0000
+30|http://dbpedia.org/resource/Belle_de_Jour_(film)|Belle de Jour (film)|0000
+31|http://dbpedia.org/resource/Crimson_Tide_(film)|Crimson Tide (film)|0000
+32|http://dbpedia.org/resource/Crumb_(film)|Crumb (film)|0000
+33|http://dbpedia.org/resource/Desperado_(film)|Desperado (film)|0000
+34|http://dbpedia.org/resource/The_Doom_Generation|The Doom Generation|0000
+35|http://dbpedia.org/resource/Free_Willy_2:_The_Adventure_Home|Free Willy 2: The Adventure Home|0000
+36|http://dbpedia.org/resource/Mad_Love_(1995_film)|Mad Love (1995 film)|0000
+37|http://dbpedia.org/resource/Nadja_(film)|Nadja (film)|0000
+38|http://dbpedia.org/resource/The_Net_(1995_film)|The Net (1995 film)|0000
+39|http://dbpedia.org/resource/Strange_Days_(film)|Strange Days (film)|0000
+40|http://dbpedia.org/resource/To_Wong_Foo,_Thanks_for_Everything!_Julie_Newmar|To Wong Foo, Thanks for Everything! Julie Newmar|0000
+41|http://dbpedia.org/resource/Billy_Madison|Billy Madison|1995-02-10
+42|http://dbpedia.org/resource/Clerks|Clerks|1994-10-19
+43|http://dbpedia.org/resource/Disclosure_(film)|Disclosure (film)|0000
+44|http://dbpedia.org/resource/Dolores_Claiborne_(film)|Dolores Claiborne (film)|0000
+45|http://dbpedia.org/resource/Eat_Drink_Man_Woman|Eat Drink Man Woman|0000
+46|http://dbpedia.org/resource/Exotica_(film)|Exotica (film)|1994-05-16
+47|http://dbpedia.org/resource/Ed_Wood_(film)|Ed Wood (film)|0000
+48|http://dbpedia.org/resource/Hoop_Dreams|Hoop Dreams|0000
+49|http://dbpedia.org/resource/I.Q._(film)|I.Q. (film)|1994-12-25
+50|http://dbpedia.org/resource/Star_Wars_(film)|Star Wars (film)|0000
+51|http://dbpedia.org/resource/Legends_of_the_Fall|Legends of the Fall|0000
+52|http://dbpedia.org/resource/The_Madness_of_King_George|The Madness of King George|0000
+53|http://dbpedia.org/resource/Natural_Born_Killers|Natural Born Killers|0000
+54|http://dbpedia.org/resource/Outbreak_(film)|Outbreak (film)|1995-03-10
+55|http://dbpedia.org/resource/The_Professional_(film)|The Professional (film)|0000
+56|http://dbpedia.org/resource/Pulp_Fiction|Pulp Fiction|0000
+57|http://dbpedia.org/resource/Priest_(1994_film)|Priest (1994 film)|1995-03-17
+58|http://dbpedia.org/resource/Quiz_Show_(film)|Quiz Show (film)|0000
+59|http://dbpedia.org/resource/Three_Colours:_Red|Three Colours: Red|0000
+60|http://dbpedia.org/resource/Three_Colors:_Blue|Three Colors: Blue|0000
+61|http://dbpedia.org/resource/Three_Colours:_White|Three Colours: White|0000
+62|http://dbpedia.org/resource/Stargate_(film)|Stargate (film)|0000
+63|http://dbpedia.org/resource/The_Santa_Clause_(film_series)|The Santa Clause (film series)|1994-11-11
+64|http://dbpedia.org/resource/The_Shawshank_Redemption|The Shawshank Redemption|0000
+65|http://dbpedia.org/resource/What's_Eating_Gilbert_Grape|What's Eating Gilbert Grape|0000
+66|http://dbpedia.org/resource/While_You_Were_Sleeping_(film)|While You Were Sleeping (film)|0000
+67|http://dbpedia.org/resource/Ace_Ventura:_Pet_Detective|Ace Ventura: Pet Detective|0000
+68|http://dbpedia.org/resource/The_Crow_(1994_film)|The Crow (1994 film)|0000
+69|http://dbpedia.org/resource/Forrest_Gump|Forrest Gump|0000
+70|http://dbpedia.org/resource/Four_Weddings_and_a_Funeral|Four Weddings and a Funeral|0000
+71|http://dbpedia.org/resource/The_Lion_King|The Lion King|0000
+72|http://dbpedia.org/resource/The_Mask_(film)|The Mask (film)|0000
+73|http://dbpedia.org/resource/Maverick_(film)|Maverick (film)|0000
+74|http://dbpedia.org/resource/Faster,_Pussycat!_Kill!_Kill!|Faster, Pussycat! Kill! Kill!|0000
+76|http://dbpedia.org/resource/Carlito's_Way|Carlito's Way|0000
+77|http://dbpedia.org/resource/The_Firm_(1993_film)|The Firm (1993 film)|0000
+78|http://dbpedia.org/resource/Free_Willy_(film_series)|Free Willy (film series)|0000
+79|http://dbpedia.org/resource/The_Fugitive_(1993_film)|The Fugitive (1993 film)|0000
+80|http://dbpedia.org/resource/Hot_Shots!_Part_Deux|Hot Shots! Part Deux|0000
+81|http://dbpedia.org/resource/The_Hudsucker_Proxy|The Hudsucker Proxy|0000
+82|http://dbpedia.org/resource/Jurassic_Park_(film)|Jurassic Park (film)|0000
+83|http://dbpedia.org/resource/Much_Ado_About_Nothing_(1993_film)|Much Ado About Nothing (1993 film)|0000
+84|http://dbpedia.org/resource/The_Puppet_Masters_(film)|The Puppet Masters (film)|0000
+85|http://dbpedia.org/resource/The_Ref|The Ref|0000
+86|http://dbpedia.org/resource/The_Remains_of_the_Day_(film)|The Remains of the Day (film)|0000
+87|http://dbpedia.org/resource/Searching_for_Bobby_Fischer|Searching for Bobby Fischer|1993-08-11
+88|http://dbpedia.org/resource/Sleepless_in_Seattle|Sleepless in Seattle|0000
+89|http://dbpedia.org/resource/Blade_Runner|Blade Runner|0000
+90|http://dbpedia.org/resource/So_I_Married_an_Axe_Murderer|So I Married an Axe Murderer|0000
+91|http://dbpedia.org/resource/The_Nightmare_Before_Christmas|The Nightmare Before Christmas|0000
+92|http://dbpedia.org/resource/True_Romance|True Romance|0000
+93|http://dbpedia.org/resource/Welcome_to_the_Dollhouse|Welcome to the Dollhouse|0000
+94|http://dbpedia.org/resource/Home_Alone|Home Alone|0000
+95|http://dbpedia.org/resource/Aladdin_(1992_Golden_Films_film)|Aladdin (1992 Golden Films film)|1992-04-27
+96|http://dbpedia.org/resource/Terminator_2:_Judgment_Day|Terminator 2: Judgment Day|0000
+97|http://dbpedia.org/resource/Dances_with_Wolves|Dances with Wolves|0000
+98|http://dbpedia.org/resource/The_Silence_of_the_Lambs_(film)|The Silence of the Lambs (film)|0000
+99|http://dbpedia.org/resource/Snow_White_and_the_Seven_Dwarfs_(1937_film)|Snow White and the Seven Dwarfs (1937 film)|0000
+100|http://dbpedia.org/resource/Fargo_(film)|Fargo (film)|0000
+101|http://dbpedia.org/resource/Heavy_Metal_(film)|Heavy Metal (film)|0000
+102|http://dbpedia.org/resource/The_Aristocats|The Aristocats|1970-12-11
+103|http://dbpedia.org/resource/All_Dogs_Go_to_Heaven_2|All Dogs Go to Heaven 2|0000
+104|http://dbpedia.org/resource/The_Crypt_(film)|The Crypt (film)|0000
+105|http://dbpedia.org/resource/Sgt._Bilko|Sgt. Bilko|0000
+106|http://dbpedia.org/resource/Diabolique_(1996_film)|Diabolique (1996 film)|0000
+107|http://dbpedia.org/resource/Moll_Flanders_(1996_film)|Moll Flanders (1996 film)|1996-06-14
+108|http://dbpedia.org/resource/Kids_in_the_Hall:_Brain_Candy|Kids in the Hall: Brain Candy|1996-04-12
+109|http://dbpedia.org/resource/Mystery_Science_Theater_3000:_The_Movie|Mystery Science Theater 3000: The Movie|0000
+110|http://dbpedia.org/resource/Operation_Dumbo_Drop|Operation Dumbo Drop|0000
+111|http://dbpedia.org/resource/The_Truth_About_Cats_&_Dogs|The Truth About Cats & Dogs|0000
+112|http://dbpedia.org/resource/Flipper_(1996_film)|Flipper (1996 film)|0000
+113|http://dbpedia.org/resource/The_Horseman_on_the_Roof|The Horseman on the Roof|0000
+114|http://dbpedia.org/resource/Wallace_&_Gromit:_The_Best_of_Aardman_Animation|Wallace & Gromit: The Best of Aardman Animation|0000
+116|http://dbpedia.org/resource/Cold_Comfort_Farm_(film)|Cold Comfort Farm (film)|0000
+117|http://dbpedia.org/resource/The_Rock_(film)|The Rock (film)|0000
+118|http://dbpedia.org/resource/Twister_(1996_film)|Twister (1996 film)|0000
+119|http://dbpedia.org/resource/Maya_Lin:_A_Strong_Clear_Vision|Maya Lin: A Strong Clear Vision|0000
+120|http://dbpedia.org/resource/Striptease_(film)|Striptease (film)|0000
+121|http://dbpedia.org/resource/Independence_Day_(1996_film)|Independence Day (1996 film)|0000
+122|http://dbpedia.org/resource/The_Cable_Guy|The Cable Guy|0000
+123|http://dbpedia.org/resource/The_Frighteners|The Frighteners|0000
+124|http://dbpedia.org/resource/Lone_Star_(1996_film)|Lone Star (1996 film)|0000
+125|http://dbpedia.org/resource/Phenomenon_(film)|Phenomenon (film)|1996-07-05
+126|http://dbpedia.org/resource/The_Spitfire_Grill|The Spitfire Grill|0000
+127|http://dbpedia.org/resource/The_Godfather_(film_series)|The Godfather (film series)|0000
+128|http://dbpedia.org/resource/Police_Story_3:_Super_Cop|Police Story 3: Super Cop|0000
+129|http://dbpedia.org/resource/Bound_(1996_film)|Bound (1996 film)|0000
+130|http://dbpedia.org/resource/Kansas_City_(film)|Kansas City (film)|0000
+131|http://dbpedia.org/resource/Breakfast_at_Tiffany's_(film)|Breakfast at Tiffany's (film)|0000
+132|http://dbpedia.org/resource/The_Wizard_of_Oz_(1939_film)|The Wizard of Oz (1939 film)|0000
+133|http://dbpedia.org/resource/Gone_with_the_Wind_(film)|Gone with the Wind (film)|0000
+134|http://dbpedia.org/resource/Citizen_Kane|Citizen Kane|0000
+135|http://dbpedia.org/resource/2001:_A_Space_Odyssey_(film)|2001: A Space Odyssey (film)|0000
+136|http://dbpedia.org/resource/Mr._Smith_Goes_to_Washington|Mr. Smith Goes to Washington|0000
+137|http://dbpedia.org/resource/Big_Night|Big Night|0000
+138|http://dbpedia.org/resource/D3:_The_Mighty_Ducks|D3: The Mighty Ducks|0000
+139|http://dbpedia.org/resource/The_Love_Bug|The Love Bug|0000
+140|http://dbpedia.org/resource/Homeward_Bound:_The_Incredible_Journey|Homeward Bound: The Incredible Journey|1993-02-03
+141|http://dbpedia.org/resource/20,000_Leagues_Under_the_Sea_(1954_film)|20,000 Leagues Under the Sea (1954 film)|0000
+142|http://dbpedia.org/resource/Bedknobs_and_Broomsticks|Bedknobs and Broomsticks|0000
+143|http://dbpedia.org/resource/The_Sound_of_Music_(film)|The Sound of Music (film)|0000
+144|http://dbpedia.org/resource/Die_Hard|Die Hard|0000
+145|http://dbpedia.org/resource/The_Lawnmower_Man_(film)|The Lawnmower Man (film)|0000
+146|http://dbpedia.org/resource/Unhook_the_Stars|Unhook the Stars|0000
+147|http://dbpedia.org/resource/The_Long_Kiss_Goodnight|The Long Kiss Goodnight|0000
+148|http://dbpedia.org/resource/The_Ghost_and_the_Darkness|The Ghost and the Darkness|1996-10-11
+149|http://dbpedia.org/resource/Jude_(film)|Jude (film)|0000
+150|http://dbpedia.org/resource/Swingers_(1996_film)|Swingers (1996 film)|0000
+151|http://dbpedia.org/resource/Willy_Wonka_&_the_Chocolate_Factory|Willy Wonka & the Chocolate Factory|0000
+152|http://dbpedia.org/resource/Sleeper_(1973_film)|Sleeper (1973 film)|0000
+153|http://dbpedia.org/resource/A_Fish_Called_Wanda|A Fish Called Wanda|0000
+154|http://dbpedia.org/resource/Monty_Python's_Life_of_Brian|Monty Python's Life of Brian|0000
+155|http://dbpedia.org/resource/Dirty_Dancing|Dirty Dancing|1987
+156|http://dbpedia.org/resource/Reservoir_Dogs|Reservoir Dogs|0000
+157|http://dbpedia.org/resource/Platoon_(film)|Platoon (film)|1986-12-19
+158|http://dbpedia.org/resource/Weekend_at_Bernie's|Weekend at Bernie's|0000
+159|http://dbpedia.org/resource/Basic_Instinct|Basic Instinct|0000
+160|http://dbpedia.org/resource/Glengarry_Glen_Ross_(film)|Glengarry Glen Ross (film)|0000
+161|http://dbpedia.org/resource/Top_Gun|Top Gun|0000
+162|http://dbpedia.org/resource/On_Golden_Pond_(1981_film)|On Golden Pond (1981 film)|0000
+163|http://dbpedia.org/resource/The_Return_of_the_Pink_Panther|The Return of the Pink Panther|0000
+164|http://dbpedia.org/resource/The_Abyss|The Abyss|0000
+165|http://dbpedia.org/resource/Jean_de_Florette|Jean de Florette|0000
+166|http://dbpedia.org/resource/Manon_des_Sources_(1986_film)|Manon des Sources (1986 film)|0000
+167|http://dbpedia.org/resource/Private_Benjamin_(1980_film)|Private Benjamin (1980 film)|0000
+168|http://dbpedia.org/resource/Monty_Python_and_the_Holy_Grail|Monty Python and the Holy Grail|0000
+169|http://dbpedia.org/resource/The_Wrong_Trousers|The Wrong Trousers|0000
+170|http://dbpedia.org/resource/Cinema_Paradiso|Cinema Paradiso|0000
+171|http://dbpedia.org/resource/Delicatessen_(film)|Delicatessen (film)|1991-04-17
+172|http://dbpedia.org/resource/The_Empire_Strikes_Back|The Empire Strikes Back|0000
+173|http://dbpedia.org/resource/The_Princess_Bride_(film)|The Princess Bride (film)|0000
+174|http://dbpedia.org/resource/Raiders_of_the_Lost_Ark|Raiders of the Lost Ark|0000
+175|http://dbpedia.org/resource/Brazil_(1985_film)|Brazil (1985 film)|0000
+176|http://dbpedia.org/resource/Aliens_(film)|Aliens (film)|0000
+177|http://dbpedia.org/resource/The_Good,_the_Bad_and_the_Ugly|The Good, the Bad and the Ugly|0000
+178|http://dbpedia.org/resource/12_Angry_Men_(1957_film)|12 Angry Men (1957 film)|0000
+179|http://dbpedia.org/resource/A_Clockwork_Orange_(film)|A Clockwork Orange (film)|0000
+180|http://dbpedia.org/resource/Apocalypse_Now|Apocalypse Now|0000
+181|http://dbpedia.org/resource/Return_of_the_Jedi|Return of the Jedi|0000
+182|http://dbpedia.org/resource/Goodfellas|Goodfellas|0000
+183|http://dbpedia.org/resource/Alien_(film)|Alien (film)|0000
+184|http://dbpedia.org/resource/Army_of_Darkness|Army of Darkness|0000
+185|http://dbpedia.org/resource/Psycho_(1960_film)|Psycho (1960 film)|0000
+186|http://dbpedia.org/resource/The_Blues_Brothers_(film)|The Blues Brothers (film)|0000
+187|http://dbpedia.org/resource/The_Godfather_Part_II|The Godfather Part II|0000
+188|http://dbpedia.org/resource/Full_Metal_Jacket|Full Metal Jacket|0000
+189|http://dbpedia.org/resource/A_Grand_Day_Out|A Grand Day Out|0000
+190|http://dbpedia.org/resource/Henry_V_(1989_film)|Henry V (1989 film)|0000
+191|http://dbpedia.org/resource/Amadeus_(film)|Amadeus (film)|0000
+192|http://dbpedia.org/resource/Raging_Bull|Raging Bull|0000
+193|http://dbpedia.org/resource/The_Right_Stuff_(film)|The Right Stuff (film)|0000
+194|http://dbpedia.org/resource/The_Sting|The Sting|0000
+195|http://dbpedia.org/resource/The_Terminator|The Terminator|0000
+196|http://dbpedia.org/resource/Dead_Poets_Society|Dead Poets Society|0000
+197|http://dbpedia.org/resource/The_Graduate|The Graduate|0000
+198|http://dbpedia.org/resource/Nikita_(film)|Nikita (film)|0000
+199|http://dbpedia.org/resource/The_Bridge_on_the_River_Kwai|The Bridge on the River Kwai|0000
+200|http://dbpedia.org/resource/The_Shining_(film)|The Shining (film)|0000
+201|http://dbpedia.org/resource/Evil_Dead_II|Evil Dead II|0000
+202|http://dbpedia.org/resource/Groundhog_Day_(film)|Groundhog Day (film)|0000
+203|http://dbpedia.org/resource/Unforgiven|Unforgiven|0000
+204|http://dbpedia.org/resource/Back_to_the_Future|Back to the Future|0000
+205|http://dbpedia.org/resource/Patton_(film)|Patton (film)|0000
+206|http://dbpedia.org/resource/Akira_(1988_film)|Akira (1988 film)|0000
+207|http://dbpedia.org/resource/Cyrano_Agency|Cyrano Agency|0000
+208|http://dbpedia.org/resource/Young_Frankenstein|Young Frankenstein|0000
+209|http://dbpedia.org/resource/This_Is_Spinal_Tap|This Is Spinal Tap|0000
+210|http://dbpedia.org/resource/Indiana_Jones_and_the_Last_Crusade|Indiana Jones and the Last Crusade|0000
+211|http://dbpedia.org/resource/MASH_(film)|MASH (film)|0000
+212|http://dbpedia.org/resource/The_Unbearable_Lightness_of_Being_(film)|The Unbearable Lightness of Being (film)|0000
+213|http://dbpedia.org/resource/From_Time_to_Time_(film)|From Time to Time (film)|0000
+214|http://dbpedia.org/resource/Pink_Floyd_?_The_Wall|Pink Floyd: The Wall|0000
+215|http://dbpedia.org/resource/Field_of_Dreams|Field of Dreams|0000
+216|http://dbpedia.org/resource/When_Harry_Met_Sally...|When Harry Met Sally...|0000
+217|http://dbpedia.org/resource/Bram_Stoker's_Dracula|Bram Stoker's Dracula|0000
+218|http://dbpedia.org/resource/Cape_Fear_(1991_film)|Cape Fear (1991 film)|0000
+219|http://dbpedia.org/resource/A_Nightmare_on_Elm_Street|A Nightmare on Elm Street|0000
+220|http://dbpedia.org/resource/The_Mirror_Has_Two_Faces|The Mirror Has Two Faces|0000
+221|http://dbpedia.org/resource/Breaking_the_Waves|Breaking the Waves|0000
+222|http://dbpedia.org/resource/Star_Trek:_First_Contact|Star Trek: First Contact|0000
+223|http://dbpedia.org/resource/Sling_Blade|Sling Blade|0000
+224|http://dbpedia.org/resource/Ridicule|Ridicule|0000
+225|http://dbpedia.org/resource/101_Dalmatians_(1996_film)|101 Dalmatians (1996 film)|0000
+226|http://dbpedia.org/resource/Die_Hard_2|Die Hard 2|0000
+227|http://dbpedia.org/resource/Star_Trek_VI:_The_Undiscovered_Country|Star Trek VI: The Undiscovered Country|0000
+228|http://dbpedia.org/resource/Star_Trek_II:_The_Wrath_of_Khan|Star Trek II: The Wrath of Khan|0000
+229|http://dbpedia.org/resource/Star_Trek_III:_The_Search_for_Spock|Star Trek III: The Search for Spock|0000
+230|http://dbpedia.org/resource/Star_Trek_IV:_The_Voyage_Home|Star Trek IV: The Voyage Home|0000
+231|http://dbpedia.org/resource/Batman_Returns|Batman Returns|0000
+232|http://dbpedia.org/resource/Young_Guns_(film)|Young Guns (film)|0000
+233|http://dbpedia.org/resource/Under_Siege|Under Siege|0000
+234|http://dbpedia.org/resource/Jaws_(film)|Jaws (film)|0000
+235|http://dbpedia.org/resource/Mars_Attacks!|Mars Attacks!|0000
+236|http://dbpedia.org/resource/Citizen_Ruth|Citizen Ruth|0000
+237|http://dbpedia.org/resource/Jerry_Maguire|Jerry Maguire|0000
+238|http://dbpedia.org/resource/Raising_Arizona|Raising Arizona|0000
+239|http://dbpedia.org/resource/Sneakers_(1992_film)|Sneakers (1992 film)|1992-09-11
+240|http://dbpedia.org/resource/Beavis_and_Butt-Head_Do_America|Beavis and Butt-Head Do America|0000
+241|http://dbpedia.org/resource/The_Last_of_the_Mohicans_(1992_film)|The Last of the Mohicans (1992 film)|0000
+242|http://dbpedia.org/resource/Kolya|Kolya|0000
+243|http://dbpedia.org/resource/Jungle_2_Jungle|Jungle 2 Jungle|0000
+244|http://dbpedia.org/resource/Smilla's_Sense_of_Snow_(film)|Smilla's Sense of Snow (film)|0000
+245|http://dbpedia.org/resource/The_Devil's_Own|The Devil's Own|0000
+246|http://dbpedia.org/resource/Chasing_Amy|Chasing Amy|0000
+247|http://dbpedia.org/resource/Turbo:_A_Power_Rangers_Movie|Turbo: A Power Rangers Movie|0000
+248|http://dbpedia.org/resource/Grosse_Pointe_Blank|Grosse Pointe Blank|1997-04-11
+249|http://dbpedia.org/resource/Austin_Powers:_International_Man_of_Mystery|Austin Powers: International Man of Mystery|0000
+250|http://dbpedia.org/resource/The_Fifth_Element|The Fifth Element|0000
+251|http://dbpedia.org/resource/Shall_We_Dance%3F_(1996_film)|Shall We Dance? (1996 film)|0000
+252|http://dbpedia.org/resource/The_Lost_World:_Jurassic_Park|The Lost World: Jurassic Park|0000
+253|http://dbpedia.org/resource/The_Pillow_Book_(film)|The Pillow Book (film)|0000
+254|http://dbpedia.org/resource/Batman_&_Robin_(film)|Batman & Robin (film)|0000
+255|http://dbpedia.org/resource/My_Best_Friend's_Wedding|My Best Friend's Wedding|0000
+256|http://dbpedia.org/resource/When_the_Cat's_Away_(1996_film)|When the Cat's Away (1996 film)|0000
+257|http://dbpedia.org/resource/Men_in_Black_(film_series)|Men in Black (film series)|0000
+258|http://dbpedia.org/resource/Contact_(1997_American_film)|Contact (1997 American film)|0000
+259|http://dbpedia.org/resource/George_of_the_Jungle_(film)|George of the Jungle (film)|0000
+260|http://dbpedia.org/resource/Event_Horizon_(film)|Event Horizon (film)|0000
+261|http://dbpedia.org/resource/Air_Bud|Air Bud|1997-08-01
+262|http://dbpedia.org/resource/In_the_Company_of_Men|In the Company of Men|1997-08-01
+263|http://dbpedia.org/resource/Steel_(1997_film)|Steel (1997 film)|0000
+264|http://dbpedia.org/resource/Mimic_(film)|Mimic (film)|0000
+265|http://dbpedia.org/resource/The_Hunt_for_Red_October_(film)|The Hunt for Red October (film)|0000
+266|http://dbpedia.org/resource/Kull_the_Conqueror|Kull the Conqueror|0000
+268|http://dbpedia.org/resource/Chasing_Amy|Chasing Amy|0000
+269|http://dbpedia.org/resource/The_Full_Monty|The Full Monty|0000
+270|http://dbpedia.org/resource/Gattaca|Gattaca|0000
+271|http://dbpedia.org/resource/Starship_Troopers_(film)|Starship Troopers (film)|0000
+272|http://dbpedia.org/resource/Good_Will_Hunting|Good Will Hunting|0000
+273|http://dbpedia.org/resource/Heat_(1995_film)|Heat (1995 film)|0000
+274|http://dbpedia.org/resource/Sabrina_(1995_film)|Sabrina (1995 film)|0000
+275|http://dbpedia.org/resource/Sense_and_Sensibility_(film)|Sense and Sensibility (film)|0000
+276|http://dbpedia.org/resource/Leaving_Las_Vegas|Leaving Las Vegas|0000
+277|http://dbpedia.org/resource/Restoration_(1995_film)|Restoration (1995 film)|0000
+278|http://dbpedia.org/resource/Bed_of_Roses_(1996_film)|Bed of Roses (1996 film)|1996-02-01
+279|http://dbpedia.org/resource/Once_Upon_a_Time...When_We_Were_Colored|Once Upon a Time...When We Were Colored|0000
+280|http://dbpedia.org/resource/Up_Close_and_Personal_(film)|Up Close and Personal (film)|0000
+281|http://dbpedia.org/resource/The_River_Wild|The River Wild|0000
+282|http://dbpedia.org/resource/A_Time_to_Kill_(1996_film)|A Time to Kill (1996 film)|0000
+283|http://dbpedia.org/resource/Emma_(1996_TV_film)|Emma (1996 TV film)|0000
+284|http://dbpedia.org/resource/Tin_Cup|Tin Cup|0000
+285|http://dbpedia.org/resource/Secrets_&_Lies_(film)|Secrets & Lies (film)|0000
+286|http://dbpedia.org/resource/The_English_Patient_(film)|The English Patient (film)|0000
+287|http://dbpedia.org/resource/Marvin's_Room_(film)|Marvin's Room (film)|0000
+288|http://dbpedia.org/resource/Scream_(1996_film)|Scream (1996 film)|0000
+289|http://dbpedia.org/resource/Evita_(1996_film)|Evita (1996 film)|0000
+290|http://dbpedia.org/resource/Fierce_Creatures|Fierce Creatures|1997-01-24
+291|http://dbpedia.org/resource/Absolute_Power_(film)|Absolute Power (film)|0000
+292|http://dbpedia.org/resource/Rosewood_(film)|Rosewood (film)|0000
+293|http://dbpedia.org/resource/Donnie_Brasco_(film)|Donnie Brasco (film)|1997
+294|http://dbpedia.org/resource/Liar_Liar|Liar Liar|1997-03-21
+295|http://dbpedia.org/resource/Breakdown_(1997_film)|Breakdown (1997 film)|0000
+296|http://dbpedia.org/resource/La_Promesse|La Promesse|0000
+297|http://dbpedia.org/resource/Ulee's_Gold|Ulee's Gold|0000
+298|http://dbpedia.org/resource/Face/Off|Face/Off|0000
+299|http://dbpedia.org/resource/Hoodlum_(film)|Hoodlum (film)|1997-08-27
+300|http://dbpedia.org/resource/Air_Force_One_(film)|Air Force One (film)|0000
+301|http://dbpedia.org/resource/In_&_Out_(film)|In & Out (film)|0000
+302|http://dbpedia.org/resource/L.A._Confidential_(film)|L.A. Confidential (film)|0000
+303|http://dbpedia.org/resource/Ulee's_Gold|Ulee's Gold|0000
+304|http://dbpedia.org/resource/Fly_Away_Home|Fly Away Home|0000
+305|http://dbpedia.org/resource/The_Ice_Storm_(film)|The Ice Storm (film)|0000
+306|http://dbpedia.org/resource/Mrs_Brown|Mrs Brown|0000
+307|http://dbpedia.org/resource/The_Devil's_Advocate_(1997_film)|The Devil's Advocate (1997 film)|0000
+308|http://dbpedia.org/resource/FairyTale:_A_True_Story|FairyTale: A True Story|0000
+309|http://dbpedia.org/resource/Deceiver_(film)|Deceiver (film)|1997-08-31
+310|http://dbpedia.org/resource/The_Rainmaker_(1997_film)|The Rainmaker (1997 film)|0000
+311|http://dbpedia.org/resource/The_Wings_of_the_Dove_(1997_film)|The Wings of the Dove (1997 film)|0000
+312|http://dbpedia.org/resource/Midnight_in_the_Garden_of_Good_and_Evil_(film)|Midnight in the Garden of Good and Evil (film)|0000
+313|http://dbpedia.org/resource/Titanic_(1997_film)|Titanic (1997 film)|0000
+314|http://dbpedia.org/resource/3_Ninjas:_High_Noon_at_Mega_Mountain|3 Ninjas: High Noon at Mega Mountain|0000
+315|http://dbpedia.org/resource/Apt_Pupil_(film)|Apt Pupil (film)|0000
+316|http://dbpedia.org/resource/As_Good_as_It_Gets|As Good as It Gets|0000
+317|http://dbpedia.org/resource/In_the_Name_of_the_Father_(film)|In the Name of the Father (film)|0000
+318|http://dbpedia.org/resource/Schindler's_List|Schindler's List|0000
+319|http://dbpedia.org/resource/Everyone_Says_I_Love_You|Everyone Says I Love You|0000
+320|http://dbpedia.org/resource/Paradise_Lost:_The_Child_Murders_at_Robin_Hood_Hills|Paradise Lost: The Child Murders at Robin Hood Hills|0000
+321|http://dbpedia.org/resource/Mother_(1996_film)|Mother (1996 film)|0000
+322|http://dbpedia.org/resource/Murder_at_1600|Murder at 1600|1997
+323|http://dbpedia.org/resource/Dante's_Peak|Dante's Peak|0000
+324|http://dbpedia.org/resource/Lost_Highway_(film)|Lost Highway (film)|0000
+325|http://dbpedia.org/resource/Crash_(1996_film)|Crash (1996 film)|0000
+326|http://dbpedia.org/resource/G.I._Jane|G.I. Jane|0000
+327|http://dbpedia.org/resource/Cop_Land|Cop Land|0000
+328|http://dbpedia.org/resource/Conspiracy_Theory_(film)|Conspiracy Theory (film)|0000
+329|http://dbpedia.org/resource/Desperate_Measures_(film)|Desperate Measures (film)|0000
+330|http://dbpedia.org/resource/One_Eight_Seven|One Eight Seven|1997
+331|http://dbpedia.org/resource/The_Edge_(1997_film)|The Edge (1997 film)|0000
+332|http://dbpedia.org/resource/Kiss_the_Girls_(1997_film)|Kiss the Girls (1997 film)|0000
+333|http://dbpedia.org/resource/The_Game_(1997_film)|The Game (1997 film)|0000
+334|http://dbpedia.org/resource/U_Turn_(1997_film)|U Turn (1997 film)|0000
+335|http://dbpedia.org/resource/Def_Jam's_How_to_Be_a_Player|Def Jam's How to Be a Player|0000
+336|http://dbpedia.org/resource/Playing_God_(film)|Playing God (film)|0000
+337|http://dbpedia.org/resource/The_House_of_Yes|The House of Yes|0000
+338|http://dbpedia.org/resource/Bean_(film)|Bean (film)|0000
+339|http://dbpedia.org/resource/Mad_City_(film)|Mad City (film)|0000
+340|http://dbpedia.org/resource/Boogie_Nights|Boogie Nights|0000
+341|http://dbpedia.org/resource/Critical_Care_(film)|Critical Care (film)|0000
+342|http://dbpedia.org/resource/The_Man_Who_Knew_Too_Little|The Man Who Knew Too Little|0000
+343|http://dbpedia.org/resource/Alien:_Resurrection|Alien: Resurrection|0000
+344|http://dbpedia.org/resource/The_Apostle|The Apostle|0000
+345|http://dbpedia.org/resource/Deconstructing_Harry|Deconstructing Harry|1997
+346|http://dbpedia.org/resource/Jackie_Brown_(film)|Jackie Brown (film)|0000
+347|http://dbpedia.org/resource/Wag_the_Dog|Wag the Dog|0000
+348|http://dbpedia.org/resource/Desperate_Measures_(film)|Desperate Measures (film)|0000
+349|http://dbpedia.org/resource/Hard_Rain_(film)|Hard Rain (film)|0000
+350|http://dbpedia.org/resource/Fallen_(1998_film)|Fallen (1998 film)|0000
+351|http://dbpedia.org/resource/The_Prophecy_II|The Prophecy II|0000
+352|http://dbpedia.org/resource/Spice_World_(film)|Spice World (film)|0000
+353|http://dbpedia.org/resource/Deep_Rising|Deep Rising|0000
+354|http://dbpedia.org/resource/The_Wedding_Singer|The Wedding Singer|1998
+355|http://dbpedia.org/resource/Sphere_(1998_film)|Sphere (1998 film)|0000
+356|http://dbpedia.org/resource/The_Client_(1994_film)|The Client (1994 film)|0000
+357|http://dbpedia.org/resource/One_Flew_Over_the_Cuckoo's_Nest_(film)|One Flew Over the Cuckoo's Nest (film)|0000
+358|http://dbpedia.org/resource/Spawn_(film)|Spawn (film)|0000
+359|http://dbpedia.org/resource/The_Assignment_(1997_film)|The Assignment (1997 film)|0000
+360|http://dbpedia.org/resource/Robbery|Robbery|0000
+361|http://dbpedia.org/resource/Incantato|Incantato|0000
+362|http://dbpedia.org/resource/Blues_Brothers_2000|Blues Brothers 2000|0000
+363|http://dbpedia.org/resource/Sudden_Death_(1995_film)|Sudden Death (1995 film)|0000
+364|http://dbpedia.org/resource/Ace_Ventura:_When_Nature_Calls|Ace Ventura: When Nature Calls|0000
+365|http://dbpedia.org/resource/Powder_(film)|Powder (film)|1995-10-27
+366|http://dbpedia.org/resource/Dangerous_Minds|Dangerous Minds|0000
+367|http://dbpedia.org/resource/Clueless_(film)|Clueless (film)|0000
+368|http://dbpedia.org/resource/Bio-Dome|Bio-Dome|1996
+369|http://dbpedia.org/resource/Black_Sheep_(1996_film)|Black Sheep (1996 film)|1996
+370|http://dbpedia.org/resource/Mary_Reilly_(film)|Mary Reilly (film)|0000
+371|http://dbpedia.org/resource/The_Bridges_of_Madison_County_(film)|The Bridges of Madison County (film)|0000
+372|http://dbpedia.org/resource/Jeffrey_(1995_film)|Jeffrey (1995 film)|1995-08-18
+373|http://dbpedia.org/resource/Judge_Dredd_(film)|Judge Dredd (film)|0000
+374|http://dbpedia.org/resource/Mighty_Morphin_Power_Rangers:_The_Movie|Mighty Morphin Power Rangers: The Movie|0000
+375|http://dbpedia.org/resource/Showgirls|Showgirls|0000
+376|http://dbpedia.org/resource/A_Secret|A Secret|0000
+377|http://dbpedia.org/resource/Heavyweights|Heavyweights|0000
+378|http://dbpedia.org/resource/Miracle_on_34th_Street_(1994_film)|Miracle on 34th Street (1994 film)|0000
+379|http://dbpedia.org/resource/Demon_Knight|Demon Knight|0000
+380|http://dbpedia.org/resource/Star_Trek_Generations|Star Trek Generations|0000
+381|http://dbpedia.org/resource/Muriel's_Wedding|Muriel's Wedding|1994-09-29
+382|http://dbpedia.org/resource/The_Adventures_of_Priscilla,_Queen_of_the_Desert|The Adventures of Priscilla, Queen of the Desert|0000
+383|http://dbpedia.org/resource/The_Flintstones_(film_series)|The Flintstones (film series)|1994-05-27
+384|http://dbpedia.org/resource/Naked_Gun_33?:_The_Final_Insult|Naked Gun 33?: The Final Insult|0000
+385|http://dbpedia.org/resource/True_Lies|True Lies|0000
+386|http://dbpedia.org/resource/Addams_Family_Values|Addams Family Values|0000
+387|http://dbpedia.org/resource/The_Age_of_Innocence_(1993_film)|The Age of Innocence (1993 film)|0000
+388|http://dbpedia.org/resource/Beverly_Hills_Cop_III|Beverly Hills Cop III|0000
+389|http://dbpedia.org/resource/Black_Beauty_(1994_film)|Black Beauty (1994 film)|0000
+390|http://dbpedia.org/resource/Fear_of_a_Black_Hat|Fear of a Black Hat|0000
+391|http://dbpedia.org/resource/Last_Action_Hero|Last Action Hero|0000
+392|http://dbpedia.org/resource/The_Man_Without_a_Face|The Man Without a Face|0000
+393|http://dbpedia.org/resource/Mrs._Doubtfire|Mrs. Doubtfire|0000
+394|http://dbpedia.org/resource/Radioland_Murders|Radioland Murders|0000
+395|http://dbpedia.org/resource/Robin_Hood:_Men_in_Tights|Robin Hood: Men in Tights|0000
+396|http://dbpedia.org/resource/Serial_Mom|Serial Mom|0000
+397|http://dbpedia.org/resource/Striking_Distance|Striking Distance|0000
+398|http://dbpedia.org/resource/Super_Mario_Bros._(film)|Super Mario Bros. (film)|0000
+399|http://dbpedia.org/resource/The_Three_Musketeers_(1993_film)|The Three Musketeers (1993 film)|0000
+400|http://dbpedia.org/resource/The_Little_Rascals_(film)|The Little Rascals (film)|0000
+401|http://dbpedia.org/resource/The_Brady_Bunch_Movie|The Brady Bunch Movie|0000
+402|http://dbpedia.org/resource/Ghost_(1990_film)|Ghost (1990 film)|0000
+403|http://dbpedia.org/resource/Batman_(1989_film_series)|Batman (1989 film series)|0000
+404|http://dbpedia.org/resource/Pinocchio_(1940_film)|Pinocchio (1940 film)|0000
+405|http://dbpedia.org/resource/Mission:_Impossible_(film_series)|Mission: Impossible (film series)|0000
+406|http://dbpedia.org/resource/Thinner_(film)|Thinner (film)|0000
+407|http://dbpedia.org/resource/Spy_Hard|Spy Hard|0000
+408|http://dbpedia.org/resource/A_Close_Shave|A Close Shave|0000
+409|http://dbpedia.org/resource/Jack_(1996_film)|Jack (1996 film)|0000
+410|http://dbpedia.org/resource/Kingpin_(1996_film)|Kingpin (1996 film)|0000
+411|http://dbpedia.org/resource/The_Nutty_Professor_(1996_film)|The Nutty Professor (1996 film)|0000
+412|http://dbpedia.org/resource/A_Very_Brady_Sequel|A Very Brady Sequel|0000
+413|http://dbpedia.org/resource/Bordello_of_Blood|Bordello of Blood|0000
+414|http://dbpedia.org/resource/My_Favorite_Year|My Favorite Year|0000
+415|http://dbpedia.org/resource/The_Apple_Dumpling_Gang_(film)|The Apple Dumpling Gang (film)|1975-07-01
+416|http://dbpedia.org/resource/Old_Yeller_(film)|Old Yeller (film)|0000
+417|http://dbpedia.org/resource/The_Parent_Trap_(1961_film)|The Parent Trap (1961 film)|0000
+418|http://dbpedia.org/resource/Cinderella_(1950_film)|Cinderella (1950 film)|0000
+419|http://dbpedia.org/resource/Mary_Poppins_(film)|Mary Poppins (film)|0000
+420|http://dbpedia.org/resource/Alice_in_Wonderland_(1951_film)|Alice in Wonderland (1951 film)|0000
+421|http://dbpedia.org/resource/Romeo_+_Juliet|Romeo + Juliet|0000
+422|http://dbpedia.org/resource/Aladdin_and_the_King_of_Thieves|Aladdin and the King of Thieves|0000
+423|http://dbpedia.org/resource/E.T._the_Extra-Terrestrial|E.T. the Extra-Terrestrial|0000
+424|http://dbpedia.org/resource/Children_of_the_Corn_IV:_The_Gathering|Children of the Corn IV: The Gathering|0000
+425|http://dbpedia.org/resource/Bob_Roberts|Bob Roberts|0000
+426|http://dbpedia.org/resource/The_Transformers:_The_Movie|The Transformers: The Movie|0000
+427|http://dbpedia.org/resource/To_Kill_a_Mockingbird_(film)|To Kill a Mockingbird (film)|0000
+428|http://dbpedia.org/resource/Harold_and_Maude|Harold and Maude|0000
+429|http://dbpedia.org/resource/The_Day_the_Earth_Stood_Still|The Day the Earth Stood Still|0000
+430|http://dbpedia.org/resource/Duck_Soup_(1933_film)|Duck Soup (1933 film)|0000
+431|http://dbpedia.org/resource/Highlander_(film)|Highlander (film)|0000
+432|http://dbpedia.org/resource/Fantasia_(1940_film)|Fantasia (1940 film)|0000
+433|http://dbpedia.org/resource/Heathers|Heathers|0000
+434|http://dbpedia.org/resource/Forbidden_Planet|Forbidden Planet|0000
+435|http://dbpedia.org/resource/Butch_Cassidy_and_the_Sundance_Kid|Butch Cassidy and the Sundance Kid|0000
+436|http://dbpedia.org/resource/An_American_Werewolf_in_London|An American Werewolf in London|0000
+437|http://dbpedia.org/resource/Amityville:_It's_About_Time|Amityville: It's About Time|1992-07-16
+438|http://dbpedia.org/resource/Amityville_3-D|Amityville 3-D|0000
+439|http://dbpedia.org/resource/Amityville:_A_New_Generation|Amityville: A New Generation|0000
+440|http://dbpedia.org/resource/Amityville_II:_The_Possession|Amityville II: The Possession|1982-09-24
+441|http://dbpedia.org/resource/The_Amityville_Horror_(1979_film)|The Amityville Horror (1979 film)|0000
+442|http://dbpedia.org/resource/The_Amityville_Curse|The Amityville Curse|0000
+443|http://dbpedia.org/resource/The_Birds_(film)|The Birds (film)|0000
+444|http://dbpedia.org/resource/The_Blob|The Blob|0000
+445|http://dbpedia.org/resource/The_Body_Snatcher_(film)|The Body Snatcher (film)|1945-05-25
+446|http://dbpedia.org/resource/Burnt_Offerings_(film)|Burnt Offerings (film)|0000
+447|http://dbpedia.org/resource/Carrie_(1976_film)|Carrie (1976 film)|0000
+448|http://dbpedia.org/resource/The_Omen|The Omen|0000
+449|http://dbpedia.org/resource/Star_Trek:_The_Motion_Picture|Star Trek: The Motion Picture|0000
+450|http://dbpedia.org/resource/Star_Trek_V:_The_Final_Frontier|Star Trek V: The Final Frontier|0000
+451|http://dbpedia.org/resource/Grease_(film)|Grease (film)|0000
+452|http://dbpedia.org/resource/Jaws_2|Jaws 2|0000
+453|http://dbpedia.org/resource/Jaws_3-D|Jaws 3-D|0000
+454|http://dbpedia.org/resource/Bastard_out_of_Carolina_(film)|Bastard out of Carolina (film)|1996-12-15
+455|http://dbpedia.org/resource/Police_Story_4:_First_Strike|Police Story 4: First Strike|0000
+456|http://dbpedia.org/resource/Beverly_Hills_Ninja|Beverly Hills Ninja|1997-01-17
+457|http://dbpedia.org/resource/Free_Willy_3:_The_Rescue|Free Willy 3: The Rescue|0000
+458|http://dbpedia.org/resource/Nixon_(film)|Nixon (film)|0000
+459|http://dbpedia.org/resource/Cry,_the_Beloved_Country_(1995_film)|Cry, the Beloved Country (1995 film)|0000
+460|http://dbpedia.org/resource/The_Crossing_Guard|The Crossing Guard|0000
+461|http://dbpedia.org/resource/Smoke_(film)|Smoke (film)|0000
+462|http://dbpedia.org/resource/Like_Water_for_Chocolate_(film)|Like Water for Chocolate (film)|0000
+463|http://dbpedia.org/resource/The_Secret_of_Roan_Inish|The Secret of Roan Inish|0000
+464|http://dbpedia.org/resource/Vanya_on_42nd_Street|Vanya on 42nd Street|1994-09-13
+465|http://dbpedia.org/resource/The_Jungle_Book_(1994_film)|The Jungle Book (1994 film)|0000
+466|http://dbpedia.org/page/Red_Rock_West|Red Rock West|1993
+467|http://dbpedia.org/resource/A_Bronx_Tale|A Bronx Tale|0000
+468|http://dbpedia.org/resource/Rudy_(film)|Rudy (film)|0000
+469|http://dbpedia.org/resource/Short_Cuts_(film)|Short Cuts (film)|0000
+470|http://dbpedia.org/resource/Tombstone_(film)|Tombstone (film)|0000
+471|http://dbpedia.org/resource/Courage_Under_Fire|Courage Under Fire|1996-07-12
+472|http://dbpedia.org/resource/Dragonheart|Dragonheart|0000
+473|http://dbpedia.org/resource/James_and_the_Giant_Peach_(film)|James and the Giant Peach (film)|0000
+474|http://dbpedia.org/resource/Dr._Strangelove|Dr. Strangelove|0000
+475|http://dbpedia.org/resource/Trainspotting_(film)|Trainspotting (film)|0000
+476|http://dbpedia.org/resource/The_First_Wives_Club|The First Wives Club|1996-09-20
+477|http://dbpedia.org/resource/Matilda_(1996_film)|Matilda (1996 film)|0000
+478|http://dbpedia.org/resource/The_Philadelphia_Story_(film)|The Philadelphia Story (film)|0000
+479|http://dbpedia.org/resource/Vertigo_(film)|Vertigo (film)|0000
+480|http://dbpedia.org/resource/North_by_Northwest|North by Northwest|0000
+481|http://dbpedia.org/resource/The_Apartment|The Apartment|0000
+482|http://dbpedia.org/resource/Some_Like_It_Hot|Some Like It Hot|0000
+483|http://dbpedia.org/resource/Casablanca_(film)|Casablanca (film)|0000
+484|http://dbpedia.org/resource/The_Maltese_Falcon_(1941_film)|The Maltese Falcon (1941 film)|0000
+485|http://dbpedia.org/resource/My_Fair_Lady_(film)|My Fair Lady (film)|1964
+486|http://dbpedia.org/resource/Sabrina_(1954_film)|Sabrina (1954 film)|0000
+487|http://dbpedia.org/resource/Roman_Holiday|Roman Holiday|0000
+488|http://dbpedia.org/resource/Sunset_Boulevard_(film)|Sunset Boulevard (film)|0000
+489|http://dbpedia.org/resource/Notorious_(1946_film)|Notorious (1946 film)|0000
+490|http://dbpedia.org/resource/To_Catch_a_Thief|To Catch a Thief|0000
+491|http://dbpedia.org/resource/The_Adventures_of_Robin_Hood|The Adventures of Robin Hood|0000
+492|http://dbpedia.org/resource/East_of_Eden_(film)|East of Eden (film)|0000
+493|http://dbpedia.org/resource/The_Thin_Man_(film)|The Thin Man (film)|0000
+494|http://dbpedia.org/resource/His_Girl_Friday|His Girl Friday|0000
+495|http://dbpedia.org/resource/Around_the_World_in_80_Days_(1956_film)|Around the World in 80 Days (1956 film)|0000
+496|http://dbpedia.org/resource/It's_a_Wonderful_Life|It's a Wonderful Life|0000
+497|http://dbpedia.org/resource/Bringing_Up_Baby|Bringing Up Baby|0000
+498|http://dbpedia.org/resource/The_African_Queen_(film)|The African Queen (film)|0000
+499|http://dbpedia.org/resource/Cat_on_a_Hot_Tin_Roof_(1958_film)|Cat on a Hot Tin Roof (1958 film)|0000
+500|http://dbpedia.org/resource/Fly_Away_Home|Fly Away Home|0000
+501|http://dbpedia.org/resource/Dumbo|Dumbo|0000
+502|http://dbpedia.org/resource/Bananas_(film)|Bananas (film)|0000
+503|http://dbpedia.org/resource/The_Candidate_(1972_film)|The Candidate (1972 film)|0000
+504|http://dbpedia.org/resource/Bonnie_and_Clyde_(film)|Bonnie and Clyde (film)|0000
+505|http://dbpedia.org/resource/Dial_M_for_Murder|Dial M for Murder|0000
+506|http://dbpedia.org/resource/Rebel_Without_a_Cause|Rebel Without a Cause|0000
+507|http://dbpedia.org/resource/A_Streetcar_Named_Desire_(1951_film)|A Streetcar Named Desire (1951 film)|0000
+508|http://dbpedia.org/resource/The_People_vs._Larry_Flynt|The People vs. Larry Flynt|0000
+509|http://dbpedia.org/resource/My_Left_Foot|My Left Foot|0000
+510|http://dbpedia.org/resource/The_Magnificent_Seven|The Magnificent Seven|0000
+511|http://dbpedia.org/resource/Lawrence_of_Arabia_(film)|Lawrence of Arabia (film)|0000
+512|http://dbpedia.org/resource/Wings_of_Desire|Wings of Desire|0000
+513|http://dbpedia.org/resource/The_Third_Man|The Third Man|0000
+514|http://dbpedia.org/resource/Annie_Hall|Annie Hall|0000
+515|http://dbpedia.org/resource/Das_Boot|Das Boot|0000
+516|http://dbpedia.org/resource/Local_Hero|Local Hero|0000
+517|http://dbpedia.org/resource/Manhattan_(film)|Manhattan (film)|0000
+518|http://dbpedia.org/resource/Miller's_Crossing|Miller's Crossing|0000
+519|http://dbpedia.org/resource/The_Treasure_of_the_Sierra_Madre_(film)|The Treasure of the Sierra Madre (film)|0000
+520|http://dbpedia.org/resource/The_Great_Escape_(film)|The Great Escape (film)|0000
+521|http://dbpedia.org/resource/The_Deer_Hunter|The Deer Hunter|0000
+522|http://dbpedia.org/resource/Down_by_Law_(film)|Down by Law (film)|0000
+523|http://dbpedia.org/resource/Cool_Hand_Luke|Cool Hand Luke|0000
+524|http://dbpedia.org/resource/The_Great_Dictator|The Great Dictator|0000
+525|http://dbpedia.org/resource/The_Big_Sleep_(1946_film)|The Big Sleep (1946 film)|0000
+526|http://dbpedia.org/resource/Ben-Hur_(1959_film)|Ben-Hur (1959 film)|0000
+527|http://dbpedia.org/resource/Gandhi_(film)|Gandhi (film)|0000
+528|http://dbpedia.org/resource/The_Killing_Fields_(film)|The Killing Fields (film)|0000
+529|http://dbpedia.org/resource/My_Life_as_a_Dog|My Life as a Dog|0000
+530|http://dbpedia.org/resource/The_Man_Who_Would_Be_King_(film)|The Man Who Would Be King (film)|0000
+531|http://dbpedia.org/resource/Shine_(film)|Shine (film)|0000
+532|http://dbpedia.org/resource/Saturday_Night_Fever|Saturday Night Fever|0000
+533|http://dbpedia.org/resource/The_Daytrippers|The Daytrippers|0000
+534|http://dbpedia.org/resource/Traveller_(1997_film)|Traveller (1997 film)|0000
+535|http://dbpedia.org/resource/Addicted_to_Love_(film)|Addicted to Love (film)|1997-05-23
+536|http://dbpedia.org/resource/Ponette|Ponette|0000
+537|http://dbpedia.org/resource/My_Own_Private_Idaho|My Own Private Idaho|0000
+538|http://dbpedia.org/resource/Anastasia_(1997_film)|Anastasia (1997 film)|0000
+539|http://dbpedia.org/resource/MouseHunt_(film)|MouseHunt (film)|0000
+540|http://dbpedia.org/resource/Money_Train_(film)|Money Train (film)|0000
+541|http://dbpedia.org/resource/Mortal_Kombat_(film)|Mortal Kombat (film)|0000
+542|http://dbpedia.org/resource/Pocahontas_(1995_film)|Pocahontas (1995 film)|0000
+543|http://dbpedia.org/resource/Les_Misérables_(1995_film)|Les Misérables (1995 film)|0000
+544|http://dbpedia.org/resource/Things_to_Do_in_Denver_When_You're_Dead|Things to Do in Denver When You're Dead|0000
+545|http://dbpedia.org/resource/Vampire_in_Brooklyn|Vampire in Brooklyn|0000
+546|http://dbpedia.org/resource/Broken_Arrow_(1996_film)|Broken Arrow (1996 film)|1996-02-09
+547|http://dbpedia.org/resource/The_Young_Poisoner's_Handbook|The Young Poisoner's Handbook|0000
+548|http://dbpedia.org/resource/The_NeverEnding_Story_III|The NeverEnding Story III|0000
+549|http://dbpedia.org/resource/Rob_Roy_(1995_film)|Rob Roy (1995 film)|0000
+550|http://dbpedia.org/resource/Die_Hard_with_a_Vengeance|Die Hard with a Vengeance|0000
+551|http://dbpedia.org/resource/Lord_of_Illusions|Lord of Illusions|0000
+552|http://dbpedia.org/resource/Species_(film)|Species (film)|0000
+553|http://dbpedia.org/resource/A_Walk_in_the_Clouds|A Walk in the Clouds|1995
+554|http://dbpedia.org/resource/Waterworld|Waterworld|0000
+555|http://dbpedia.org/resource/White_Man's_Burden_(film)|White Man's Burden (film)|0000
+556|http://dbpedia.org/resource/Wild_Bill_(1995_film)|Wild Bill (1995 film)|0000
+558|http://dbpedia.org/resource/Heavenly_Creatures|Heavenly Creatures|0000
+559|http://dbpedia.org/resource/Interview_with_the_Vampire_(film)|Interview with the Vampire (film)|0000
+560|http://dbpedia.org/resource/A_Kid_in_King_Arthur's_Court|A Kid in King Arthur's Court|0000
+561|http://dbpedia.org/resource/Mary_Shelley's_Frankenstein_(film)|Mary Shelley's Frankenstein (film)|0000
+562|http://dbpedia.org/resource/The_Quick_and_the_Dead_(1995_film)|The Quick and the Dead (1995 film)|0000
+564|http://dbpedia.org/resource/Tales_from_the_Hood|Tales from the Hood|0000
+565|http://dbpedia.org/resource/Village_of_the_Damned_(1995_film)|Village of the Damned (1995 film)|0000
+566|http://dbpedia.org/resource/Clear_and_Present_Danger_(film)|Clear and Present Danger (film)|0000
+567|http://dbpedia.org/resource/Wes_Craven's_New_Nightmare|Wes Craven's New Nightmare|0000
+568|http://dbpedia.org/resource/Speed_(1994_film)|Speed (1994 film)|0000
+569|http://dbpedia.org/resource/Wolf_(1994_film)|Wolf (1994 film)|0000
+570|http://dbpedia.org/resource/Wyatt_Earp_(film)|Wyatt Earp (film)|0000
+571|http://dbpedia.org/resource/Another_Stakeout|Another Stakeout|0000
+572|http://dbpedia.org/resource/Blown_Away_(1994_film)|Blown Away (1994 film)|1994-07-01
+573|http://dbpedia.org/resource/Body_Snatchers_(1993_film)|Body Snatchers (1993 film)|0000
+574|http://dbpedia.org/resource/Boxing_Helena|Boxing Helena|0000
+575|http://dbpedia.org/resource/City_Slickers_II:_The_Legend_of_Curly's_Gold|City Slickers II: The Legend of Curly's Gold|0000
+576|http://dbpedia.org/resource/Cliffhanger_(film)|Cliffhanger (film)|0000
+577|http://dbpedia.org/resource/Coneheads_(film)|Coneheads (film)|0000
+578|http://dbpedia.org/resource/Demolition_Man_(film)|Demolition Man (film)|0000
+579|http://dbpedia.org/resource/Fatal_Instinct|Fatal Instinct|1993-10-29
+580|http://dbpedia.org/resource/The_Englishman_Who_Went_up_a_Hill_but_Came_down_a_Mountain|The Englishman Who Went up a Hill but Came down a Mountain|0000
+581|http://dbpedia.org/resource/Kalifornia|Kalifornia|1993
+582|http://dbpedia.org/resource/The_Piano|The Piano|0000
+583|http://dbpedia.org/resource/Frame_of_Mind_(film)|Frame of Mind (film)|0000
+584|http://dbpedia.org/resource/The_Secret_Garden_(1993_film)|The Secret Garden (1993 film)|0000
+585|http://dbpedia.org/resource/Son_in_Law|Son in Law|0000
+586|http://dbpedia.org/resource/Terminal_Velocity_(film)|Terminal Velocity (film)|0000
+587|http://dbpedia.org/resource/The_Hour_of_the_Pig|The Hour of the Pig|0000
+588|http://dbpedia.org/resource/Beauty_and_the_Beast_(1991_film)|Beauty and the Beast (1991 film)|0000
+589|http://dbpedia.org/resource/The_Wild_Bunch|The Wild Bunch|0000
+590|http://dbpedia.org/resource/Hellraiser:_Bloodline|Hellraiser: Bloodline|0000
+591|http://dbpedia.org/resource/Primal_Fear_(film)|Primal Fear (film)|0000
+592|http://dbpedia.org/resource/Hate_crime|Hate crime|0000
+593|http://dbpedia.org/resource/Stalingrad_(1993_film)|Stalingrad (1993 film)|0000
+594|http://dbpedia.org/resource/Heavy_(film)|Heavy (film)|0000
+595|http://dbpedia.org/resource/The_Fan_(1996_film)|The Fan (1996 film)|1996-08-16
+596|http://dbpedia.org/resource/The_Hunchback_of_Notre_Dame_(1996_film)|The Hunchback of Notre Dame (1996 film)|0000
+597|http://dbpedia.org/resource/Eraser_(film)|Eraser (film)|0000
+599|http://dbpedia.org/resource/Once_a_Cop|Once a Cop|0000
+601|http://dbpedia.org/resource/For_Whom_the_Bell_Tolls_(film)|For Whom the Bell Tolls (film)|0000
+602|http://dbpedia.org/resource/An_American_in_Paris_(film)|An American in Paris (film)|0000
+603|http://dbpedia.org/resource/Rear_Window|Rear Window|0000
+604|http://dbpedia.org/resource/It_Happened_One_Night|It Happened One Night|0000
+605|http://dbpedia.org/resource/Meet_Me_in_St._Louis|Meet Me in St. Louis|0000
+606|http://dbpedia.org/resource/All_About_Eve|All About Eve|0000
+607|http://dbpedia.org/resource/Rebecca_(1940_film)|Rebecca (1940 film)|0000
+608|http://dbpedia.org/resource/Spellbound_(1945_film)|Spellbound (1945 film)|0000
+609|http://dbpedia.org/resource/Father_of_the_Bride_(1950_film)|Father of the Bride (1950 film)|1950-06-16
+610|http://dbpedia.org/resource/Gigi_(1958_film)|Gigi (1958 film)|0000
+611|http://dbpedia.org/resource/Laura_(1944_film)|Laura (1944 film)|0000
+612|http://dbpedia.org/resource/Lost_Horizon_(1937_film)|Lost Horizon (1937 film)|0000
+613|http://dbpedia.org/resource/My_Man_Godfrey|My Man Godfrey|0000
+614|http://dbpedia.org/resource/Giant_(1956_film)|Giant (1956 film)|0000
+615|http://dbpedia.org/resource/The_39_Steps_(1935_film)|The 39 Steps (1935 film)|1935-06-06
+616|http://dbpedia.org/resource/Night_of_the_Living_Dead_(film_series)|Night of the Living Dead (film series)|0000
+617|http://dbpedia.org/resource/The_Blue_Angel|The Blue Angel|0000
+618|http://dbpedia.org/resource/Picnic_(1955_film)|Picnic (1955 film)|0000
+619|http://dbpedia.org/resource/Extreme_Measures|Extreme Measures|0000
+620|http://dbpedia.org/resource/The_Chamber_(film)|The Chamber (film)|0000
+621|http://dbpedia.org/resource/Davy_Crockett,_King_of_the_Wild_Frontier|Davy Crockett, King of the Wild Frontier|1955-05-25
+622|http://dbpedia.org/resource/Swiss_Family_Robinson_(1960_film)|Swiss Family Robinson (1960 film)|0000
+623|http://dbpedia.org/resource/Angels_in_the_Outfield_(1994_film)|Angels in the Outfield (1994 film)|0000
+624|http://dbpedia.org/resource/The_Three_Caballeros|The Three Caballeros|0000
+625|http://dbpedia.org/resource/The_Sword_in_the_Stone_(film)|The Sword in the Stone (film)|0000
+626|http://dbpedia.org/resource/So_Dear_to_My_Heart|So Dear to My Heart|0000
+627|http://dbpedia.org/resource/Robin_Hood:_Prince_of_Thieves|Robin Hood: Prince of Thieves|0000
+628|http://dbpedia.org/resource/Sleepers_(film)|Sleepers (film)|0000
+629|http://dbpedia.org/resource/Victor/Victoria|Victor/Victoria|0000
+630|http://dbpedia.org/resource/The_Great_Race|The Great Race|0000
+631|http://dbpedia.org/resource/The_Crying_Game|The Crying Game|0000
+632|http://dbpedia.org/resource/Sophie's_Choice_(film)|Sophie's Choice (film)|0000
+633|http://dbpedia.org/resource/A_Christmas_Carol_(1938_film)|A Christmas Carol (1938 film)|0000
+634|http://dbpedia.org/resource/Microcosmos_(film)|Microcosmos (film)|0000
+635|http://dbpedia.org/resource/The_Fog|The Fog|0000
+636|http://dbpedia.org/resource/Escape_from_New_York|Escape from New York|0000
+637|http://dbpedia.org/resource/The_Howling_(film)|The Howling (film)|0000
+638|http://dbpedia.org/resource/The_Return_of_Martin_Guerre|The Return of Martin Guerre|1982-05-14
+639|http://dbpedia.org/resource/The_Tin_Drum_(film)|The Tin Drum (film)|0000
+640|http://dbpedia.org/resource/The_Cook,_the_Thief,_His_Wife_&_Her_Lover|The Cook, the Thief, His Wife & Her Lover|0000
+641|http://dbpedia.org/resource/Paths_of_Glory|Paths of Glory|0000
+642|http://dbpedia.org/resource/The_Grifters_(film)|The Grifters (film)|0000
+643|http://dbpedia.org/resource/The_Innocent_(1994_film)|The Innocent (1994 film)|1994-09-25
+644|http://dbpedia.org/resource/The_Thin_Blue_Line_(1988_film)|The Thin Blue Line (1988 film)|0000
+645|http://dbpedia.org/resource/Paris_Is_Burning_(film)|Paris Is Burning (film)|0000
+646|http://dbpedia.org/resource/Once_Upon_a_Time_in_the_West|Once Upon a Time in the West|0000
+647|http://dbpedia.org/resource/Ran_(film)|Ran (film)|0000
+648|http://dbpedia.org/resource/The_Quiet_Man|The Quiet Man|0000
+649|http://dbpedia.org/resource/Once_Upon_a_Time_in_America|Once Upon a Time in America|0000
+650|http://dbpedia.org/resource/The_Seventh_Seal|The Seventh Seal|0000
+651|http://dbpedia.org/resource/Glory_(1989_film)|Glory (1989 film)|0000
+652|http://dbpedia.org/resource/Rosencrantz_&_Guildenstern_Are_Dead_(film)|Rosencrantz & Guildenstern Are Dead (film)|0000
+653|http://dbpedia.org/resource/Touch_of_Evil|Touch of Evil|0000
+654|http://dbpedia.org/resource/Chinatown_(1974_film)|Chinatown (1974 film)|0000
+655|http://dbpedia.org/resource/Stand_by_Me_(film)|Stand by Me (film)|0000
+656|http://dbpedia.org/resource/M_(1931_film)|M (1931 film)|0000
+657|http://dbpedia.org/resource/The_Manchurian_Candidate_(1962_film)|The Manchurian Candidate (1962 film)|0000
+658|http://dbpedia.org/resource/Pump_Up_the_Volume_(film)|Pump Up the Volume (film)|1990-08-22
+659|http://dbpedia.org/resource/Arsenic_and_Old_Lace_(film)|Arsenic and Old Lace (film)|0000
+660|http://dbpedia.org/resource/Fried_Green_Tomatoes|Fried Green Tomatoes|0000
+661|http://dbpedia.org/resource/High_Noon|High Noon|0000
+662|http://dbpedia.org/resource/Somewhere_in_Time_(film)|Somewhere in Time (film)|0000
+663|http://dbpedia.org/resource/Being_There|Being There|0000
+664|http://dbpedia.org/resource/Paris,_Texas_(film)|Paris, Texas (film)|0000
+665|http://dbpedia.org/resource/Alien_3|Alien 3|0000
+666|http://dbpedia.org/resource/Blood_for_Dracula|Blood for Dracula|0000
+667|http://dbpedia.org/resource/Audrey_Rose_(film)|Audrey Rose (film)|0000
+668|http://dbpedia.org/resource/Blood_Beach|Blood Beach|0000
+669|http://dbpedia.org/resource/Body_Parts_(film)|Body Parts (film)|0000
+670|http://dbpedia.org/resource/Body_Snatchers_(1993_film)|Body Snatchers (1993 film)|0000
+671|http://dbpedia.org/resource/Bride_of_Frankenstein|Bride of Frankenstein|1935-04-22
+672|http://dbpedia.org/resource/Candyman_(film)|Candyman (film)|0000
+673|http://dbpedia.org/resource/Cape_Fear_(1962_film)|Cape Fear (1962 film)|0000
+674|http://dbpedia.org/resource/Cat_People_(1982_film)|Cat People (1982 film)|0000
+675|http://dbpedia.org/resource/Nosferatu|Nosferatu|0000
+676|http://dbpedia.org/resource/The_Crucible_(1996_film)|The Crucible (1996 film)|0000
+677|http://dbpedia.org/resource/Fire_on_the_Mountain_(1996_film)|Fire on the Mountain (1996 film)|0000
+678|http://dbpedia.org/resource/Volcano_(1997_film)|Volcano (1997 film)|0000
+679|http://dbpedia.org/resource/The_Aquarians|The Aquarians|0000
+680|http://dbpedia.org/resource/Kull_the_Conqueror|Kull the Conqueror|0000
+681|http://dbpedia.org/resource/Wishmaster_(film)|Wishmaster (film)|1997-09-19
+682|http://dbpedia.org/resource/I_Know_What_You_Did_Last_Summer|I Know What You Did Last Summer|0000
+683|http://dbpedia.org/resource/RocketMan|RocketMan|0000
+684|http://dbpedia.org/resource/In_the_Line_of_Fire|In the Line of Fire|0000
+685|http://dbpedia.org/resource/Executive_Decision|Executive Decision|0000
+686|http://dbpedia.org/resource/A_Perfect_World|A Perfect World|0000
+687|http://dbpedia.org/resource/McHale's_Navy_(1997_film)|McHale's Navy (1997 film)|0000
+688|http://dbpedia.org/resource/Leave_It_to_Beaver_(film)|Leave It to Beaver (film)|0000
+689|http://dbpedia.org/resource/The_Jackal_(1997_film)|The Jackal (1997 film)|0000
+690|http://dbpedia.org/resource/Seven_Years_in_Tibet_(1997_film)|Seven Years in Tibet (1997 film)|0000
+691|http://dbpedia.org/resource/Dark_City_(1998_film)|Dark City (1998 film)|1998
+692|http://dbpedia.org/resource/The_American_President|The American President|0000
+693|http://dbpedia.org/resource/Casino_(film)|Casino (film)|0000
+694|http://dbpedia.org/resource/Persuasion_(1995_film)|Persuasion (1995 film)|0000
+695|http://dbpedia.org/resource/Kicking_and_Screaming_(1995_film)|Kicking and Screaming (1995 film)|0000
+696|http://dbpedia.org/resource/City_Hall_(film)|City Hall (film)|0000
+697|http://dbpedia.org/resource/The_Basketball_Diaries_(film)|The Basketball Diaries (film)|0000
+698|http://dbpedia.org/resource/The_Browning_Version_(1994_film)|The Browning Version (1994 film)|1994-06-08
+699|http://dbpedia.org/resource/Little_Women_(1994_film)|Little Women (1994 film)|0000
+700|http://dbpedia.org/resource/Miami_Rhapsody|Miami Rhapsody|1995-01-27
+701|http://dbpedia.org/resource/The_Wonderful_Horrible_Life_of_Leni_Riefenstahl|The Wonderful Horrible Life of Leni Riefenstahl|0000
+702|http://dbpedia.org/resource/Barcelona_(film)|Barcelona (film)|1994-07-29
+703|http://dbpedia.org/resource/Widows'_Peak|Widows' Peak|1994-05-13
+704|http://dbpedia.org/resource/The_House_of_the_Spirits_(film)|The House of the Spirits (film)|1993-10-17
+705|http://dbpedia.org/resource/Singin'_in_the_Rain|Singin' in the Rain|0000
+706|http://dbpedia.org/resource/Bad_Moon|Bad Moon|0000
+707|http://dbpedia.org/resource/Enchanted_Island_(film)|Enchanted Island (film)|0000
+708|http://dbpedia.org/resource/Sex,_Lies,_and_Videotape|Sex, Lies, and Videotape|0000
+709|http://dbpedia.org/resource/Strictly_Ballroom|Strictly Ballroom|0000
+710|http://dbpedia.org/resource/Better_Off_Dead_(film)|Better Off Dead (film)|0000
+711|http://dbpedia.org/resource/The_Substance_of_Fire|The Substance of Fire|1996
+712|http://dbpedia.org/resource/Tin_Men|Tin Men|0000
+713|http://dbpedia.org/resource/Othello_(1995_film)|Othello (1995 film)|1995-12-15
+714|http://dbpedia.org/resource/Carrington_(film)|Carrington (film)|0000
+715|http://dbpedia.org/resource/To_Die_For|To Die For|0000
+716|http://dbpedia.org/resource/Home_for_the_Holidays_(film)|Home for the Holidays (film)|0000
+717|http://dbpedia.org/resource/The_Juror|The Juror|0000
+718|http://dbpedia.org/resource/In_the_Bleak_Midwinter_(film)|In the Bleak Midwinter (film)|1995-09-10
+719|http://dbpedia.org/resource/Casablanca_(film)|Casablanca (film)|0000
+720|http://dbpedia.org/resource/First_Knight|First Knight|0000
+721|http://dbpedia.org/resource/Mallrats|Mallrats|0000
+722|http://dbpedia.org/resource/Nine_Months|Nine Months|0000
+723|http://dbpedia.org/resource/Boys_on_the_Side|Boys on the Side|0000
+724|http://dbpedia.org/resource/Circle_of_Friends_(1995_film)|Circle of Friends (1995 film)|1995-03-17
+725|http://dbpedia.org/resource/Exit_to_Eden_(film)|Exit to Eden (film)|0000
+726|http://dbpedia.org/resource/Fluke_(film)|Fluke (film)|0000
+727|http://dbpedia.org/resource/Immortal_Beloved_(film)|Immortal Beloved (film)|0000
+728|http://dbpedia.org/resource/Junior_(1994_film)|Junior (1994 film)|1994
+729|http://dbpedia.org/resource/Nell_(film)|Nell (film)|0000
+730|http://dbpedia.org/resource/La_Reine_Margot_(1994_film)|La Reine Margot (1994 film)|0000
+731|http://dbpedia.org/resource/Corrina,_Corrina_(film)|Corrina, Corrina (film)|0000
+732|http://dbpedia.org/resource/Dave_(film)|Dave (film)|1993
+733|http://dbpedia.org/resource/Go_Fish_(film)|Go Fish (film)|1994-06-10
+734|http://dbpedia.org/resource/Made_in_America_(1993_film)|Made in America (1993 film)|0000
+735|http://dbpedia.org/resource/Philadelphia_(film)|Philadelphia (film)|1993-12-22
+736|http://dbpedia.org/resource/Shadowlands_(1993_film)|Shadowlands (1993 film)|0000
+737|http://dbpedia.org/resource/Sirens_(1994_film)|Sirens (1994 film)|1994-04-28
+738|http://dbpedia.org/resource/Threesome_(film)|Threesome (film)|0000
+739|http://dbpedia.org/resource/Pretty_Woman|Pretty Woman|0000
+740|http://dbpedia.org/resource/Jane_Eyre_(1996_film)|Jane Eyre (1996 film)|0000
+741|http://dbpedia.org/resource/The_Last_Supper_(1995_film)|The Last Supper (1995 film)|0000
+742|http://dbpedia.org/resource/Ransom_(1996_film)|Ransom (1996 film)|0000
+743|http://dbpedia.org/resource/The_Crow:_City_of_Angels|The Crow: City of Angels|0000
+744|http://dbpedia.org/resource/Michael_Collins_(film)|Michael Collins (film)|1996
+745|http://dbpedia.org/resource/The_Ruling_Class_(film)|The Ruling Class (film)|1972-09-13
+746|http://dbpedia.org/resource/Real_Genius|Real Genius|0000
+747|http://dbpedia.org/resource/Benny_&_Joon|Benny & Joon|1993-04-16
+748|http://dbpedia.org/resource/The_Saint_(film)|The Saint (film)|0000
+749|http://dbpedia.org/resource/The_Matchmaker_(1997_film)|The Matchmaker (1997 film)|0000
+750|http://dbpedia.org/resource/Amistad_(film)|Amistad (film)|0000
+751|http://dbpedia.org/resource/Tomorrow_Never_Dies|Tomorrow Never Dies|0000
+752|http://dbpedia.org/resource/The_Replacement_Killers|The Replacement Killers|0000
+753|http://dbpedia.org/resource/Burnt_by_the_Sun|Burnt by the Sun|0000
+754|http://dbpedia.org/resource/Red_Corner|Red Corner|0000
+755|http://dbpedia.org/resource/Jumanji|Jumanji|0000
+756|http://dbpedia.org/resource/Father_of_the_Bride_Part_II|Father of the Bride Part II|0000
+757|http://dbpedia.org/resource/Across_the_Sea_of_Time|Across the Sea of Time|0000
+758|http://dbpedia.org/resource/Lawnmower_Man_2:_Beyond_Cyberspace|Lawnmower Man 2: Beyond Cyberspace|0000
+759|http://dbpedia.org/resource/Fair_Game_(1995_film)|Fair Game (1995 film)|0000
+760|http://dbpedia.org/resource/Screamers_(1995_film)|Screamers (1995 film)|0000
+761|http://dbpedia.org/resource/Nick_of_Time_(film)|Nick of Time (film)|0000
+762|http://dbpedia.org/resource/Beautiful_Girls_(film)|Beautiful Girls (film)|0000
+763|http://dbpedia.org/resource/Happy_Gilmore|Happy Gilmore|1996-02-16
+764|http://dbpedia.org/resource/If_Lucy_Fell|If Lucy Fell|0000
+765|http://dbpedia.org/resource/Boomerang_(1992_film)|Boomerang (1992 film)|1992-07-01
+766|http://dbpedia.org/resource/Man_of_the_Year_(1995_film)|Man of the Year (1995 film)|0000
+767|http://dbpedia.org/resource/The_Addiction|The Addiction|1995-10-06
+768|http://dbpedia.org/resource/Casper_(film)|Casper (film)|0000
+769|http://dbpedia.org/resource/Congo_(film)|Congo (film)|0000
+770|http://dbpedia.org/resource/Devil_in_a_Blue_Dress_(film)|Devil in a Blue Dress (film)|0000
+771|http://dbpedia.org/resource/Johnny_Mnemonic_(film)|Johnny Mnemonic (film)|0000
+772|http://dbpedia.org/resource/Kids_(film)|Kids (film)|0000
+773|http://dbpedia.org/resource/Mute_Witness|Mute Witness|0000
+774|http://dbpedia.org/resource/The_Prophecy_(film_series)|The Prophecy (film series)|0000
+775|http://dbpedia.org/resource/Something_to_Talk_About_(film)|Something to Talk About (film)|0000
+776|http://dbpedia.org/resource/Three_Wishes_(film)|Three Wishes (film)|1995-10-27
+777|http://dbpedia.org/resource/Castle_Freak|Castle Freak|1995-11-14
+778|http://dbpedia.org/resource/Don_Juan_DeMarco|Don Juan DeMarco|0000
+779|http://dbpedia.org/resource/Drop_Zone_(film)|Drop Zone (film)|0000
+780|http://dbpedia.org/resource/Dumb_and_Dumber|Dumb and Dumber|0000
+781|http://dbpedia.org/resource/French_Kiss_(1995_film)|French Kiss (1995 film)|0000
+782|http://dbpedia.org/resource/Line_code|Line code|0000
+783|http://dbpedia.org/resource/Milk_Money_(film)|Milk Money (film)|1994-08-31
+785|http://dbpedia.org/resource/Only_You_(1994_film)|Only You (1994 film)|0000
+786|http://dbpedia.org/resource/The_Perez_Family|The Perez Family|0000
+787|http://dbpedia.org/resource/Roommates_(1995_film)|Roommates (1995 film)|1995-03-03
+788|http://dbpedia.org/resource/Relative_Fear|Relative Fear|0000
+789|http://dbpedia.org/resource/Swimming_with_Sharks|Swimming with Sharks|0000
+790|http://dbpedia.org/resource/Tommy_Boy|Tommy Boy|0000
+791|http://dbpedia.org/resource/The_Baby-Sitters_Club_(film)|The Baby-Sitters Club (film)|1995-08-18
+792|http://dbpedia.org/resource/Bullets_over_Broadway|Bullets over Broadway|0000
+793|http://dbpedia.org/resource/Crooklyn|Crooklyn|1994
+794|http://dbpedia.org/resource/It_Could_Happen_to_You_(film)|It Could Happen to You (film)|0000
+795|http://dbpedia.org/resource/Richie_Rich_(film)|Richie Rich (film)|0000
+796|http://dbpedia.org/resource/Speechless_(1994_film)|Speechless (1994 film)|0000
+797|http://dbpedia.org/resource/Timecop|Timecop|0000
+798|http://dbpedia.org/resource/Bad_Company_(1995_film)|Bad Company (1995 film)|0000
+799|http://dbpedia.org/resource/Boys_Life_(film)|Boys Life (film)|0000
+800|http://dbpedia.org/resource/In_the_Mouth_of_Madness|In the Mouth of Madness|0000
+801|http://dbpedia.org/resource/The_Air_Up_There|The Air Up There|1994
+802|http://dbpedia.org/resource/Hard_Target|Hard Target|0000
+803|http://dbpedia.org/resource/Heaven_&_Earth_(1993_film)|Heaven & Earth (1993 film)|0000
+804|http://dbpedia.org/resource/Jimmy_Hollywood|Jimmy Hollywood|0000
+805|http://dbpedia.org/resource/Manhattan_Murder_Mystery|Manhattan Murder Mystery|0000
+806|http://dbpedia.org/resource/Menace_II_Society|Menace II Society|0000
+807|http://dbpedia.org/resource/Poetic_Justice_(film)|Poetic Justice (film)|0000
+808|http://dbpedia.org/resource/The_Program_(1993_film)|The Program (1993 film)|0000
+809|http://dbpedia.org/resource/Rising_Sun_(film)|Rising Sun (film)|0000
+810|http://dbpedia.org/resource/The_Shadow_(1994_film)|The Shadow (1994 film)|0000
+811|http://dbpedia.org/resource/Thirty_Two_Short_Films_About_Glenn_Gould|Thirty Two Short Films About Glenn Gould|0000
+812|http://dbpedia.org/resource/Andre_(film)|Andre (film)|0000
+813|http://dbpedia.org/resource/The_Celluloid_Closet|The Celluloid Closet|0000
+814|http://dbpedia.org/resource/A_Great_Day_in_Harlem_(film)|A Great Day in Harlem (film)|0000
+815|http://dbpedia.org/resource/One_Fine_Day_(film)|One Fine Day (film)|0000
+816|http://dbpedia.org/resource/Candyman:_Farewell_to_the_Flesh|Candyman: Farewell to the Flesh|0000
+817|http://dbpedia.org/resource/Frisk_(film)|Frisk (film)|0000
+818|http://dbpedia.org/resource/Girl_6|Girl 6|1996-03-22
+819|http://dbpedia.org/resource/Eddie_(film)|Eddie (film)|1996-05-31
+820|http://dbpedia.org/resource/Space_Jam|Space Jam|0000
+821|http://dbpedia.org/resource/Mrs._Winterbourne|Mrs. Winterbourne|0000
+822|http://dbpedia.org/resource/Faces_(film)|Faces (film)|0000
+823|http://dbpedia.org/resource/Mulholland_Falls|Mulholland Falls|0000
+824|http://dbpedia.org/resource/The_Great_White_Hype|The Great White Hype|0000
+825|http://dbpedia.org/resource/The_Arrival_(1996_film)|The Arrival (1996 film)|1996-05-31
+826|http://dbpedia.org/resource/The_Phantom_(1996_film)|The Phantom (1996 film)|0000
+827|http://dbpedia.org/resource/Daylight_(1996_film)|Daylight (1996 film)|1996-12-06
+828|http://dbpedia.org/resource/Alaska_(1996_film)|Alaska (1996 film)|0000
+829|http://dbpedia.org/resource/Fled|Fled|1996-07-19
+830|http://dbpedia.org/resource/Downtown_(film)|Downtown (film)|0000
+831|http://dbpedia.org/resource/Escape_from_L.A.|Escape from L.A.|0000
+832|http://dbpedia.org/resource/Bogus_(film)|Bogus (film)|0000
+833|http://dbpedia.org/resource/Bulletproof_(1996_film)|Bulletproof (1996 film)|0000
+834|http://dbpedia.org/resource/Halloween:_The_Curse_of_Michael_Myers|Halloween: The Curse of Michael Myers|0000
+835|http://dbpedia.org/resource/The_Gay_Divorcee|The Gay Divorcee|0000
+836|http://dbpedia.org/resource/Ninotchka|Ninotchka|1939-10-06
+837|http://dbpedia.org/resource/Meet_John_Doe|Meet John Doe|0000
+839|http://dbpedia.org/resource/Godless_(film)|Godless (film)|0000
+840|http://dbpedia.org/resource/Last_Man_Standing_(film)|Last Man Standing (film)|1996-09-20
+841|http://dbpedia.org/resource/The_Glimmer_Man|The Glimmer Man|0000
+842|http://dbpedia.org/resource/Pollyanna_(1960_film)|Pollyanna (1960 film)|1960-05-19
+843|http://dbpedia.org/resource/The_Shaggy_Dog_(1959_film)|The Shaggy Dog (1959 film)|0000
+844|http://dbpedia.org/resource/Freeway_(1996_film)|Freeway (1996 film)|0000
+845|http://dbpedia.org/resource/That_Thing_You_Do!|That Thing You Do!|0000
+846|http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday|To Gillian on Her 37th Birthday|0000
+847|http://dbpedia.org/resource/Looking_for_Richard|Looking for Richard|0000
+848|http://dbpedia.org/resource/Murder,_My_Sweet|Murder, My Sweet|0000
+849|http://dbpedia.org/resource/Days_of_Thunder|Days of Thunder|0000
+850|http://dbpedia.org/resource/A_Perfect_Candidate|A Perfect Candidate|0000
+851|http://dbpedia.org/resource/All_Things_to_All_Men_(film)|All Things to All Men (film)|0000
+853|http://dbpedia.org/resource/Braindead_(film)|Braindead (film)|0000
+854|http://dbpedia.org/resource/Bad_Taste|Bad Taste|0000
+855|http://dbpedia.org/resource/Diva_(1981_film)|Diva (1981 film)|0000
+856|http://dbpedia.org/resource/Night_on_Earth|Night on Earth|0000
+858|http://dbpedia.org/resource/Amityville_Dollhouse|Amityville Dollhouse|0000
+859|http://dbpedia.org/resource/April_Fool's_Day_(1986_film)|April Fool's Day (1986 film)|0000
+860|http://dbpedia.org/resource/The_Believers|The Believers|0000
+861|http://dbpedia.org/resource/Vampire_in_Venice|Vampire in Venice|0000
+862|http://dbpedia.org/resource/Jingle_All_the_Way|Jingle All the Way|0000
+863|http://dbpedia.org/resource/The_Garden_of_the_Finzi-Continis_(film)|The Garden of the Finzi-Continis (film)|0000
+864|http://dbpedia.org/resource/My_Fellow_Americans|My Fellow Americans|0000
+865|http://dbpedia.org/resource/The_Ice_Storm_(film)|The Ice Storm (film)|0000
+866|http://dbpedia.org/resource/Michael_(1996_film)|Michael (1996 film)|0000
+867|http://dbpedia.org/resource/The_Whole_Wide_World|The Whole Wide World|0000
+868|http://dbpedia.org/resource/Hearts_and_Minds_(film)|Hearts and Minds (film)|0000
+869|http://dbpedia.org/resource/Fools_Rush_In_(1997_film)|Fools Rush In (1997 film)|1997-02-14
+870|http://dbpedia.org/resource/Touch_(1997_film)|Touch (1997 film)|0000
+871|http://dbpedia.org/resource/Vegas_Vacation|Vegas Vacation|0000
+872|http://dbpedia.org/resource/Love_Jones_(film)|Love Jones (film)|1997-03-14
+873|http://dbpedia.org/resource/Blue_Planet_(film)|Blue Planet (film)|0000
+874|http://dbpedia.org/resource/Career_Girls|Career Girls|0000
+875|http://dbpedia.org/resource/She's_So_Lovely|She's So Lovely|1997
+876|http://dbpedia.org/resource/Money_Talks_(1997_film)|Money Talks (1997 film)|0000
+877|http://dbpedia.org/resource/Excess_Baggage_(1997_film)|Excess Baggage (1997 film)|0000
+878|http://dbpedia.org/resource/That_Darn_Cat!|That Darn Cat!|0000
+879|http://dbpedia.org/resource/The_Peacemaker_(1997_film)|The Peacemaker (1997 film)|0000
+880|http://dbpedia.org/resource/Soul_Food_(film)|Soul Food (film)|1997-09-26
+881|http://dbpedia.org/resource/Money_Talks_(1997_film)|Money Talks (1997 film)|0000
+882|http://dbpedia.org/resource/Washington_Square_(film)|Washington Square (film)|0000
+883|http://dbpedia.org/resource/Telling_Lies_in_America|Telling Lies in America|0000
+884|http://dbpedia.org/resource/Year_of_the_Horse|Year of the Horse|0000
+885|http://dbpedia.org/resource/Phantoms_(film)|Phantoms (film)|0000
+886|http://dbpedia.org/resource/A_Life_Less_Ordinary|A Life Less Ordinary|1997-10-24
+887|http://dbpedia.org/resource/Eve's_Bayou|Eve's Bayou|1997-11-07
+888|http://dbpedia.org/resource/One_Night_Stand_(1997_film)|One Night Stand (1997 film)|0000
+889|http://dbpedia.org/resource/The_Tango_Lesson|The Tango Lesson|0000
+890|http://dbpedia.org/resource/Mortal_Kombat:_Annihilation|Mortal Kombat: Annihilation|0000
+891|http://dbpedia.org/resource/Bent_(film)|Bent (film)|0000
+892|http://dbpedia.org/resource/Flubber_(film)|Flubber (film)|0000
+893|http://dbpedia.org/resource/For_Richer_or_Poorer|For Richer or Poorer|0000
+894|http://dbpedia.org/resource/Home_Alone_3|Home Alone 3|0000
+895|http://dbpedia.org/resource/Scream_2|Scream 2|0000
+896|http://dbpedia.org/resource/The_Sweet_Hereafter_(film)|The Sweet Hereafter (film)|0000
+898|http://dbpedia.org/resource/The_Postman_(film)|The Postman (film)|0000
+899|http://dbpedia.org/resource/The_Winter_Guest|The Winter Guest|0000
+900|http://dbpedia.org/resource/Kundun|Kundun|0000
+901|http://dbpedia.org/resource/Mr._Magoo_(film)|Mr. Magoo (film)|0000
+902|http://dbpedia.org/resource/The_Big_Lebowski|The Big Lebowski|0000
+903|http://dbpedia.org/resource/Afterglow_(film)|Afterglow (film)|0000
+904|http://dbpedia.org/resource/Ma_vie_en_rose|Ma vie en rose|0000
+905|http://dbpedia.org/resource/Great_Expectations_(1998_film)|Great Expectations (1998 film)|0000
+906|http://dbpedia.org/resource/Oscar_and_Lucinda_(film)|Oscar and Lucinda (film)|1997-12-31
+908|http://dbpedia.org/resource/Half_Baked|Half Baked|0000
+909|http://dbpedia.org/resource/Dangerous_Beauty|Dangerous Beauty|0000
+910|http://dbpedia.org/resource/Nil_by_Mouth_(film)|Nil by Mouth (film)|0000
+911|http://dbpedia.org/resource/Twilight_(1998_film)|Twilight (1998 film)|1998-03-06
+912|http://dbpedia.org/resource/U.S._Marshals_(film)|U.S. Marshals (film)|0000
+913|http://dbpedia.org/resource/Love_and_Death_on_Long_Island|Love and Death on Long Island|0000
+914|http://dbpedia.org/resource/Wild_Things_(1998_film)|Wild Things (1998 film)|0000
+915|http://dbpedia.org/resource/Primary_Colors_(film)|Primary Colors (film)|1998
+916|http://dbpedia.org/resource/Lost_in_Space_(film)|Lost in Space (film)|0000
+917|http://dbpedia.org/resource/Mercury_Rising|Mercury Rising|0000
+918|http://dbpedia.org/resource/City_of_Angels_(film)|City of Angels (film)|0000
+919|http://dbpedia.org/resource/The_City_of_Lost_Children|The City of Lost Children|0000
+920|http://dbpedia.org/resource/Two_Bits|Two Bits|0000
+921|http://dbpedia.org/resource/Farewell_My_Concubine_(film)|Farewell My Concubine (film)|0000
+922|http://dbpedia.org/resource/Dead_Man|Dead Man|0000
+923|http://dbpedia.org/resource/Raise_the_Red_Lantern|Raise the Red Lantern|0000
+924|http://dbpedia.org/resource/White_Squall_(film)|White Squall (film)|1996
+925|http://dbpedia.org/resource/Unforgettable_(1996_film)|Unforgettable (1996 film)|0000
+926|http://dbpedia.org/resource/Down_Periscope|Down Periscope|1996-03-01
+927|http://dbpedia.org/resource/The_Flower_of_My_Secret|The Flower of My Secret|0000
+928|http://dbpedia.org/resource/The_Craft_(film)|The Craft (film)|0000
+929|http://dbpedia.org/resource/Harriet_the_Spy_(film)|Harriet the Spy (film)|1996-07-10
+930|http://dbpedia.org/resource/Chain_Reaction_(film)|Chain Reaction (film)|0000
+931|http://dbpedia.org/resource/The_Island_of_Dr._Moreau_(1996_film)|The Island of Dr. Moreau (1996 film)|0000
+932|http://dbpedia.org/resource/First_Kid|First Kid|0000
+933|http://dbpedia.org/resource/The_Funeral_(1996_film)|The Funeral (1996 film)|0000
+934|http://dbpedia.org/resource/The_Preacher's_Wife|The Preacher's Wife|0000
+935|http://dbpedia.org/resource/Paradise_Road_(1997_film)|Paradise Road (1997 film)|0000
+936|http://dbpedia.org/resource/Brassed_Off|Brassed Off|0000
+937|http://dbpedia.org/resource/A_Thousand_Acres_(film)|A Thousand Acres (film)|1997-09-19
+938|http://dbpedia.org/resource/A_Smile_Like_Yours|A Smile Like Yours|0000
+939|http://dbpedia.org/resource/Murder_in_the_First_(film)|Murder in the First (film)|1995-01-20
+940|http://dbpedia.org/resource/Airheads|Airheads|0000
+941|http://dbpedia.org/resource/With_Honors_(film)|With Honors (film)|0000
+942|http://dbpedia.org/resource/What's_Love_Got_to_Do_with_It_(film)|What's Love Got to Do with It (film)|0000
+943|http://dbpedia.org/resource/Killing_Zoe|Killing Zoe|0000
+944|http://dbpedia.org/resource/Renaissance_Man_(film)|Renaissance Man (film)|0000
+945|http://dbpedia.org/resource/Charade_(1963_film)|Charade (1963 film)|1963
+946|http://dbpedia.org/resource/The_Fox_and_the_Hound|The Fox and the Hound|0000
+947|http://dbpedia.org/resource/The_Big_Blue|The Big Blue|1988-08-22
+948|http://dbpedia.org/resource/Booty_Call|Booty Call|1997-02-26
+949|http://dbpedia.org/resource/How_to_Make_an_American_Quilt|How to Make an American Quilt|1995-10-06
+950|http://dbpedia.org/resource/Georgia_(1995_film)|Georgia (1995 film)|1995-05-19
+951|http://dbpedia.org/resource/The_Indian_in_the_Cupboard_(film)|The Indian in the Cupboard (film)|0000
+952|http://dbpedia.org/resource/Blue_in_the_Face|Blue in the Face|1995-10-13
+953|http://dbpedia.org/resource/Unstrung_Heroes|Unstrung Heroes|0000
+954|http://dbpedia.org/resource/Unzipped_(film)|Unzipped (film)|0000
+955|http://dbpedia.org/resource/Before_Sunrise|Before Sunrise|0000
+956|http://dbpedia.org/resource/Nobody's_Fool_(1994_film)|Nobody's Fool (1994 film)|0000
+957|http://dbpedia.org/resource/Pushing_Hands_(film)|Pushing Hands (film)|0000
+958|http://dbpedia.org/resource/To_Live_(1994_film)|To Live (1994 film)|0000
+959|http://dbpedia.org/resource/Dazed_and_Confused_(film)|Dazed and Confused (film)|0000
+960|http://dbpedia.org/resource/Naked_(1993_film)|Naked (1993 film)|0000
+961|http://dbpedia.org/resource/Orlando_(film)|Orlando (film)|0000
+962|http://dbpedia.org/resource/Ruby_in_Paradise|Ruby in Paradise|0000
+963|http://dbpedia.org/resource/Some_Folks_Call_It_a_Sling_Blade|Some Folks Call It a Sling Blade|0000
+964|http://dbpedia.org/resource/A_Month_by_the_Lake|A Month by the Lake|0000
+965|http://dbpedia.org/resource/Funny_Face|Funny Face|0000
+966|http://dbpedia.org/resource/An_Affair_to_Remember|An Affair to Remember|0000
+967|http://dbpedia.org/resource/Little_Lord_Fauntleroy_(1936_film)|Little Lord Fauntleroy (1936 film)|0000
+968|http://dbpedia.org/resource/The_Inspector_General_(film)|The Inspector General (film)|0000
+969|http://dbpedia.org/resource/Winnie_the_Pooh_and_the_Blustery_Day|Winnie the Pooh and the Blustery Day|1968-12-20
+970|http://dbpedia.org/resource/Hear_My_Song|Hear My Song|1991-12-27
+971|http://dbpedia.org/resource/Mediterraneo|Mediterraneo|0000
+972|http://dbpedia.org/resource/Passion_Fish|Passion Fish|0000
+974|http://dbpedia.org/resource/Eye_for_an_Eye_(1996_film)|Eye for an Eye (1996 film)|0000
+975|http://dbpedia.org/resource/Fear_(1996_film)|Fear (1996 film)|0000
+976|http://dbpedia.org/resource/Solo_(1996_film)|Solo (1996 film)|1996-08-23
+977|http://dbpedia.org/resource/The_Substitute|The Substitute|0000
+978|http://dbpedia.org/resource/Heaven's_Prisoners|Heaven's Prisoners|0000
+979|http://dbpedia.org/resource/The_Trigger_Effect|The Trigger Effect|0000
+980|http://dbpedia.org/resource/Mother_Night_(film)|Mother Night (film)|0000
+981|http://dbpedia.org/resource/Dangerous_Ground|Dangerous Ground|0000
+982|http://dbpedia.org/resource/Maximum_Risk|Maximum Risk|0000
+983|http://dbpedia.org/resource/The_Rich_Man's_Wife|The Rich Man's Wife|1996-09-13
+984|http://dbpedia.org/resource/Shadow_Conspiracy|Shadow Conspiracy|0000
+985|http://dbpedia.org/resource/Blood_and_Wine|Blood and Wine|0000
+986|http://dbpedia.org/resource/Turbulence_(1997_film)|Turbulence (1997 film)|0000
+987|http://dbpedia.org/resource/Underworld_(film_series)|Underworld (film series)|0000
+988|http://dbpedia.org/resource/The_Beautician_and_the_Beast|The Beautician and the Beast|1997-02-07
+989|http://dbpedia.org/resource/Cats_Don't_Dance|Cats Don't Dance|0000
+990|http://dbpedia.org/resource/Anna_Karenina_(1997_film)|Anna Karenina (1997 film)|0000
+991|http://dbpedia.org/resource/Keys_to_Tulsa|Keys to Tulsa|0000
+992|http://dbpedia.org/resource/Head_Above_Water|Head Above Water|1996-11-07
+993|http://dbpedia.org/resource/Hercules_(1997_film)|Hercules (1997 film)|0000
+994|http://dbpedia.org/resource/The_Last_Time_I_Committed_Suicide|The Last Time I Committed Suicide|0000
+995|http://dbpedia.org/resource/Kiss_Me,_Guido|Kiss Me, Guido|1997-07-18
+996|http://dbpedia.org/resource/The_Big_Green|The Big Green|1995-09-29
+997|http://dbpedia.org/resource/Stuart_Saves_His_Family|Stuart Saves His Family|0000
+998|http://dbpedia.org/resource/Cabin_Boy|Cabin Boy|0000
+999|http://dbpedia.org/resource/Clean_Slate_(1994_film)|Clean Slate (1994 film)|0000
+1000|http://dbpedia.org/resource/Lightning_Jack|Lightning Jack|1994-03-11
+1001|http://dbpedia.org/resource/The_Stupids_(film)|The Stupids (film)|0000
+1002|http://dbpedia.org/resource/The_Pest_(1997_film)|The Pest (1997 film)|0000
+1003|http://dbpedia.org/resource/That_Darn_Cat!|That Darn Cat!|0000
+1004|http://dbpedia.org/resource/Geronimo:_An_American_Legend|Geronimo: An American Legend|0000
+1005|http://dbpedia.org/resource/The_Double_Life_of_Veronique|The Double Life of Veronique|0000
+1006|http://dbpedia.org/resource/Until_the_End_of_the_World|Until the End of the World|0000
+1007|http://dbpedia.org/resource/Waiting_for_Guffman|Waiting for Guffman|0000
+1008|http://dbpedia.org/resource/I_Shot_Andy_Warhol|I Shot Andy Warhol|0000
+1009|http://dbpedia.org/resource/Stealing_Beauty|Stealing Beauty|0000
+1010|http://dbpedia.org/resource/Basquiat_(film)|Basquiat (film)|0000
+1011|http://dbpedia.org/resource/2_Days_in_the_Valley|2 Days in the Valley|0000
+1012|http://dbpedia.org/resource/Private_Parts_(1997_film)|Private Parts (1997 film)|0000
+1013|http://dbpedia.org/resource/Anaconda_(film)|Anaconda (film)|1997-04-11
+1014|http://dbpedia.org/resource/Romy_and_Michele's_High_School_Reunion|Romy and Michele's High School Reunion|0000
+1015|http://dbpedia.org/resource/Shiloh_(film)|Shiloh (film)|0000
+1016|http://dbpedia.org/resource/Con_Air|Con Air|0000
+1017|http://dbpedia.org/resource/Trees_Lounge|Trees Lounge|0000
+1018|http://dbpedia.org/resource/Tie_Me_Up!_Tie_Me_Down!|Tie Me Up! Tie Me Down!|0000
+1019|http://dbpedia.org/resource/The_Killer_(1989_film)|The Killer (1989 film)|0000
+1020|http://dbpedia.org/resource/Gaslight_(1944_film)|Gaslight (1944 film)|0000
+1022|http://dbpedia.org/resource/Fast,_Cheap_&_Out_of_Control|Fast, Cheap & Out of Control|0000
+1023|http://dbpedia.org/resource/Fathers'_Day_(1997_film)|Fathers' Day (1997 film)|0000
+1024|http://dbpedia.org/resource/Mrs_Dalloway_(film)|Mrs Dalloway (film)|0000
+1025|http://dbpedia.org/resource/Fire_Down_Below_(1997_film)|Fire Down Below (1997 film)|0000
+1027|http://dbpedia.org/resource/The_Shooter_(1995_film)|The Shooter (1995 film)|1995-12-15
+1028|http://dbpedia.org/resource/Grumpier_Old_Men|Grumpier Old Men|1995
+1029|http://dbpedia.org/resource/Jury_Duty_(film)|Jury Duty (film)|1995
+1030|http://dbpedia.org/resource/The_Beverly_Hillbillies_(film)|The Beverly Hillbillies (film)|0000
+1031|http://dbpedia.org/resource/Hansie|Hansie|0000
+1032|http://dbpedia.org/resource/Little_Big_League|Little Big League|1994-06-29
+1033|http://dbpedia.org/resource/Homeward_Bound_II:_Lost_in_San_Francisco|Homeward Bound II: Lost in San Francisco|0000
+1034|http://dbpedia.org/resource/The_Quest_(film)|The Quest (film)|0000
+1035|http://dbpedia.org/resource/Cool_Runnings|Cool Runnings|0000
+1036|http://dbpedia.org/resource/Drop_Dead_Fred|Drop Dead Fred|0000
+1037|http://dbpedia.org/resource/Grease_2|Grease 2|0000
+1038|http://dbpedia.org/resource/Switchback_(film)|Switchback (film)|0000
+1039|http://dbpedia.org/resource/Hamlet_(1996_film)|Hamlet (1996 film)|0000
+1040|http://dbpedia.org/resource/Two_If_by_Sea|Two If by Sea|0000
+1041|http://dbpedia.org/resource/Forget_Paris|Forget Paris|0000
+1042|http://dbpedia.org/resource/Just_Cause_(film)|Just Cause (film)|0000
+1043|http://dbpedia.org/resource/Rent-a-Kid|Rent-a-Kid|1995-11-04
+1044|http://dbpedia.org/resource/The_Paper_(film)|The Paper (film)|0000
+1045|http://dbpedia.org/resource/Fearless_(1993_film)|Fearless (1993 film)|0000
+1046|http://dbpedia.org/resource/Malice_(film)|Malice (film)|0000
+1047|http://dbpedia.org/resource/Multiplicity_(film)|Multiplicity (film)|1996-07-17
+1048|http://dbpedia.org/resource/She's_the_One_(1996_film)|She's the One (1996 film)|0000
+1049|http://dbpedia.org/resource/House_Arrest_(film)|House Arrest (film)|1996-08-14
+1050|http://dbpedia.org/resource/The_Ghost_and_Mrs._Muir|The Ghost and Mrs. Muir|1947
+1051|http://dbpedia.org/resource/The_Associate|The Associate|0000
+1052|http://dbpedia.org/resource/Dracula:_Dead_and_Loving_It|Dracula: Dead and Loving It|0000
+1053|http://dbpedia.org/resource/Now_and_Then_(film)|Now and Then (film)|0000
+1054|http://dbpedia.org/resource/Mr._Wrong|Mr. Wrong|0000
+1055|http://dbpedia.org/resource/A_Simple_Twist_of_Fate|A Simple Twist of Fate|0000
+1056|http://dbpedia.org/resource/Cronos_(film)|Cronos (film)|0000
+1057|http://dbpedia.org/resource/The_Pallbearer|The Pallbearer|0000
+1058|http://dbpedia.org/resource/The_War_(1994_film)|The War (1994 film)|0000
+1059|http://dbpedia.org/resource/Don't_Be_a_Menace_to_South_Central_While_Drinking_Your_Juice_in_the_Hood|Don't Be a Menace to South Central While Drinking Your Juice in the Hood|0000
+1060|http://dbpedia.org/resource/The_Adventures_of_Pinocchio_(1996_film)|The Adventures of Pinocchio (1996 film)|0000
+1061|http://dbpedia.org/resource/The_Evening_Star|The Evening Star|0000
+1062|http://dbpedia.org/resource/Four_Days_in_September|Four Days in September|0000
+1063|http://dbpedia.org/resource/A_Little_Princess_(1995_film)|A Little Princess (1995 film)|0000
+1064|http://dbpedia.org/resource/Crossfire_(film)|Crossfire (film)|0000
+1065|http://dbpedia.org/resource/Koyaanisqatsi|Koyaanisqatsi|0000
+1066|http://dbpedia.org/resource/Balto_(film)|Balto (film)|0000
+1067|http://dbpedia.org/resource/Bottle_Rocket|Bottle Rocket|0000
+1068|http://dbpedia.org/resource/The_Star_Maker_(1995_film)|The Star Maker (1995 film)|0000
+1069|http://dbpedia.org/resource/Amateur_(film)|Amateur (film)|0000
+1070|http://dbpedia.org/resource/Living_in_Oblivion|Living in Oblivion|1995-07-21
+1071|http://dbpedia.org/resource/Party_Girl_(1995_film)|Party Girl (1995 film)|0000
+1072|http://dbpedia.org/resource/A_Pyromaniac's_Love_Story|A Pyromaniac's Love Story|0000
+1073|http://dbpedia.org/resource/Shallow_Grave|Shallow Grave|0000
+1074|http://dbpedia.org/resource/Reality_Bites|Reality Bites|0000
+1075|http://dbpedia.org/resource/A_Man_of_No_Importance_(film)|A Man of No Importance (film)|1994-09-10
+1076|http://dbpedia.org/resource/The_Pagemaster|The Pagemaster|1994-11-23
+1077|http://dbpedia.org/resource/Love_and_a_.45|Love and a .45|0000
+1078|http://dbpedia.org/resource/Oliver_&_Company|Oliver & Company|0000
+1079|http://dbpedia.org/resource/Joe's_Apartment|Joe's Apartment|0000
+1081|http://dbpedia.org/resource/Curdled_(film)|Curdled (film)|0000
+1082|http://dbpedia.org/resource/Female_Perversions|Female Perversions|0000
+1083|http://dbpedia.org/resource/Albino_Alligator|Albino Alligator|0000
+1084|http://dbpedia.org/resource/Anne_Frank_Remembered|Anne Frank Remembered|1995-06-08
+1085|http://dbpedia.org/resource/Carried_Away_(1996_film)|Carried Away (1996 film)|0000
+1086|http://dbpedia.org/resource/Going_My_Way|Going My Way|0000
+1087|http://dbpedia.org/resource/Ghost_in_the_Shell:_Arise|Ghost in the Shell: Arise|0000
+1088|http://dbpedia.org/resource/Double_Team_(film)|Double Team (film)|0000
+1089|http://dbpedia.org/resource/Speed_2:_Cruise_Control|Speed 2: Cruise Control|0000
+1090|http://dbpedia.org/resource/Sliver_(film)|Sliver (film)|1993-05-21
+1091|http://dbpedia.org/resource/Pete's_Dragon_(1977_film)|Pete's Dragon (1977 film)|0000
+1092|http://dbpedia.org/resource/Dear_God_(film)|Dear God (film)|1996-11-01
+1093|http://dbpedia.org/resource/Live_Nude_Girls|Live Nude Girls|0000
+1094|http://dbpedia.org/resource/A_Thin_Line_Between_Love_and_Hate|A Thin Line Between Love and Hate|1996-04-03
+1095|http://dbpedia.org/resource/High_School_High|High School High|0000
+1096|http://dbpedia.org/resource/Commandments_(film)|Commandments (film)|1997-05-02
+1098|http://dbpedia.org/resource/Flirting_with_Disaster_(film)|Flirting with Disaster (film)|0000
+1099|http://dbpedia.org/resource/Red_Firecracker,_Green_Firecracker|Red Firecracker, Green Firecracker|1994
+1100|http://dbpedia.org/resource/What_Happened_Was|What Happened Was|1994-01-26
+1101|http://dbpedia.org/resource/Six_Degrees_of_Separation_(film)|Six Degrees of Separation (film)|0000
+1102|http://dbpedia.org/resource/Two_Much|Two Much|0000
+1103|http://dbpedia.org/resource/Trust_(1990_film)|Trust (1990 film)|0000
+1104|http://dbpedia.org/resource/Man_Bites_Dog_(film)|Man Bites Dog (film)|0000
+1105|http://dbpedia.org/resource/Firestorm_(1998_film)|Firestorm (1998 film)|0000
+1106|http://dbpedia.org/resource/The_Newton_Boys|The Newton Boys|0000
+1107|http://dbpedia.org/resource/Beyond_Rangoon|Beyond Rangoon|0000
+1108|http://dbpedia.org/resource/Feast_of_July|Feast of July|0000
+1109|http://dbpedia.org/resource/Death_and_the_Maiden_(film)|Death and the Maiden (film)|1994-12-23
+1110|http://dbpedia.org/resource/Tank_Girl_(film)|Tank Girl (film)|0000
+1111|http://dbpedia.org/resource/Double_Happiness_(film)|Double Happiness (film)|0000
+1112|http://dbpedia.org/resource/Cobb_(film)|Cobb (film)|1994-12-02
+1113|http://dbpedia.org/resource/Mrs._Parker_and_the_Vicious_Circle|Mrs. Parker and the Vicious Circle|0000
+1114|http://dbpedia.org/resource/Faithful_(1996_film)|Faithful (1996 film)|0000
+1115|http://dbpedia.org/resource/Twelfth_Night_(1996_film)|Twelfth Night (1996 film)|0000
+1116|http://dbpedia.org/resource/The_Mark_of_Zorro_(1940_film)|The Mark of Zorro (1940 film)|0000
+1117|http://dbpedia.org/resource/Surviving_Picasso|Surviving Picasso|1996-09-20
+1118|http://dbpedia.org/resource/Up_in_Smoke|Up in Smoke|0000
+1119|http://dbpedia.org/resource/Some_Kind_of_Wonderful_(film)|Some Kind of Wonderful (film)|0000
+1120|http://dbpedia.org/resource/I'm_Not_Rappaport_(film)|I'm Not Rappaport (film)|0000
+1121|http://dbpedia.org/resource/The_Umbrellas_of_Cherbourg|The Umbrellas of Cherbourg|0000
+1122|http://dbpedia.org/resource/They_Made_Me_a_Criminal|They Made Me a Criminal|0000
+1123|http://dbpedia.org/resource/The_Last_Time_I_Saw_Paris|The Last Time I Saw Paris|0000
+1124|http://dbpedia.org/resource/A_Farewell_to_Arms_(1932_film)|A Farewell to Arms (1932 film)|0000
+1125|http://dbpedia.org/resource/The_Innocents_(1961_film)|The Innocents (1961 film)|0000
+1126|http://dbpedia.org/resource/The_Old_Man_and_the_Sea_(1958_film)|The Old Man and the Sea|1958
+1127|http://dbpedia.org/resource/The_Truman_Show|The Truman Show|0000
+1128|http://dbpedia.org/resource/Heidi_Fleiss:_Hollywood_Madam|Heidi Fleiss: Hollywood Madam|0000
+1129|http://dbpedia.org/resource/Chungking_Express|Chungking Express|0000
+1131|http://dbpedia.org/resource/Safe_(1995_film)|Safe (1995 film)|0000
+1132|http://dbpedia.org/resource/Feeling_Minnesota|Feeling Minnesota|0000
+1133|http://dbpedia.org/resource/Escape_to_Witch_Mountain_(1975_film)|Escape to Witch Mountain (1975 film)|0000
+1134|http://dbpedia.org/resource/Get_on_the_Bus|Get on the Bus|0000
+1135|http://dbpedia.org/resource/The_Doors_(film)|The Doors (film)|0000
+1136|http://dbpedia.org/resource/Ghosts_of_Mississippi|Ghosts of Mississippi|0000
+1137|http://dbpedia.org/resource/Beautiful_Thing_(film)|Beautiful Thing (film)|0000
+1138|http://dbpedia.org/resource/Best_Men|Best Men|0000
+1139|http://dbpedia.org/resource/Hackers_(film)|Hackers (film)|1995-09-15
+1140|http://dbpedia.org/resource/The_Road_to_Wellville_(film)|The Road to Wellville (film)|0000
+1141|http://dbpedia.org/resource/The_War_Room|The War Room|0000
+1142|http://dbpedia.org/resource/When_We_Were_Kings|When We Were Kings|1996-10-25
+1143|http://dbpedia.org/resource/Hard_Eight_(film)|Hard Eight (film)|0000
+1144|http://dbpedia.org/resource/The_Quiet_Room|The Quiet Room|0000
+1145|http://dbpedia.org/resource/Blue_Chips|Blue Chips|1994-02-18
+1146|http://dbpedia.org/resource/Calendar_Girl_(1993_film)|Calendar Girl (1993 film)|1993-09-03
+1147|http://dbpedia.org/resource/My_Family_(film)|My Family (film)|0000
+1148|http://dbpedia.org/resource/Tom_&_Viv|Tom & Viv|0000
+1149|http://dbpedia.org/resource/Walkabout_(film)|Walkabout (film)|0000
+1150|http://dbpedia.org/resource/Last_Dance_(1996_film)|Last Dance (1996 film)|0000
+1151|http://dbpedia.org/resource/Original_Gangstas|Original Gangstas|1996-05-10
+1152|http://dbpedia.org/resource/In_Love_and_War_(1996_film)|In Love and War (1996 film)|0000
+1153|http://dbpedia.org/resource/Black_Sea_(film)|Black Sea (film)|0000
+1154|http://dbpedia.org/resource/Alphaville_(film)|Alphaville (film)|1965-05-05
+1155|http://dbpedia.org/resource/Garden_Party_(film)|Garden Party (film)|0000
+1156|http://dbpedia.org/resource/Ceylon_(film)|Ceylon (film)|0000
+1157|http://dbpedia.org/resource/The_Relic_(film)|The Relic (film)|0000
+1158|http://dbpedia.org/resource/A_Single_Girl|A Single Girl|1995-05-29
+1159|http://dbpedia.org/resource/Stalker_(1979_film)|Stalker (1979 film)|0000
+1160|http://dbpedia.org/resource/Love!_Valour!_Compassion!_(film)|Love! Valour! Compassion! (film)|1997-01-25
+1161|http://dbpedia.org/resource/Palookaville_(film)|Palookaville (film)|0000
+1162|http://dbpedia.org/resource/Phat_Beach|Phat Beach|0000
+1163|http://dbpedia.org/resource/The_Portrait_of_a_Lady_(film)|The Portrait of a Lady (film)|0000
+1164|http://dbpedia.org/resource/Zeus_and_Roxanne|Zeus and Roxanne|0000
+1165|http://dbpedia.org/resource/Big_Bully_(film)|Big Bully (film)|0000
+1166|http://dbpedia.org/resource/Love_and_Human_Remains|Love and Human Remains|1993
+1167|http://dbpedia.org/resource/The_Sum_of_Us_(film)|The Sum of Us (film)|1994-07-12
+1168|http://dbpedia.org/resource/Little_Buddha|Little Buddha|1993
+1169|http://dbpedia.org/resource/Fresh_(1994_film)|Fresh (1994 film)|0000
+1170|http://dbpedia.org/resource/Spanking_the_Monkey|Spanking the Monkey|0000
+1171|http://dbpedia.org/resource/Wild_Reeds|Wild Reeds|0000
+1172|http://dbpedia.org/resource/The_Women_(1939_film)|The Women (1939 film)|0000
+1173|http://dbpedia.org/resource/Reds_(film)|Reds (film)|0000
+1174|http://dbpedia.org/resource/Caught_(1996_film)|Caught (1996 film)|0000
+1175|http://dbpedia.org/resource/Hugo_Pool|Hugo Pool|1997-12-12
+1176|http://dbpedia.org/resource/Welcome_to_Sarajevo|Welcome to Sarajevo|0000
+1177|http://dbpedia.org/resource/Dunston_Checks_In|Dunston Checks In|0000
+1178|http://dbpedia.org/resource/Major_Payne|Major Payne|0000
+1179|http://dbpedia.org/resource/Man_of_the_House_(1995_film)|Man of the House (1995 film)|0000
+1180|http://dbpedia.org/resource/I_Love_Trouble_(1994_film)|I Love Trouble (1994 film)|0000
+1181|http://dbpedia.org/resource/A_Low_Down_Dirty_Shame|A Low Down Dirty Shame|0000
+1182|http://dbpedia.org/resource/Cops_&_Robbersons|Cops & Robbersons|0000
+1183|http://dbpedia.org/resource/The_Cowboy_Way_(film)|The Cowboy Way (film)|1994-06-03
+1184|http://dbpedia.org/resource/The_Endless_Summer_II|The Endless Summer II|0000
+1185|http://dbpedia.org/resource/In_the_Army_Now_(film)|In the Army Now|1994
+1186|http://dbpedia.org/resource/The_Inkwell|The Inkwell|1994-04-22
+1187|http://dbpedia.org/resource/Switchblade_Sisters|Switchblade Sisters|0000
+1188|http://dbpedia.org/resource/Young_Guns_II|Young Guns II|0000
+1189|http://dbpedia.org/resource/Prefontaine_(film)|Prefontaine (film)|0000
+1190|http://dbpedia.org/resource/That_Old_Feeling_(film)|That Old Feeling (film)|0000
+1191|http://dbpedia.org/resource/A_Letter_from_Death_Row_(film)|A Letter from Death Row (film)|1998-11-17
+1193|http://dbpedia.org/resource/Before_the_Rain_(1994_film)|Before the Rain (1994 film)|0000
+1194|http://dbpedia.org/resource/Once_Were_Warriors_(film)|Once Were Warriors (film)|0000
+1195|http://dbpedia.org/resource/Strawberry_and_Chocolate|Strawberry and Chocolate|0000
+1196|http://dbpedia.org/resource/Savage_Nights|Savage Nights|1992-10-21
+1197|http://dbpedia.org/resource/A_Family_Thing|A Family Thing|0000
+1198|http://dbpedia.org/resource/Purple_Noon|Purple Noon|0000
+1199|http://dbpedia.org/resource/Cemetery_Man|Cemetery Man|0000
+1200|http://dbpedia.org/resource/Kim_(1950_film)|Kim (1950 film)|0000
+1202|http://dbpedia.org/resource/Der_bewegte_Mann|Der bewegte Mann|0000
+1203|http://dbpedia.org/resource/Top_Hat|Top Hat|0000
+1204|http://dbpedia.org/resource/To_Be_or_Not_to_Be_(1942_film)|To Be or Not to Be (1942 film)|0000
+1205|http://dbpedia.org/resource/The_Secret_Agent_(film)|The Secret Agent (film)|0000
+1206|http://dbpedia.org/resource/Amos_&_Andrew|Amos & Andrew|0000
+1207|http://dbpedia.org/resource/Jade_(film)|Jade (film)|0000
+1208|http://dbpedia.org/resource/Kiss_of_Death_(1995_film)|Kiss of Death (1995 film)|0000
+1209|http://dbpedia.org/resource/Mixed_Nuts|Mixed Nuts|0000
+1210|http://dbpedia.org/resource/Virtuosity|Virtuosity|0000
+1211|http://dbpedia.org/resource/Blue_Sky_(film)|Blue Sky (film)|0000
+1212|http://dbpedia.org/resource/Flesh_and_Bone_(film)|Flesh and Bone (film)|0000
+1213|http://dbpedia.org/resource/Guilty_as_Sin|Guilty as Sin|0000
+1214|http://dbpedia.org/resource/In_the_Realm_of_the_Senses|In the Realm of the Senses|0000
+1215|http://dbpedia.org/resource/Barb_Wire_(film)|Barb Wire (film)|0000
+1216|http://dbpedia.org/resource/Kissed|Kissed|1996-09-07
+1217|http://dbpedia.org/resource/Assassins_(film)|Assassins (film)|0000
+1218|http://dbpedia.org/resource/Friday_(1995_film)|Friday (1995 film)|0000
+1219|http://dbpedia.org/resource/A_Goofy_Movie|A Goofy Movie|0000
+1220|http://dbpedia.org/resource/Higher_Learning|Higher Learning|0000
+1221|http://dbpedia.org/resource/When_a_Man_Loves_a_Woman_(film)|When a Man Loves a Woman (film)|0000
+1222|http://dbpedia.org/resource/Judgment_Night_(film)|Judgment Night (film)|0000
+1223|http://dbpedia.org/resource/King_of_the_Hill_(film)|King of the Hill (film)|0000
+1224|http://dbpedia.org/resource/The_Scout_(film)|The Scout (film)|0000
+1225|http://dbpedia.org/resource/Angus_(film)|Angus (film)|1995-09-15
+1226|http://dbpedia.org/resource/Night_Falls_on_Manhattan|Night Falls on Manhattan|0000
+1227|http://dbpedia.org/resource/An_Awfully_Big_Adventure|An Awfully Big Adventure|0000
+1228|http://dbpedia.org/resource/Under_Siege_2:_Dark_Territory|Under Siege 2: Dark Territory|0000
+1229|http://dbpedia.org/resource/Poison_Ivy_II:_Lily|Poison Ivy II: Lily|0000
+1230|http://dbpedia.org/resource/Prêt-à-Porter_(film)|Prêt-à-Porter (film)|0000
+1231|http://dbpedia.org/resource/Marked_for_Death|Marked for Death|0000
+1232|http://dbpedia.org/resource/Madonna:_Truth_or_Dare|Madonna: Truth or Dare|0000
+1233|http://dbpedia.org/resource/Nénette_et_Boni|Nénette et Boni|0000
+1234|http://dbpedia.org/resource/Chairman_of_the_Board_(film)|Chairman of the Board (film)|1998-03-13
+1237|http://dbpedia.org/resource/Twisted_(1996_film)|Twisted (1996 film)|0000
+1238|http://dbpedia.org/resource/Full_Speed|Full Speed|0000
+1239|http://dbpedia.org/resource/Cutthroat_Island|Cutthroat Island|0000
+1240|http://dbpedia.org/resource/Ghost_in_the_Shell_(1995_film)|Ghost in the Shell (1995 film)|0000
+1241|http://dbpedia.org/resource/The_Van_(1996_film)|The Van (1996 film)|0000
+1242|http://dbpedia.org/resource/The_Old_Lady_Who_Walked_in_the_Sea|The Old Lady Who Walked in the Sea|0000
+1243|http://dbpedia.org/resource/The_Night_Flier_(film)|The Night Flier (film)|0000
+1244|http://dbpedia.org/resource/Metro_(1997_film)|Metro (1997 film)|0000
+1245|http://dbpedia.org/resource/Gridlock'd|Gridlock'd|1997-01-29
+1246|http://dbpedia.org/resource/Bushwhacked_(film)|Bushwhacked (film)|0000
+1247|http://dbpedia.org/resource/Bad_Girls_(1994_film)|Bad Girls (1994 film)|0000
+1248|http://dbpedia.org/resource/Blink_(film)|Blink (film)|1994-01-26
+1249|http://dbpedia.org/resource/For_Love_or_Money_(1993_film)|For Love or Money (1993 film)|1993-10-01
+1250|http://dbpedia.org/resource/Best_of_the_Best_3:_No_Turning_Back|Best of the Best 3: No Turning Back|0000
+1251|http://dbpedia.org/resource/A_Chef_in_Love|A Chef in Love|0000
+1252|http://dbpedia.org/resource/Contempt_(film)|Contempt (film)|0000
+1253|http://dbpedia.org/resource/The_Tie_That_Binds_(1995_film)|The Tie That Binds (1995 film)|0000
+1254|http://dbpedia.org/resource/Gone_Fishin'_(film)|Gone Fishin' (film)|0000
+1255|http://dbpedia.org/resource/Broken_English_(1996_film)|Broken English (1996 film)|1996
+1256|http://dbpedia.org/resource/The_Designated_Mourner|The Designated Mourner|0000
+1257|http://dbpedia.org/resource/The_Designated_Mourner|The Designated Mourner|0000
+1258|http://dbpedia.org/resource/Trial_and_Error_(1997_film)|Trial and Error (1997 film)|0000
+1259|http://dbpedia.org/resource/Duel_in_the_Sun_(film)|Duel in the Sun (film)|0000
+1260|http://dbpedia.org/resource/Total_Eclipse_(film)|Total Eclipse (film)|0000
+1261|http://dbpedia.org/resource/The_Run_of_the_Country|The Run of the Country|1995-09-22
+1262|http://dbpedia.org/resource/Walking_and_Talking|Walking and Talking|1996-07-17
+1263|http://dbpedia.org/resource/Foxfire_(1996_film)|Foxfire (1996 film)|0000
+1264|http://dbpedia.org/resource/Nothin'_2_Lose|Nothin' 2 Lose|0000
+1265|http://dbpedia.org/resource/Star_Maps_(film)|Star Maps (film)|1997-07-23
+1266|http://dbpedia.org/resource/Arms_and_the_Man|Arms and the Man|0000
+1267|http://dbpedia.org/resource/Clockers_(film)|Clockers (film)|1995-09-13
+1268|http://dbpedia.org/resource/Bitter_Moon|Bitter Moon|0000
+1269|http://dbpedia.org/resource/Love_in_the_Afternoon_(1957_film)|Love in the Afternoon (1957 film)|0000
+1270|http://dbpedia.org/resource/Life_with_Mikey|Life with Mikey|0000
+1271|http://dbpedia.org/resource/North_(1994_film)|North (1994 film)|0000
+1273|http://dbpedia.org/resource/Color_of_Night|Color of Night|0000
+1274|http://dbpedia.org/resource/RoboCop_3|RoboCop 3|0000
+1275|http://dbpedia.org/resource/Robbery|Robbery|0000
+1276|http://dbpedia.org/resource/Sunset_Park_(film)|Sunset Park (film)|1996-04-26
+1277|http://dbpedia.org/resource/Set_It_Off_(film)|Set It Off (film)|1996-11-06
+1278|http://dbpedia.org/resource/Selena_(film)|Selena (film)|0000
+1279|http://dbpedia.org/resource/Wild_America_(film)|Wild America (film)|0000
+1280|http://dbpedia.org/resource/Gang_Related|Gang Related|1997-10-08
+1281|http://dbpedia.org/resource/Manny_&_Lo|Manny & Lo|0000
+1282|http://dbpedia.org/resource/The_Grass_Harp_(film)|The Grass Harp (film)|0000
+1283|http://dbpedia.org/resource/Out_to_Sea|Out to Sea|1997
+1284|http://dbpedia.org/resource/Before_and_After_(film)|Before and After (film)|0000
+1285|http://dbpedia.org/resource/Princess_Caraboo_(film)|Princess Caraboo (film)|1994
+1286|http://dbpedia.org/resource/Shadow_Dancer_(film)|Shadow Dancer (film)|0000
+1287|http://dbpedia.org/resource/Ed_(film)|Ed (film)|0000
+1288|http://dbpedia.org/resource/Denise_Calls_Up|Denise Calls Up|0000
+1289|http://dbpedia.org/resource/Jack_and_Sarah|Jack and Sarah|0000
+1290|http://dbpedia.org/resource/Country_Life_(film)|Country Life (film)|0000
+1291|http://dbpedia.org/resource/Celtic_Pride|Celtic Pride|1996-04-19
+1292|http://dbpedia.org/resource/A_Simple_Wish|A Simple Wish|0000
+1293|http://dbpedia.org/resource/Star_Kid|Star Kid|0000
+1294|http://dbpedia.org/resource/Ayn_Rand:_A_Sense_of_Life|Ayn Rand: A Sense of Life|0000
+1295|http://dbpedia.org/resource/Kicked_in_the_Head_(film)|Kicked in the Head (film)|0000
+1296|http://dbpedia.org/resource/Indian_Summer_(1996_film)|Indian Summer (1996 film)|0000
+1297|http://dbpedia.org/resource/Love_Affair_(1994_film)|Love Affair (1994 film)|1994-10-21
+1298|http://dbpedia.org/resource/The_Band_Wagon|The Band Wagon|0000
+1299|http://dbpedia.org/resource/Penny_Serenade|Penny Serenade|0000
+1300|http://dbpedia.org/resource/'Til_There_Was_You|'Til There Was You|0000
+1301|http://dbpedia.org/resource/Stripes_(film)|Stripes (film)|0000
+1302|http://dbpedia.org/resource/Code_Breakers_(film)|Code Breakers (film)|0000
+1303|http://dbpedia.org/resource/The_Getaway_(1994_film)|The Getaway (1994 film)|0000
+1305|http://dbpedia.org/resource/National_Lampoon's_Pledge_This!|National Lampoon's Pledge This!|0000
+1306|http://dbpedia.org/resource/Star_Wars_(film)|Star Wars (film)|0000
+1307|http://dbpedia.org/resource/Carmen_Miranda:_Bananas_is_My_Business|Carmen Miranda: Bananas is My Business|0000
+1309|http://dbpedia.org/resource/A_Very_Natural_Thing|A Very Natural Thing|1974
+1310|http://dbpedia.org/resource/A_Walk_in_the_Sun_(1945_film)|A Walk in the Sun (1945 film)|0000
+1311|http://dbpedia.org/resource/Waiting_to_Exhale|Waiting to Exhale|0000
+1312|http://dbpedia.org/resource/The_Pompatus_of_Love|The Pompatus of Love|0000
+1313|http://dbpedia.org/resource/Palmetto_(film)|Palmetto (film)|0000
+1314|http://dbpedia.org/resource/Surviving_the_Game|Surviving the Game|0000
+1315|http://dbpedia.org/resource/Inventing_the_Abbotts|Inventing the Abbotts|0000
+1316|http://dbpedia.org/resource/The_Horse_Whisperer_(film)|The Horse Whisperer (film)|0000
+1317|http://dbpedia.org/resource/The_Journey_of_August_King|The Journey of August King|1995
+1318|http://dbpedia.org/resource/Catwalk_(1995_film)|Catwalk (1995 film)|0000
+1319|http://dbpedia.org/resource/The_Neon_Bible_(film)|The Neon Bible (film)|0000
+1321|http://dbpedia.org/resource/Treason|Treason|0000
+1322|http://dbpedia.org/resource/Métisse_(film)|Métisse (film)|0000
+1323|http://dbpedia.org/resource/The_Wooden_Man's_Bride|The Wooden Man's Bride|0000
+1324|http://dbpedia.org/resource/Loved_(film)|Loved (film)|0000
+1325|http://dbpedia.org/resource/August_(1996_film)|August (1996 film)|1996-08-09
+1326|http://dbpedia.org/resource/Boys_(1996_film)|Boys (1996 film)|1996-05-10
+1327|http://dbpedia.org/resource/Caribe_(film)|Caribe (film)|0000
+1328|http://dbpedia.org/resource/Of_Love_and_Shadows|Of Love and Shadows|0000
+1329|http://dbpedia.org/resource/The_Low_Life|The Low Life|0000
+1330|http://dbpedia.org/resource/An_Unforgettable_Summer|An Unforgettable Summer|0000
+1332|http://dbpedia.org/resource/My_Life_and_Times_with_Antonin_Artaud|My Life and Times with Antonin Artaud|0000
+1333|http://dbpedia.org/resource/Sibak:_Midnight_Dancers|Sibak: Midnight Dancers|0000
+1334|http://dbpedia.org/resource/Somebody_to_Love_(film)|Somebody to Love (film)|0000
+1335|http://dbpedia.org/resource/American_Buffalo_(film)|American Buffalo (film)|0000
+1336|http://dbpedia.org/resource/Kazaam|Kazaam|0000
+1337|http://dbpedia.org/resource/Larger_than_Life_(film)|Larger than Life (film)|0000
+1338|http://dbpedia.org/resource/Two_Deaths|Two Deaths|0000
+1339|http://dbpedia.org/resource/Stefano_Quantestorie|Stefano Quantestorie|0000
+1341|http://dbpedia.org/resource/Hedd_Wyn_(film)|Hedd Wyn (film)|0000
+1342|http://dbpedia.org/resource/The_Convent_(film)|The Convent (film)|0000
+1345|http://dbpedia.org/resource/The_Day_the_Sun_Turned_Cold|The Day the Sun Turned Cold|0000
+1346|http://dbpedia.org/resource/Dingo_(film)|Dingo (film)|1992-01-31
+1347|http://dbpedia.org/resource/The_Ballad_of_Narayama_(1958_film)|The Ballad of Narayama (1958 film)|1958-06-01
+1348|http://dbpedia.org/resource/Every_Other_Weekend_(film)|Every Other Weekend (film)|0000
+1349|http://dbpedia.org/resource/Mille_bolle_blu|Mille bolle blu|0000
+1350|http://dbpedia.org/resource/Crows_and_Sparrows|Crows and Sparrows|0000
+1352|http://dbpedia.org/resource/Shadow_of_Angels|Shadow of Angels|0000
+1353|http://dbpedia.org/resource/1-900_(film)|1-900 (film)|1994-09-01
+1354|http://dbpedia.org/resource/Venice/Venice|Venice/Venice|0000
+1355|http://dbpedia.org/resource/Infinity_(film)|Infinity (film)|1996-10-04
+1356|http://dbpedia.org/resource/Ed's_Next_Move|Ed's Next Move|0000
+1357|http://dbpedia.org/resource/Zorba_the_Greek_(film)|Zorba the Greek (film)|0000
+1361|http://dbpedia.org/resource/The_Search_for_One-eye_Jimmy|The Search for One-eye Jimmy|0000
+1362|http://dbpedia.org/resource/American_Strays|American Strays|0000
+1364|http://dbpedia.org/resource/Birds_of_Prey_(film)|Birds of Prey (film)|0000
+1365|http://dbpedia.org/resource/Johnny_100_Pesos|Johnny 100 Pesos|0000
+1366|http://dbpedia.org/resource/JLG/JLG_?_Self-Portrait_in_December|JLG/JLG ? Self-Portrait in December|0000
+1367|http://dbpedia.org/resource/Faust_(1994_film)|Faust (1994 film)|0000
+1368|http://dbpedia.org/resource/Mina_Tannenbaum|Mina Tannenbaum|0000
+1369|http://dbpedia.org/resource/The_Forbidden_Christ|The Forbidden Christ|0000
+1370|http://dbpedia.org/resource/I_Can't_Sleep_(film)|I Can't Sleep (film)|1994-05-18
+1371|http://dbpedia.org/resource/The_Machine_(film)|The Machine (film)|0000
+1372|http://dbpedia.org/resource/The_Day_After|The Day After|0000
+1373|http://dbpedia.org/resource/Holy_Man|Holy Man|0000
+1374|http://dbpedia.org/resource/Falling_in_Love_Again_(1980_film)|Falling in Love Again (1980 film)|0000
+1375|http://dbpedia.org/resource/The_Cement_Garden_(film)|The Cement Garden (film)|0000
+1376|http://dbpedia.org/resource/Meet_Wally_Sparks|Meet Wally Sparks|0000
+1377|http://dbpedia.org/resource/Hotel_de_Love|Hotel de Love|1996-09-12
+1378|http://dbpedia.org/resource/Rhyme_&_Reason_(film)|Rhyme & Reason (film)|1997-03-05
+1379|http://dbpedia.org/resource/Love_and_Other_Catastrophes|Love and Other Catastrophes|1996-08-01
+1380|http://dbpedia.org/resource/Hollow_Reed|Hollow Reed|1996
+1381|http://dbpedia.org/resource/Losing_Chase|Losing Chase|0000
+1382|http://dbpedia.org/resource/Le_Bonheur_(1965_film)|Le Bonheur (1965 film)|0000
+1383|http://dbpedia.org/resource/The_Second_Jungle_Book:_Mowgli_&_Baloo|The Second Jungle Book: Mowgli & Baloo|1997-05-16
+1385|http://dbpedia.org/resource/Roseanna's_Grave|Roseanna's Grave|0000
+1386|http://dbpedia.org/resource/Tetsuo_II:_Body_Hammer|Tetsuo II: Body Hammer|0000
+1387|http://dbpedia.org/resource/Fall_(1997_film)|Fall (1997 film)|1997
+1388|http://dbpedia.org/resource/Gabbeh_(film)|Gabbeh (film)|0000
+1389|http://dbpedia.org/resource/Mondo_(film)|Mondo (film)|0000
+1390|http://dbpedia.org/resource/The_Magnificent_Seven|The Magnificent Seven|0000
+1391|http://dbpedia.org/resource/For_Ever_Mozart|For Ever Mozart|0000
+1392|http://dbpedia.org/resource/The_Locusts_(film)|The Locusts (film)|0000
+1393|http://dbpedia.org/resource/Stag_(film)|Stag (film)|0000
+1394|http://dbpedia.org/resource/Swept_from_the_Sea|Swept from the Sea|1997
+1395|http://dbpedia.org/resource/Hurricane_Streets|Hurricane Streets|0000
+1396|http://dbpedia.org/resource/Stonewall_(1995_film)|Stonewall (1995 film)|0000
+1397|http://dbpedia.org/resource/Of_Human_Bondage_(1934_film)|Of Human Bondage (1934 film)|0000
+1398|http://dbpedia.org/resource/Hans_(film)|Hans (film)|0000
+1399|http://dbpedia.org/resource/Stranger_in_the_House_(1997_film)|Stranger in the House (1997 film)|0000
+1400|http://dbpedia.org/resource/Picture_Bride_(film)|Picture Bride (film)|0000
+1401|http://dbpedia.org/resource/M._Butterfly_(film)|M. Butterfly (film)|0000
+1402|http://dbpedia.org/resource/Ciao,_Professore!|Ciao, Professore!|0000
+1403|http://dbpedia.org/resource/Caro_diario|Caro diario|0000
+1404|http://dbpedia.org/resource/Withnail_and_I|Withnail and I|1987-04-10
+1405|http://dbpedia.org/resource/Boys_Life_2|Boys Life 2|0000
+1406|http://dbpedia.org/resource/When_Night_Is_Falling|When Night Is Falling|0000
+1407|http://dbpedia.org/resource/The_Specialist|The Specialist|0000
+1408|http://dbpedia.org/resource/Gordy|Gordy|0000
+1409|http://dbpedia.org/resource/The_Swan_Princess|The Swan Princess|0000
+1411|http://dbpedia.org/resource/Barbarella_(film)|Barbarella (film)|0000
+1412|http://dbpedia.org/resource/The_Land_Before_Time_III:_The_Time_of_the_Great_Giving|The Land Before Time III: The Time of the Great Giving|0000
+1413|http://dbpedia.org/resource/Street_Fighter_(1994_film)|Street Fighter (1994 film)|0000
+1414|http://dbpedia.org/resource/Coldblooded_(film)|Coldblooded (film)|0000
+1415|http://dbpedia.org/resource/The_Next_Karate_Kid|The Next Karate Kid|0000
+1416|http://dbpedia.org/resource/No_Escape_(1994_film)|No Escape (1994 film)|0000
+1417|http://dbpedia.org/resource/The_Turning_(1992_film)|The Turning (1992 film)|0000
+1418|http://dbpedia.org/resource/The_Joy_Luck_Club_(film)|The Joy Luck Club (film)|0000
+1419|http://dbpedia.org/resource/Highlander_III:_The_Sorcerer|Highlander III: The Sorcerer|0000
+1421|http://dbpedia.org/resource/Mi_Vida_Loca|Mi Vida Loca|0000
+1422|http://dbpedia.org/resource/Suture_(film)|Suture (film)|0000
+1423|http://dbpedia.org/resource/The_Walking_Dead_(1995_film)|The Walking Dead (1995 film)|1995-02-24
+1424|http://dbpedia.org/resource/I_Like_It_Like_That_(film)|I Like It Like That (film)|1994
+1425|http://dbpedia.org/resource/I'll_Do_Anything|I'll Do Anything|0000
+1426|http://dbpedia.org/resource/Grace_of_My_Heart|Grace of My Heart|0000
+1427|http://dbpedia.org/resource/Drunks_(film)|Drunks (film)|0000
+1428|http://dbpedia.org/resource/Suburbia_(film)|Suburbia (film)|0000
+1429|http://dbpedia.org/resource/Sliding_Doors|Sliding Doors|0000
+1432|http://dbpedia.org/resource/The_Mighty|The Mighty|0000
+1434|http://dbpedia.org/resource/Shooting_Fish|Shooting Fish|1997
+1435|http://dbpedia.org/resource/Steal_Big_Steal_Little|Steal Big Steal Little|0000
+1436|http://dbpedia.org/resource/Mr._Jones_(1993_film)|Mr. Jones (1993 film)|0000
+1437|http://dbpedia.org/resource/House_Party_3|House Party 3|1994-01-12
+1438|http://dbpedia.org/resource/Panther_(film)|Panther (film)|0000
+1439|http://dbpedia.org/resource/Jason's_Lyric|Jason's Lyric|0000
+1440|http://dbpedia.org/resource/Above_the_Rim|Above the Rim|0000
+1441|http://dbpedia.org/resource/Moonlight_and_Valentino|Moonlight and Valentino|0000
+1442|http://dbpedia.org/resource/The_Scarlet_Letter_(1995_film)|The Scarlet Letter (1995 film)|0000
+1443|http://dbpedia.org/resource/8_Seconds|8 Seconds|0000
+1444|http://dbpedia.org/resource/That_Darn_Cat!|That Darn Cat!|0000
+1445|http://dbpedia.org/resource/Ladybird,_Ladybird_(film)|Ladybird, Ladybird (film)|1994-06-16
+1446|http://dbpedia.org/resource/Bye_Bye_Love_(film)|Bye Bye Love (film)|0000
+1447|http://dbpedia.org/resource/Century_(film)|Century (film)|0000
+1448|http://dbpedia.org/resource/My_Favorite_Season|My Favorite Season|0000
+1449|http://dbpedia.org/resource/Pather_Panchali|Pather Panchali|0000
+1450|http://dbpedia.org/resource/Golden_Earrings|Golden Earrings|0000
+1451|http://dbpedia.org/resource/Foreign_Correspondent_(film)|Foreign Correspondent (film)|0000
+1452|http://dbpedia.org/resource/Lady_of_Burlesque|Lady of Burlesque|0000
+1453|http://dbpedia.org/resource/Angel_on_My_Shoulder_(film)|Angel on My Shoulder (film)|0000
+1454|http://dbpedia.org/resource/Angel_and_the_Badman|Angel and the Badman|0000
+1455|http://dbpedia.org/resource/The_Outlaws_(film)|The Outlaws (film)|0000
+1456|http://dbpedia.org/resource/Daredevil_(film)|Daredevil (film)|0000
+1457|http://dbpedia.org/resource/Love_Is_All_There_Is|Love Is All There Is|0000
+1458|http://dbpedia.org/resource/A_Damsel_in_Distress|A Damsel in Distress|0000
+1459|http://dbpedia.org/resource/Dark_Matter_(film)|Dark Matter (film)|0000
+1460|http://dbpedia.org/resource/Sleepover_(film)|Sleepover (film)|0000
+1461|http://dbpedia.org/resource/Here_Comes_Cookie|Here Comes Cookie|0000
+1462|http://dbpedia.org/resource/Thieves_(1996_film)|Thieves (1996 film)|0000
+1463|http://dbpedia.org/resource/Les_Boys|Les Boys|0000
+1464|http://dbpedia.org/resource/The_Stars_Fell_on_Henrietta|The Stars Fell on Henrietta|1995-09-15
+1465|http://dbpedia.org/resource/Last_Summer_in_the_Hamptons|Last Summer in the Hamptons|0000
+1466|http://dbpedia.org/resource/Margaret's_Museum|Margaret's Museum|0000
+1467|http://dbpedia.org/resource/The_Saint_of_Fort_Washington|The Saint of Fort Washington|1993-11-17
+1468|http://dbpedia.org/resource/The_Cure_(1995_film)|The Cure (1995 film)|0000
+1469|http://dbpedia.org/resource/Tom_and_Huck|Tom and Huck|0000
+1470|http://dbpedia.org/resource/Gumby:_The_Movie|Gumby: The Movie|1995-10-04
+1471|http://dbpedia.org/resource/Hideaway_(film)|Hideaway (film)|0000
+1472|http://dbpedia.org/resource/The_Liars_(film)|The Liars (film)|0000
+1473|http://dbpedia.org/resource/The_Little_Princess_(1939_film)|The Little Princess (1939 film)|0000
+1475|http://dbpedia.org/resource/Bhaji_on_the_Beach|Bhaji on the Beach|0000
+1476|http://dbpedia.org/resource/Raw_Deal_(1948_film)|Raw Deal (1948 film)|0000
+1477|http://dbpedia.org/resource/Nightwatch_(1997_film)|Nightwatch (1997 film)|1998-04-17
+1478|http://dbpedia.org/resource/Dead_Presidents|Dead Presidents|0000
+1479|http://dbpedia.org/resource/Reckless_(1995_film)|Reckless (1995 film)|0000
+1480|http://dbpedia.org/resource/Herbie_Rides_Again|Herbie Rides Again|0000
+1481|http://dbpedia.org/resource/S.F.W.|S.F.W.|1994-09-15
+1482|http://dbpedia.org/resource/The_Gate_of_Heavenly_Peace|The Gate of Heavenly Peace|0000
+1483|http://dbpedia.org/resource/The_Man_in_the_Iron_Mask_(1998_film)|The Man in the Iron Mask (1998 film)|0000
+1484|http://dbpedia.org/resource/The_Jerky_Boys:_The_Movie|The Jerky Boys: The Movie|0000
+1485|http://dbpedia.org/resource/Colonel_Chabert_(1994_film)|Colonel Chabert (1994 film)|0000
+1486|http://dbpedia.org/resource/Girl_in_the_Cadillac|Girl in the Cadillac|0000
+1487|http://dbpedia.org/resource/Even_Cowgirls_Get_the_Blues_(film)|Even Cowgirls Get the Blues (film)|0000
+1489|http://dbpedia.org/resource/Chasers|Chasers|0000
+1492|http://dbpedia.org/resource/Window_to_Paris|Window to Paris|0000
+1493|http://dbpedia.org/resource/A_Modern_Affair|A Modern Affair|0000
+1494|http://dbpedia.org/resource/Akhil_Mishra|Akhil Mishra|0000
+1495|http://dbpedia.org/resource/Flirt_(1995_film)|Flirt (1995 film)|0000
+1496|http://dbpedia.org/resource/Carpool_(1996_film)|Carpool (1996 film)|0000
+1497|http://dbpedia.org/resource/The_Line_King:_The_Al_Hirschfeld_Story|The Line King: The Al Hirschfeld Story|0000
+1499|http://dbpedia.org/resource/Dead_Tired|Dead Tired|0000
+1500|http://dbpedia.org/resource/Santa_with_Muscles|Santa with Muscles|0000
+1501|http://dbpedia.org/resource/Prisoner_of_the_Mountains|Prisoner of the Mountains|0000
+1502|http://dbpedia.org/resource/Naked_in_New_York|Naked in New York|0000
+1503|http://dbpedia.org/resource/Gold_Diggers:_The_Secret_of_Bear_Mountain|Gold Diggers: The Secret of Bear Mountain|0000
+1504|http://dbpedia.org/resource/Der_bewegte_Mann|Der bewegte Mann|0000
+1505|http://dbpedia.org/resource/Miller's_Crossing|Miller's Crossing|0000
+1506|http://dbpedia.org/resource/Nelly_and_Mr._Arnaud|Nelly and Mr. Arnaud|0000
+1507|http://dbpedia.org/resource/Three_Lives_and_Only_One_Death|Three Lives and Only One Death|0000
+1508|http://dbpedia.org/resource/The_Babysitter|The Babysitter|0000
+1509|http://dbpedia.org/resource/Getting_Even_with_Dad|Getting Even with Dad|1994-06-17
+1510|http://dbpedia.org/resource/Mad_Dog_Time|Mad Dog Time|0000
+1511|http://dbpedia.org/resource/Cars_of_the_Revolution|Cars of the Revolution|0000
+1512|http://dbpedia.org/resource/The_World_of_Apu|The World of Apu|0000
+1513|http://dbpedia.org/resource/Sprung_(film)|Sprung (film)|1997-05-14
+1514|http://dbpedia.org/resource/Dream_with_the_Fishes|Dream with the Fishes|0000
+1515|http://dbpedia.org/resource/Wings_of_Courage|Wings of Courage|0000
+1517|http://dbpedia.org/resource/Race_the_Sun|Race the Sun|1996-03-22
+1518|http://dbpedia.org/resource/Losing_Isaiah|Losing Isaiah|0000
+1519|http://dbpedia.org/resource/New_Jersey_Drive|New Jersey Drive|0000
+1520|http://dbpedia.org/resource/The_Rock_(film)|The Rock (film)|0000
+1521|http://dbpedia.org/resource/Mr._Wonderful_(film)|Mr. Wonderful (film)|0000
+1522|http://dbpedia.org/resource/Trial_by_Jury_(film)|Trial by Jury (film)|0000
+1523|http://dbpedia.org/resource/A_Good_Man_in_Africa|A Good Man in Africa|0000
+1524|http://dbpedia.org/resource/The_Enigma_of_Kaspar_Hauser|The Enigma of Kaspar Hauser|0000
+1525|http://dbpedia.org/resource/The_Object_of_My_Affection|The Object of My Affection|0000
+1526|http://dbpedia.org/resource/Witness_(1985_film)|Witness (1985 film)|0000
+1527|http://dbpedia.org/resource/Senseless|Senseless|0000
+1528|http://dbpedia.org/resource/Nowhere_(film)|Nowhere (film)|0000
+1529|http://dbpedia.org/resource/Underground_(1995_film)|Underground (1995 film)|0000
+1530|http://dbpedia.org/resource/Jefferson_in_Paris|Jefferson in Paris|1995-03-31
+1531|http://dbpedia.org/resource/Far_from_Home:_The_Adventures_of_Yellow_Dog|Far from Home: The Adventures of Yellow Dog|0000
+1532|http://dbpedia.org/resource/Foreign_Student|Foreign Student|0000
+1533|http://dbpedia.org/resource/I_Don't_Want_to_Talk_About_It_(film)|I Don't Want to Talk About It (film)|0000
+1534|http://dbpedia.org/resource/Twin_Town|Twin Town|0000
+1535|http://dbpedia.org/resource/Hell_(1994_film)|Hell (1994 film)|0000
+1536|http://dbpedia.org/resource/Vive_L'Amour|Vive L'Amour|1994-09-02
+1537|http://dbpedia.org/resource/Cosi_(film)|Cosi (film)|1996-03-28
+1538|http://dbpedia.org/resource/All_Over_Me_(film)|All Over Me (film)|0000
+1539|http://dbpedia.org/resource/Being_Flynn|Being Flynn|0000
+1540|http://dbpedia.org/resource/The_Amazing_Panda_Adventure|The Amazing Panda Adventure|0000
+1541|http://dbpedia.org/resource/The_Beans_of_Egypt,_Maine|The Beans of Egypt, Maine|0000
+1542|http://dbpedia.org/resource/The_Scarlet_Letter_(1926_film)|The Scarlet Letter (1926 film)|0000
+1543|http://dbpedia.org/resource/Johns_(film)|Johns (film)|0000
+1544|http://dbpedia.org/resource/It_Takes_Two_(1995_film)|It Takes Two (1995 film)|0000
+1545|http://dbpedia.org/resource/Frankie_Starlight|Frankie Starlight|1995-11-22
+1546|http://dbpedia.org/resource/Cayo_(film)|Cayo (film)|0000
+1547|http://dbpedia.org/resource/The_Show_(1995_film)|The Show (1995 film)|0000
+1550|http://dbpedia.org/resource/Destiny_Turns_on_the_Radio|Destiny Turns on the Radio|1995
+1551|http://dbpedia.org/resource/The_Glass_Shield|The Glass Shield|0000
+1552|http://dbpedia.org/resource/The_Hunted_(1995_film)|The Hunted (1995 film)|0000
+1553|http://dbpedia.org/resource/The_Underneath_(film)|The Underneath (film)|0000
+1554|http://dbpedia.org/resource/Safe_Passage_(film)|Safe Passage (film)|0000
+1555|http://dbpedia.org/resource/The_Secret_Adventures_of_Tom_Thumb|The Secret Adventures of Tom Thumb|0000
+1556|http://dbpedia.org/resource/Condition_Red_(film)|Condition Red (film)|0000
+1557|http://dbpedia.org/resource/There's_a_Zulu_On_My_Stoep|There's a Zulu On My Stoep|0000
+1558|http://dbpedia.org/resource/Aparajito|Aparajito|1956-10-11
+1560|http://dbpedia.org/resource/Clean,_Shaven|Clean, Shaven|0000
+1562|http://dbpedia.org/resource/The_Eye_of_Vichy|The Eye of Vichy|1993-03-10
+1563|http://dbpedia.org/resource/The_Rock_(film)|The Rock (film)|0000
+1565|http://dbpedia.org/resource/Daens_(film)|Daens (film)|0000
+1566|http://dbpedia.org/resource/The_Man_from_Down_Under|The Man from Down Under|0000
+1567|http://dbpedia.org/resource/Careful_(film)|Careful (film)|0000
+1568|http://dbpedia.org/resource/Vermont_Is_for_Lovers|Vermont Is for Lovers|0000
+1569|http://dbpedia.org/resource/La_Vie_est_Belle_(1987_film)|La Vie est Belle (1987 film)|0000
+1571|http://dbpedia.org/resource/Touki_Bouki|Touki Bouki|0000
+1572|http://dbpedia.org/resource/Reds_(film)|Reds (film)|0000
+1573|http://dbpedia.org/resource/Spirits_of_the_Dead|Spirits of the Dead|0000
+1574|http://dbpedia.org/resource/Pharaoh's_Army|Pharaoh's Army|1995-11-09
+1575|http://dbpedia.org/resource/I,_the_Worst_of_All|I, the Worst of All|0000
+1576|http://dbpedia.org/resource/A_Hungarian_Fairy_Tale|A Hungarian Fairy Tale|0000
+1577|http://dbpedia.org/resource/Death_in_the_Garden|Death in the Garden|1956-09-21
+1578|http://dbpedia.org/resource/La_Collectionneuse|La Collectionneuse|1967-03-02
+1579|http://dbpedia.org/resource/Bâton_rouge_(film)|Bâton rouge (film)|0000
+1580|http://dbpedia.org/resource/Liebelei_(film)|Liebelei (film)|1933-03-10
+1581|http://dbpedia.org/resource/The_Woman_in_Question|The Woman in Question|0000
+1582|http://dbpedia.org/resource/T-Men|T-Men|1947
+1583|http://dbpedia.org/resource/The_Graduate|The Graduate|0000
+1584|http://dbpedia.org/resource/La_Symphonie_pastorale_(film)|La Symphonie pastorale (film)|0000
+1585|http://dbpedia.org/resource/American_Dream_(film)|American Dream (film)|0000
+1586|http://dbpedia.org/resource/Hard_Boiled|Hard Boiled|0000
+1587|http://dbpedia.org/resource/Terror_in_a_Texas_Town|Terror in a Texas Town|0000
+1588|http://dbpedia.org/resource/Hi_Cousin!|Hi Cousin!|0000
+1589|http://dbpedia.org/resource/Schizopolis|Schizopolis|0000
+1591|http://dbpedia.org/resource/Fallen_Angels_(1995_film)|Fallen Angels (1995 film)|0000
+1592|http://dbpedia.org/resource/The_Magic_House_(film)|The Magic House (film)|0000
+1593|http://dbpedia.org/resource/Death_in_Brunswick|Death in Brunswick|0000
+1594|http://dbpedia.org/resource/Everest_(1998_film)|Everest (1998 film)|1998-03-06
+1595|http://dbpedia.org/resource/Shopping_(1994_film)|Shopping (1994 film)|0000
+1596|http://dbpedia.org/resource/Nemesis_2:_Nebula|Nemesis 2: Nebula|1995-07-21
+1597|http://dbpedia.org/resource/Romper_Stomper|Romper Stomper|0000
+1598|http://dbpedia.org/resource/City_of_Industry_(film)|City of Industry (film)|0000
+1599|http://dbpedia.org/resource/Someone_Else's_America|Someone Else's America|0000
+1600|http://dbpedia.org/resource/Guantanamera_(film)|Guantanamera (film)|0000
+1601|http://dbpedia.org/resource/Office_Killer|Office Killer|0000
+1602|http://dbpedia.org/resource/A_Price_Above_Rubies|A Price Above Rubies|1998-01-22
+1603|http://dbpedia.org/resource/Angela_(1995_film)|Angela (1995 film)|0000
+1604|http://dbpedia.org/resource/He_Walked_by_Night|He Walked by Night|0000
+1605|http://dbpedia.org/resource/Love_Serenade|Love Serenade|1996-05-20
+1606|http://dbpedia.org/resource/Deceiver_(film)|Deceiver (film)|1997-08-31
+1607|http://dbpedia.org/resource/Hurricane_Streets|Hurricane Streets|0000
+1608|http://dbpedia.org/resource/Buddy_(1997_film)|Buddy (1997 film)|0000
+1609|http://dbpedia.org/resource/B*A*P*S|B*A*P*S|1997-03-28
+1610|http://dbpedia.org/resource/Truth_or_Consequences,_N.M._(film)|Truth or Consequences, N.M. (film)|0000
+1611|http://dbpedia.org/resource/Intimate_Relations_(1996_film)|Intimate Relations (1996 film)|1996-09-10
+1612|http://dbpedia.org/resource/The_Leading_Man|The Leading Man|1996-09-06
+1613|http://dbpedia.org/resource/Tokyo_Fist|Tokyo Fist|0000
+1614|http://dbpedia.org/resource/The_Reluctant_Debutante_(film)|The Reluctant Debutante (film)|0000
+1615|http://dbpedia.org/resource/Warriors_of_Virtue|Warriors of Virtue|0000
+1617|http://dbpedia.org/resource/Hugo_Pool|Hugo Pool|1997-12-12
+1618|http://dbpedia.org/resource/King_of_New_York|King of New York|1990-09-22
+1619|http://dbpedia.org/resource/All_Things_Fair|All Things Fair|0000
+1620|http://dbpedia.org/resource/The_6th_Man|The 6th Man|0000
+1621|http://dbpedia.org/resource/Butterfly_Kiss|Butterfly Kiss|0000
+1622|http://dbpedia.org/resource/Paris,_France_(film)|Paris, France (film)|0000
+1623|http://dbpedia.org/resource/La_Cérémonie|La Cérémonie|1995-08-30
+1624|http://dbpedia.org/resource/Hush_(1998_film)|Hush (1998 film)|1998-03-06
+1625|http://dbpedia.org/resource/Nightwatch_(1997_film)|Nightwatch (1997 film)|1998-04-17
+1627|http://dbpedia.org/resource/The_Wife_(film)|The Wife (film)|1995-08-16
+1628|http://dbpedia.org/resource/Lamerica|Lamerica|0000
+1630|http://dbpedia.org/resource/The_Silences_of_the_Palace|The Silences of the Palace|0000
+1631|http://dbpedia.org/resource/The_Slingshot_(film)|The Slingshot (film)|0000
+1632|http://dbpedia.org/resource/Land_and_Freedom|Land and Freedom|1995-10-06
+1633|http://dbpedia.org/resource/Toto_Forever|Toto Forever|0000
+1634|http://dbpedia.org/resource/Under_the_Domim_Tree|Under the Domim Tree|0000
+1635|http://dbpedia.org/resource/Two_Friends_(1986_film)|Two Friends (1986 film)|0000
+1637|http://dbpedia.org/resource/Girls_Town_(1996_film)|Girls Town (1996 film)|0000
+1638|http://dbpedia.org/resource/Normal_Life|Normal Life|1996-10-25
+1639|http://dbpedia.org/resource/Azúcar_Amarga|Azúcar Amarga|1996-10-11
+1640|http://dbpedia.org/resource/The_Eighth_Day_(1996_film)|The Eighth Day (1996 film)|0000
+1642|http://dbpedia.org/resource/Some_Mother's_Son|Some Mother's Son|0000
+1643|http://dbpedia.org/resource/Angel_Baby_(1995_film)|Angel Baby (1995 film)|1995-10-28
+1644|http://dbpedia.org/resource/Sudden_Manhattan|Sudden Manhattan|0000
+1645|http://dbpedia.org/resource/The_Mudge_Boy|The Mudge Boy|0000
+1646|http://dbpedia.org/resource/Men_with_Guns|Men with Guns|0000
+1647|http://dbpedia.org/resource/Hana-bi|Hana-bi|1997-09-03
+1648|http://dbpedia.org/resource/Niagara,_Niagara|Niagara, Niagara|0000
+1649|http://dbpedia.org/resource/The_Big_One_(film)|The Big One (film)|0000
+1650|http://dbpedia.org/resource/The_Mudge_Boy|The Mudge Boy|0000
+1651|http://dbpedia.org/resource/The_Spanish_Prisoner|The Spanish Prisoner|0000
+1652|http://dbpedia.org/resource/Temptress_Moon|Temptress Moon|0000
+1653|http://dbpedia.org/resource/Entertaining_Angels:_The_Dorothy_Day_Story|Entertaining Angels: The Dorothy Day Story|1996-09-27
+1654|http://dbpedia.org/resource/Chairman_of_the_Board_(film)|Chairman of the Board (film)|1998-03-13
+1655|http://dbpedia.org/resource/The_Favor|The Favor|0000
+1656|http://dbpedia.org/resource/Little_City|Little City|0000
+1657|http://dbpedia.org/resource/Target_(1995_film)|Target (1995 film)|0000
+1658|http://dbpedia.org/resource/The_Substance_of_Fire|The Substance of Fire|1996
+1659|http://dbpedia.org/resource/Getting_Away_with_Murder_(film)|Getting Away with Murder (film)|0000
+1660|http://dbpedia.org/resource/Small_Faces_(film)|Small Faces (film)|0000
+1661|http://dbpedia.org/resource/The_New_Age_(film)|The New Age (film)|0000
+1662|http://dbpedia.org/resource/Holy_Man|Holy Man|0000
+1663|http://dbpedia.org/resource/Nothing_Personal_(1995_film)|Nothing Personal (1995 film)|0000
+1664|http://dbpedia.org/resource/8_Heads_in_a_Duffel_Bag|8 Heads in a Duffel Bag|0000
+1666|http://dbpedia.org/resource/Rude_(film)|Rude (film)|0000
+1668|http://dbpedia.org/resource/Wedding_Bell_Blues_(film)|Wedding Bell Blues (film)|1996-10-18
+1670|http://dbpedia.org/resource/Tainted|Tainted|0000
+1671|http://dbpedia.org/resource/In_the_Bedroom|In the Bedroom|0000
+1672|http://dbpedia.org/resource/Kika_(film)|Kika (film)|0000
+1673|http://dbpedia.org/resource/Mirage_(1995_film)|Mirage (1995 film)|0000
+1674|http://dbpedia.org/resource/Mamma_Roma|Mamma Roma|0000
+1675|http://dbpedia.org/resource/Sunchaser|Sunchaser|0000
+1676|http://dbpedia.org/resource/The_War_at_Home_(film)|The War at Home (film)|1996-11-20
+1677|http://dbpedia.org/resource/Sweet_Nothing_(film)|Sweet Nothing|1995
+1678|http://dbpedia.org/resource/Mother_and_Son_(film)|Mother and Son (film)|0000
+1679|http://dbpedia.org/resource/B._Monkey|B. Monkey|1998-11-06
+1680|http://dbpedia.org/resource/Sliding_Doors|Sliding Doors|0000
+1681|http://dbpedia.org/resource/You_So_Crazy|You So Crazy|0000
+1682|http://dbpedia.org/resource/Scream_of_Stone|Scream of Stone|0000
