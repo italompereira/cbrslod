@@ -16,7 +16,7 @@ public class Main {
 //	static double thresholdCoverage = 0.9;
 //	static double thresholdDiscriminability = 0.9;
 //	static String method = "compareCosine";
-	private static String domain = /*"dbo:Film";//*/"dbo:Museum";
+	private static String domain = "dbo:Film";//*/"dbo:Museum";
 	
 	private static String fileNameI;
 	
@@ -45,8 +45,8 @@ public class Main {
 				
 				for (String method : methods) {
 					
-					new File("SimMatrix.ser").delete(); 
-					new File("Rank.ser").delete(); 
+					//new File("SimMatrix.ser").delete(); 
+					//new File("Rank.ser").delete(); 
 					
 					System.out.println(coverage/10 + " " + discriminability/10 + " " + method);
 					thresholdCoverage = coverage/10;
@@ -60,7 +60,7 @@ public class Main {
 					//String instances = null;
 					List<String> lines = new ArrayList<>();
 					try {
-						lines = FileUtils.readLines(file, StandardCharsets.UTF_8);
+						lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
 						lines.remove(0);
 						//instances = "<http://dbpedia.org/resource/"+StringUtils.join(lines, ">, <http://dbpedia.org/resource/") + ">";
 					} catch (IOException e) {
@@ -87,7 +87,7 @@ public class Main {
 					System.out.println("Comparing...");
 					dbpedia.compareBasedOnInstances(method);
 					
-					EvaluateRanks.evaluate(to);
+					EvaluateRanks.evaluateFilm(to, lines);
 				}
 				//Ends here
 				discriminability = discriminability - 1;

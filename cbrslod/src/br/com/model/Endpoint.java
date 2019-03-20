@@ -49,6 +49,7 @@ public class Endpoint extends EndpointInterface{
 	private List<Predicate> predicateList = new ArrayList<>();
 	private HashSet<Predicate> predicateSet = new HashSet<Predicate>();
 	private List<Instance> instanceList = new ArrayList<>();
+
 	private List<Term> termList = new ArrayList<Term>();
 	
 	/**
@@ -103,6 +104,10 @@ public class Endpoint extends EndpointInterface{
 			this.updatePredicateCache = true;
 			this.savePredicateCache();
 		}
+	}
+    
+	public List<Instance> getInstanceList() {
+		return instanceList;
 	}
 
     public void getSetOfInstances() {
@@ -1099,7 +1104,7 @@ public class Endpoint extends EndpointInterface{
 			String fileNameI = "./src/br/com/model/DataSet/"+domain.replace(":", "").substring(3)+"/instances.txt";
 			File file = new File(fileNameI);
 	
-			List<String> lines = FileUtils.readLines(file, StandardCharsets.UTF_8);
+			List<String> lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
 			lines.remove(0);
 			
 			int[] indexArray = new int[lines.size()];
@@ -1114,12 +1119,12 @@ public class Endpoint extends EndpointInterface{
 			
 			List<Rank> rankList = new ArrayList<>();
 			for (int i = 0; i < indexArray.length; i++) {
-				Rank rank = new Rank(this.instanceList.get(indexArray[i]).getShortURI());
+				Rank rank = new Rank(this.instanceList.get(indexArray[i]).toString().substring(28));
 				
 				for (int j = 0; j < indexArray.length; j++) {
 					if(i == j)  continue;
 					
-					rank.addInstanceSim(this.instanceList.get(indexArray[j]).getShortURI(), simMatrix[indexArray[i]][indexArray[j]]);
+					rank.addInstanceSim(this.instanceList.get(indexArray[j]).toString().substring(28), simMatrix[indexArray[i]][indexArray[j]]);
 				}
 				
 				System.out.println(rank.getInstance());
