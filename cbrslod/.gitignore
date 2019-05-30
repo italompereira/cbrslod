@@ -4,3 +4,13 @@
 /_backup/
 /src/br/com/model/DataSet/Film/backup
 /src/br/com/model/DataSet/Film/ml-100kOriginal
+/src/br/com/model/DataSet/FilmCL/ml-20m
+/_dboFilmCL-recommendation-one-levels-51-instances
+/_dboFilmCL-recommendation-one-levels-150-instances
+/_dboFilmCL-recommendation-two-levels-150-instances
+/_dboFilmCL-similar-one-levels-44-instances
+/_dboFilmCL-similar-one-levels-150-instances
+/_dboFilmCL-similar-two-levels-44-instances
+/_dboFilmCL-similar-two-levels-150-instances
+/_dboMuseum-one-levels
+/_dboMuseum-two-levels

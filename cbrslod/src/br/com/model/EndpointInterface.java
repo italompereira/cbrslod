@@ -23,6 +23,7 @@ public class EndpointInterface {
      */
     public ResultSet queryEndpoint(String szQuery, String szEndpoint) throws Exception
     {
+    	//System.out.print(".");
         query = QueryFactory.create(szQuery);
         //qexec = QueryExecutionFactory.sparqlService(szEndpoint, query);
         qexec = new QueryEngineHTTP (szEndpoint, query);

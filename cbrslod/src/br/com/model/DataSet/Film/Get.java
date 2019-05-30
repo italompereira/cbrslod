@@ -34,7 +34,7 @@ public class Get  extends EndpointInterface {
 	private String graph = "http://dbpedia.org";
 	private String domain = "dbo:Film";	
 	private int limitEndpoint = 10000;
-	private int qtItensRank = 8;
+	private static int qtItensRank = 8;
 	private static String pathFileEndPoint = "./src/br/com/model/DataSet/Film/allInstances.txt";
 	private static String pathFileML100k = /*"./src/br/com/model/DataSet/Film/instancesNotPresent.txt";//*/"./src/br/com/model/DataSet/Film/ml-100k/u.item";
 	private static String pathFileML20m = "./src/br/com/model/DataSet/Film/ml-20m/movies.csv";
@@ -716,7 +716,7 @@ public class Get  extends EndpointInterface {
 				String tdmbId = lineS[2];
 				int page = 1;
 				while (true) {
-					String URI = "https://api.themoviedb.org/3/movie/"+tdmbId+"/similar?api_key="+APIKEY+"&language=en-US&page="+page;
+					String URI = "https://api.themoviedb.org/3/movie/"+tdmbId+"/recommendations?api_key="+APIKEY+"&language=en-US&page="+page;
 					JSONObject json = JsonReader.readJsonFromUrl(URI);
 					JSONArray results = json.getJSONArray("results");
 					if (results.length() == 0) {
@@ -732,7 +732,7 @@ public class Get  extends EndpointInterface {
 						rank.addInstanceSim(resultsMap.get(tmdbIdSimilar).substring(28), 1);
 						
 						if (rank.getUnrankedInstances().size() >= 20) {
-							break;
+							//break;
 						}
 						
 					}

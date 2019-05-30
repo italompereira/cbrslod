@@ -34,11 +34,14 @@ public class Endpoint extends EndpointInterface{
 	 */
 	private String endPoint;
 	private String graph;
-	private String domain;	
+	private String domain;
+	private String domainSparql;
 	
 	public List<String> instanceFilter;
 	public int limitInstanceFilter = 50;
 	public int pagesInstanceFilter;
+	
+	public int qtInstances = 0;
 	
 	
 	private int limitEndpoint = 10000;
@@ -68,7 +71,7 @@ public class Endpoint extends EndpointInterface{
 	 * 
 	 * @param domain Domain of the instances
 	 */
-    public Endpoint(String endPoint, String graph, String domain, List<String> instanceFilter, int numberOfLevels, double thresholdCoverage, double thresholdDiscriminability) {
+    public Endpoint(String endPoint, String graph, String domain,String domainSparql, List<String> instanceFilter, int numberOfLevels, double thresholdCoverage, double thresholdDiscriminability) {
 		super();
 		
 		/**
@@ -77,6 +80,7 @@ public class Endpoint extends EndpointInterface{
 		this.endPoint = endPoint;
 		this.graph = graph;
 		this.domain = domain;
+		this.domainSparql = domainSparql;
 		this.instanceFilter = instanceFilter;
 		this.pagesInstanceFilter = instanceFilter.size()/limitInstanceFilter;
 		
@@ -139,7 +143,7 @@ public class Endpoint extends EndpointInterface{
 				+ " SELECT DISTINCT ?i "
 				+ (graph == null ? "" : "FROM <" + this.graph + ">")
 				+ " WHERE { "
-				+ " 	?i a "+ this.domain +" ; "
+				+ " 	?i a "+ this.domainSparql +" ; "
 				+ (instances == null ? " " : " 	FILTER(?i IN ("+ instances +")) ")
 				+ " } LIMIT " + limit + " OFFSET " + offset ;
 
@@ -269,14 +273,14 @@ public class Endpoint extends EndpointInterface{
 		List<String> levels = new ArrayList<String>();
 		
 		if (level == 1) {
-			levels.add("?i a "+this.domain+" . "
+			levels.add("?i a "+this.domainSparql+" . "
 					+ "?i ?p1 ?leaf . ");
-			levels.add("?i a "+this.domain+" . "
+			levels.add("?i a "+this.domainSparql+" . "
 					+ "?leaf ?p1 ?i . ");	
 		} else {
-			levels.add("?i a "+this.domain+" . "
+			levels.add("?i a "+this.domainSparql+" . "
 					+ "?i ?p1 ?o1 . ");
-			levels.add("?i a "+this.domain+" . "
+			levels.add("?i a "+this.domainSparql+" . "
 					+ "?s1 ?p1 ?i . ");
 		}
 		
@@ -337,7 +341,7 @@ public class Endpoint extends EndpointInterface{
 //		System.out.print(" - " +instanceT.getInstanceNeighborhoodList().size()+"\n");
 //		instanceT.getInstanceNeighborhoodList();
     	
-    	
+    	int i = 0;
     	for (Instance instance : instanceList) {
 			
 		
@@ -360,17 +364,17 @@ public class Endpoint extends EndpointInterface{
     		this.updatePredicateCache = true;
     		
 	    	instance.getInstanceNeighborhoodList().clear();
-	    	System.out.println(instance.toString());
+	    	System.out.print(i++ + "-" + instance.toString());
 			this.getInstanceNeighborhood(instance.getURI(), null, null, instance.getInstanceNeighborhoodList(), new ArrayList<>(), 1);
 				
-			System.out.println();
+//			System.out.println();
 //			for (InstanceNeighborhood instanceNeighborhood : instance.getInstanceNeighborhoodList()) {
 //				for (Node node : instanceNeighborhood.getNeighborhood()) {
 //					System.out.print(" \t" + node.getNode().substring(0, (node.getNode().length() > 70 ? 70: node.getNode().length())));
 //				}
 //				System.out.println();
 //			}
-			System.out.print(instance + " - " +instance.getInstanceNeighborhoodList().size()+"\n");	
+			System.out.print(" - " +instance.getInstanceNeighborhoodList().size()+"\n");	
 		//});
     	}
     	
@@ -398,21 +402,22 @@ public class Endpoint extends EndpointInterface{
      * @param previousNeighborhood List of neighborhoods for the instance(Resource) in the previous level
      * @param level Number of the level
      */
-    public void getInstanceNeighborhood(String resource, String previousResource, Resource previousPredicate, List<InstanceNeighborhood> instanceNeighborhoodList, List<Node> previousNeighborhood, int level){
+    public boolean getInstanceNeighborhood(String resource, String previousResource, Resource previousPredicate, List<InstanceNeighborhood> instanceNeighborhoodList, List<Node> previousNeighborhood, int level){
     	List<QuerySolution> qsList = this.queryInstanceNeighborhood(resource, previousResource, previousPredicate,0);
     
     	List<Node> neighborhood;
 
     	//if (level == 1) {
-			System.out.print("("+qsList.size()+")");
+			//System.out.print("("+qsList.size()+")");
 		//}
     	
+		boolean added = false;
     	for (QuerySolution qs : qsList) {
 			neighborhood = new ArrayList<>(previousNeighborhood);	
 			
-			if (level == 1) {
-				System.out.print(" " + qsList.indexOf(qs));
-			}
+			//if (level == 1) {
+				//System.out.print(" " + qsList.indexOf(qs));
+			//}
 			
 			Resource predicate = qs.getResource("predicate");
 			RDFNode object = qs.get("object");
@@ -426,8 +431,7 @@ public class Endpoint extends EndpointInterface{
 			 * Clean literal values
 			 */
 			String node = null;
-			if (object instanceof Literal) {
-				
+			if (object instanceof Literal) {		
 				node = object.asLiteral().getLexicalForm();
 				if (NumberUtils.isCreatable(node)) {
 					continue;
@@ -448,11 +452,17 @@ public class Endpoint extends EndpointInterface{
 			
 			if (object instanceof Literal || level == this.numberOfLevels || predicate.toString().equals("http://dbpedia.org/ontology/location")) {
 				instanceNeighborhoodList.add(new InstanceNeighborhood(neighborhood));
+				added = true;
 			} else			
 			if (level < this.numberOfLevels && !object.toString().equals("http://www.w3.org/2002/07/owl#Thing")) {
-				this.getInstanceNeighborhood(object.toString(), resource, predicate, instanceNeighborhoodList, neighborhood, level+1);
+				boolean addedR = this.getInstanceNeighborhood(object.toString(), resource, predicate, instanceNeighborhoodList, neighborhood, level+1);
+				if (!addedR) {
+					instanceNeighborhoodList.add(new InstanceNeighborhood(neighborhood));
+					added = true;
+				}
 			}
 		}
+    	return added;
     }
     
     /**
@@ -464,7 +474,8 @@ public class Endpoint extends EndpointInterface{
      * @return List<QuerySolution> List of neighborhood for the instance
      */
     public List<QuerySolution> queryInstanceNeighborhood(String resource, String previousResource, Resource previousPredicate, int page){
-
+    	
+    	
 		// Query
 		String szQuery = null;
 		int limit = limitEndpoint;
@@ -537,7 +548,7 @@ public class Endpoint extends EndpointInterface{
 				+ " SELECT ?i "
 				+ (graph == null ? "" : "FROM <" + this.graph + ">")
 				+ " WHERE { "
-				+ " 	?i a "+ this.domain +" ; "
+				+ " 	?i a "+ this.domainSparql +" ; "
 				+ (instances == null ? "" : " 	FILTER(?i IN ("+ instances +")) ")
 				+ " } LIMIT " + limit + " OFFSET " + offset ;
 
@@ -728,12 +739,18 @@ public class Endpoint extends EndpointInterface{
 	 * @return List<Predicate> The predicates list
 	 */
 	public List<Predicate> calcPredicateStats() {
-		
-		int qtInstances = this.countInstance();
+		int qtInstances;
+		if (this.qtInstances == 0) {
+			this.qtInstances = this.countInstance();			
+		}
+		qtInstances = this.qtInstances;
+
 //		Double maxDiscrinability = 0.0;
 //		Double maxPredicateFrequency = 0.0;
 		
-		Comparator<Predicate> comparator = Comparator.comparingInt(Predicate::getLevel);
+		Comparator<Predicate> comparator = Comparator.comparingInt(Predicate::getLevel)
+	    		.thenComparing(Predicate::getPredicateFrequency, Comparator.reverseOrder())
+	    		.thenComparing(Predicate::getDiscriminability, Comparator.reverseOrder());
 		 
 		//Sort by level and discriminability
 		Collections.sort(predicateList, comparator);
@@ -748,9 +765,10 @@ public class Endpoint extends EndpointInterface{
 		//predicateList.stream().parallel().forEach(	predicate -> {
 		
 			
-			if (predicate.getURI().contains("http://purl.org") || predicate.getURI().contains("http://www.w3.org")  || predicate.getURI().contains("http://dbpedia.org/property/wordnet_type")) {
+			if ((predicate.getURI().contains("http://purl.org") && predicate.getLevel() > 1) || predicate.getURI().contains("http://www.w3.org")  || predicate.getURI().contains("http://dbpedia.org/property/wordnet_type")) {
 				continue;
 			}
+			
 			
 			try {
 				
@@ -852,7 +870,11 @@ public class Endpoint extends EndpointInterface{
 		
 		//Filter the predicates list based on coverage and discriminability
 		predicateList = predicateList.stream()
-			.filter(x -> x.getPredicateFrequency() >= this.thresholdCoverage && x.getDiscriminability() >= this.thresholdDiscriminability)
+			.filter(
+					x -> x.getPredicateFrequency() >= this.thresholdCoverage 
+					&& x.getDiscriminability() >= this.thresholdDiscriminability
+					&& x.getLevel() <= this.numberOfLevels
+					)
 			.collect(Collectors.toList());
 		
 		/*Comparator<Predicate>*/ comparator = Comparator.comparingInt(Predicate::getLevel)
@@ -986,7 +1008,7 @@ public class Endpoint extends EndpointInterface{
 						}
 						System.out.println("Compare " + a + " with " + b);
 						
-						double score = Compare.compareCosine(a, b, predicateList);
+						double score = Compare.compareCosine(a, b, predicateList, true);
 						
 						simMatrix[indexA][indexB] += score;
 						simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
@@ -1055,22 +1077,28 @@ public class Endpoint extends EndpointInterface{
 			for (int i = 0; i < instanceList.size(); i++) {
 			//IntStream.range(0, instanceList.size()).parallel().forEach( i -> {
 				Instance a = instanceList.get(i);
-				
+				System.out.println("Compare [" + a + "(" + a.getInstanceNeighborhoodList().size() +")]");
 				for (int j = i+1; j < instanceList.size(); j++) {
 					Instance b = instanceList.get(j);
 					
 					if (simMatrix[i][j] != 0) {
 						continue;
 					}
-					System.out.println("Compare [" + a + "(" + a.getInstanceNeighborhoodList().size() +")] with [" + b + "(" + b.getInstanceNeighborhoodList().size() +")]");
+					//System.out.println("Compare [" + a + "(" + a.getInstanceNeighborhoodList().size() +")] with [" + b + "(" + b.getInstanceNeighborhoodList().size() +")]");
 					
 					double score = 0.0;
 					switch (method) {
 					case "NeighborhoodCosine":
-						score = Compare.compareSoftTFIDF(a, b, predicateList);
+						score = Compare.compareCosine(a, b, predicateList, false);
 						break;
 					case "NeighborhoodSoftTF-IDF":
-						score = Compare.compareCosine(a, b, predicateList);
+						score = Compare.compareSoftTFIDF(a, b, predicateList, false);
+						break;
+					case "NeighborhoodCosineJaccard":
+						score = Compare.compareCosine(a, b, predicateList, true);
+						break;
+					case "NeighborhoodSoftTF-IDFJaccard":
+						score = Compare.compareSoftTFIDF(a, b, predicateList, true);
 						break;
 					case "TextCosine":
 						score = Compare.compareByTextCosine(a, b);
@@ -1078,7 +1106,7 @@ public class Endpoint extends EndpointInterface{
 					case "TextSoftTF-IDF":
 						score = Compare.compareByTextSoftTFIDF(a, b);
 						break;
-						
+
 					default:
 						break;
 					}
@@ -1104,13 +1132,15 @@ public class Endpoint extends EndpointInterface{
 			String fileNameI = "./src/br/com/model/DataSet/"+domain.replace(":", "").substring(3)+"/instances.txt";
 			File file = new File(fileNameI);
 	
-			List<String> lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
+			List<String> lines = FileUtils.readLines(file, StandardCharsets.UTF_8);
+
+			
 			lines.remove(0);
 			
 			int[] indexArray = new int[lines.size()];
 			for (int i = 0; i < lines.size(); i++) {
 				String instance = lines.get(i).replace(' ', '_');
-				int index = this.instanceList.indexOf(new Instance("http://dbpedia.org/resource/"+instance));
+				int index = this.instanceList.indexOf(new Instance("http://dbpedia.org/resource/"+instance ));
 				if (index == -1) {
 					continue;
 				}
@@ -1128,7 +1158,7 @@ public class Endpoint extends EndpointInterface{
 				}
 				
 				System.out.println(rank.getInstance());
-				System.out.println("\t"+rank.getUnrankedInstances());
+				System.out.println("\t"+rank.getUnrankedInstances()+"\n");
 				System.out.println("\t"+rank.getRankedInstances()+"\n");
 				
 				rankList.add(rank);
@@ -1261,7 +1291,7 @@ public class Endpoint extends EndpointInterface{
 							}
 							System.out.println("Compare " + a + " with " + b);
 							
-							double score = Compare.compareSoftTFIDF(a, b, predicateList);
+							double score = Compare.compareSoftTFIDF(a, b, predicateList, true);
 							
 							simMatrix[indexA][indexB] += score;
 							simMatrix[indexB][indexA] = simMatrix[indexA][indexB];
@@ -1295,7 +1325,7 @@ public class Endpoint extends EndpointInterface{
 			for (int i = 0; i < indexArray.length; i++) {
 				Rank rank = new Rank(this.instanceList.get(indexArray[i]).getShortURI());
 				
-				for (int j = 0; j < indexArray.length; j++) {
+				for (int j = 0; j < Rank.qtItensRank; j++) {
 					if(i == j)  continue;
 					
 					rank.addInstanceSim(this.instanceList.get(indexArray[j]).getShortURI(), simMatrix[indexArray[i]][indexArray[j]]);

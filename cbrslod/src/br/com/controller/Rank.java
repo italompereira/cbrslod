@@ -9,11 +9,12 @@ import java.util.List;
 public class Rank implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	public static final int qtItensRank = 21;
 	private String instance;
 	private List<InstanceSim> unrankedInstances;
 	private List<InstanceSim> rankedInstances;
 	
-	class InstanceSim implements Serializable {
+	public class InstanceSim implements Serializable {
 		private static final long serialVersionUID = -935134910409271240L;
 		public String instance;
 		public double similarity;
@@ -25,8 +26,18 @@ public class Rank implements Serializable {
 
 		@Override
 		public String toString() {
-			return instance;
+			return instance+" ("+similarity+") ";
 		}
+
+		public double getSimilarity() {
+			return similarity;
+		}
+
+		public void setSimilarity(double similarity) {
+			this.similarity = similarity;
+		}
+		
+		
 	}
 	
 	public Rank(String instance){
@@ -67,6 +78,7 @@ public class Rank implements Serializable {
 	
 	public List<String> getRankedInstancesLS(){
 		List<String> list = new ArrayList<>();
+		rankedInstances = getRankedInstances();
 		for (InstanceSim instanceSim : rankedInstances) {
 			list.add(instanceSim.instance);
 		}

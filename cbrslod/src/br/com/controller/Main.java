@@ -16,7 +16,8 @@ public class Main {
 //	static double thresholdCoverage = 0.9;
 //	static double thresholdDiscriminability = 0.9;
 //	static String method = "compareCosine";
-	private static String domain = "dbo:Film";//*/"dbo:Museum";
+	private static String domain = /*"dbo:FilmCL";//*/"dbo:Museum";
+	private static String domainP = /*"dbo:Film";//*/"dbo:Museum";
 	
 	private static String fileNameI;
 	
@@ -32,45 +33,45 @@ public class Main {
 		double thresholdCoverage;
 		double thresholdDiscriminability;
 		
-		String methods[] = {"TextCosine"/*,"TextSoftTF-IDF","NeighborhoodCosine*,"NeighborhoodSoftTF-IDF"*/};
+		String methods[] = {"TextCosine","TextSoftTF-IDF","NeighborhoodCosineJaccard","NeighborhoodSoftTF-IDFJaccard","NeighborhoodCosine","NeighborhoodSoftTF-IDF"};
 		
-		Double coverage = 9.0;
-		while (coverage > 4) {
+		Double coverage = 4.0;
+		while (coverage <= 9) {
 			
-			Double discriminability = 9.0;
-			while (discriminability > 4) {
+			Double discriminability = 4.0;
+			while (discriminability <= 9) {
 				
-				//new File(domain.replace(":", "") + "Instance.ser").delete(); 
+				new File(domain.replace(":", "") + "Instance.ser").delete(); 
 				new File(domain.replace(":", "") + "Predicate.ser").delete(); 
 				
 				for (String method : methods) {
 					
-					//new File("SimMatrix.ser").delete(); 
-					//new File("Rank.ser").delete(); 
+					new File("SimMatrix.ser").delete(); 
+					new File("Rank.ser").delete(); 
 					
 					System.out.println(coverage/10 + " " + discriminability/10 + " " + method);
 					thresholdCoverage = coverage/10;
 					thresholdDiscriminability = discriminability/10;
 					
 					//Starts here
-					String to = thresholdCoverage + " " + thresholdDiscriminability + " " + method;
+					String params = thresholdCoverage + " " + thresholdDiscriminability;
 					
 					String graph = "http://dbpedia.org";
 					File file = new File(fileNameI);
 					//String instances = null;
 					List<String> lines = new ArrayList<>();
 					try {
-						lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
+						lines = FileUtils.readLines(file, StandardCharsets.UTF_8);
 						lines.remove(0);
 						//instances = "<http://dbpedia.org/resource/"+StringUtils.join(lines, ">, <http://dbpedia.org/resource/") + ">";
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
-					int numberOfLevels = 2;
+					int numberOfLevels = 1;
 					//instances = null;
 					
 					System.out.println("Building endpoint...");
-					DBPediaEndpoint dbpedia = new DBPediaEndpoint(graph, domain, lines, numberOfLevels, thresholdCoverage, thresholdDiscriminability);
+					DBPediaEndpoint dbpedia = new DBPediaEndpoint(graph, domain, domainP, lines, numberOfLevels, thresholdCoverage, thresholdDiscriminability);
 					
 					System.out.println("Calculating predicates stats...");
 					dbpedia.calcPredicateStats();
@@ -87,12 +88,12 @@ public class Main {
 					System.out.println("Comparing...");
 					dbpedia.compareBasedOnInstances(method);
 					
-					EvaluateRanks.evaluateFilm(to, lines);
+					EvaluateRanks.evaluateFilm(domain.replace(":", ""), method + " " + params, lines);
 				}
 				//Ends here
-				discriminability = discriminability - 1;
+				discriminability = discriminability + 1;
 			}
-			coverage = coverage - 1;
+			coverage = coverage + 1;
 		}
 		System.out.println(EvaluateRanks.toMax + " " + Arrays.toString(EvaluateRanks.p1TotalMax));
 	}

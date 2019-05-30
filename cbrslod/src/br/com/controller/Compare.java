@@ -1,9 +1,12 @@
 package br.com.controller;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.wcohen.ss.JaroWinklerTFIDF;
 import com.wcohen.ss.Levenstein;
 import com.wcohen.ss.SoftTFIDF;
 
@@ -25,7 +28,7 @@ public class Compare {
 	 * @param predicateList Predicate List
 	 * @return double Score of similarity
 	 */
-	public static double compareCosine(Instance a, Instance b, List<Predicate> predicateList){
+	public static double compareCosine(Instance a, Instance b, List<Predicate> predicateList, boolean jaccard){
 		
 		//score between two instances
 		double sim = 0.0;
@@ -51,14 +54,25 @@ public class Compare {
 						continue;
 					}
 					
-					score += cosine(lastElementA.getNode(), lastElementB.getNode());
+//					String lastElementAS = lastElementA.toString().replaceFirst(".*/([^/?]+).*", "$1");
+//					String lastElementBS = lastElementB.toString().replaceFirst(".*/([^/?]+).*", "$1");
+					
+					score += cosine(lastElementA.toString(), lastElementB.toString());
 				}
 				
 			} else {
 				
 				for (InstanceNeighborhood instanceNeighborhood : instanceNeighborhoodListAux) {
 					Node lastElementB = instanceNeighborhood.getLastElement();
-					if (lastElementA.getNode().equals(lastElementB.getNode())) {
+					
+					String lastElementAS = lastElementA.toString().replaceFirst(".*/([^/?]+).*", "$1").replace("Category:", "");
+					String lastElementBS = lastElementB.toString().replaceFirst(".*/([^/?]+).*", "$1").replace("Category:", "");
+					
+//					double maxSize = lastElementAS.length()>lastElementBS.length()?lastElementAS.length():lastElementBS.length();
+//					score += (1.0 + Compare.levenshtein(lastElementAS,lastElementBS)/maxSize);
+					
+					//if (lastElementA.getNode().equals(lastElementB.getNode())) {
+					if (Compare.levenshtein(lastElementBS,lastElementAS) >= -3) {
 						score += 1.0;
 					}
 				}
@@ -71,14 +85,17 @@ public class Compare {
 			double tFIDFB = predicateList.get(index).getTFIDF(b);
 			
 			sim += ((tFIDFA+tFIDFB)/2) * score;
+//			sim += score;
 			
 			
 		}
 		
-		double jaccard = sim/(a.getInstanceNeighborhoodList().size() + b.getInstanceNeighborhoodList().size() - sim);
-		System.out.println("Score [" + sim + "] - Jaccard [" + jaccard + "]");
+		if (jaccard) {
+			sim = sim/(a.getInstanceNeighborhoodList().size() + b.getInstanceNeighborhoodList().size() - sim);
+			//System.out.println("Score [" + sim + "] - Jaccard [" + jaccard + "]");
+		}
 		
-		return jaccard;
+		return sim;
 	}
 	
 	/**
@@ -89,7 +106,7 @@ public class Compare {
 	 * @param predicateList Predicate List
 	 * @return double Score of similarity
 	 */
-	public static double compareSoftTFIDF(Instance a, Instance b, List<Predicate> predicateList){
+	public static double compareSoftTFIDF(Instance a, Instance b, List<Predicate> predicateList, boolean jaccard){
 		
 		//score between two instances
 		double sim = 0.0;
@@ -114,17 +131,32 @@ public class Compare {
 						continue;
 					}
 					
-					score += softTFIDF(lastElementA.getNode(), lastElementB.getNode());
+//					String lastElementAS = lastElementA.toString().replaceFirst(".*/([^/?]+).*", "$1");
+//					String lastElementBS = lastElementB.toString().replaceFirst(".*/([^/?]+).*", "$1");
+					
+					score += softTFIDF(lastElementA.toString(), lastElementB.toString());
 				}
 				
 			} else {
 				
 				for (InstanceNeighborhood instanceNeighborhood : instanceNeighborhoodListAux) {
 					Node lastElementB = instanceNeighborhood.getLastElement();
-					if (lastElementA.getNode().equals(lastElementB.getNode())) {
+					
+					String lastElementAS = lastElementA.toString().replaceFirst(".*/([^/?]+).*", "$1").replace("Category:", "");
+					String lastElementBS = lastElementB.toString().replaceFirst(".*/([^/?]+).*", "$1").replace("Category:", "");
+					
+//					double maxSize = lastElementAS.length()>lastElementBS.length()?lastElementAS.length():lastElementBS.length();
+//					score += (1.0 + Compare.levenshtein(lastElementAS,lastElementBS)/maxSize);
+					
+					//if (lastElementA.getNode().equals(lastElementB.getNode())) {
+					if (Compare.levenshtein(lastElementAS,lastElementBS) >= -3) {
 						score += 1.0;
 					}
 				}
+			}
+			
+			if (score == 0.0) {
+				continue;
 			}
 			
 			//Apply the tf-idf weight to adjust the score
@@ -134,12 +166,15 @@ public class Compare {
 			double tFIDFB = predicateList.get(index).getTFIDF(b);
 			
 			sim += ((tFIDFA+tFIDFB)/2) * score;
+//			sim += score;
 		}
 		
-		double jaccard = sim/(a.getInstanceNeighborhoodList().size() + b.getInstanceNeighborhoodList().size() - sim);
-		System.out.println("Score [" + sim + "] - Jaccard [" + jaccard + "]");
+		if (jaccard) {
+			sim = sim/(a.getInstanceNeighborhoodList().size() + b.getInstanceNeighborhoodList().size() - sim);
+			//System.out.println("Score [" + sim + "] - Jaccard [" + jaccard + "]");
+		}
 		
-		return jaccard;
+		return sim;
 	}
 	
 	/**
@@ -157,22 +192,42 @@ public class Compare {
 		StringBuilder nBS = new StringBuilder();
 		
 		for (InstanceNeighborhood inA : a.getInstanceNeighborhoodList()) {
-			//nAS.append(inA.getLastPredicate() + " " + inA.getLastElement()+ " ");
-			
-			for (Node nA : inA.getNeighborhood()) {
-				nAS.append(nA.toString() + " ");
+			Node lastElementA = inA.getLastElement();
+			if (lastElementA.getTypeOfNode().equals("LiteralImpl")) {
+				nAS.append(inA.getLastElement()+ " ");	
+			} else {
+				nAS.append(lastElementA.toString().replaceFirst(".*/([^/?]+).*", "$1").replace("Category:", "")/*.replace("_", " ")*/+ " ");
+				//nAS.append(lastElementA.toString().replaceFirst(".*/([^/?]+).*", "$1") + " ");
 			}
+			
+			//nAS.append(inA.getLastElement()+ " ");
+			
+//			for (Node nA : inA.getNeighborhood()) {
+//				nAS.append(nA.toString() + " ");
+//			}
 		}
 		
 		for (InstanceNeighborhood inB : b.getInstanceNeighborhoodList()) {
-//			nBS.append(inB.getLastPredicate() + " " + inB.getLastElement()+ " ");
 			
-			for (Node nB : inB.getNeighborhood()) {
-				nBS.append(nB.toString() + " ");
+			Node lastElementB = inB.getLastElement();
+			if (lastElementB.getTypeOfNode().equals("LiteralImpl")) {
+				nBS.append(inB.getLastElement()+ " ");	
+			} else {
+				nBS.append(lastElementB.toString().replaceFirst(".*/([^/?]+).*", "$1").replace("Category:", "")/*.replace("_", " ")*/+ " ");
+				//nBS.append(lastElementB.toString().replaceFirst(".*/([^/?]+).*", "$1") + " ");
 			}
+			
+			//nBS.append(inB.getLastElement()+ " ");
+			
+//			for (Node nB : inB.getNeighborhood()) {
+//				nBS.append(nB.toString() + " ");
+//			}
 		}
 		
 		sim = cosine(nAS.toString(), nBS.toString());
+//		System.out.println(nAS.toString());
+//		System.out.println();
+//		System.out.println(nBS.toString());
 //		System.out.println(nAS.toString());
 //		System.out.println(nBS.toString());
 		
@@ -186,7 +241,16 @@ public class Compare {
 		StringBuilder nBS = new StringBuilder();
 		
 		for (InstanceNeighborhood inA : a.getInstanceNeighborhoodList()) {
-			nAS.append(inA.getLastPredicate() + " " + inA.getLastElement()+ " ");
+			
+			Node lastElementA = inA.getLastElement();
+			if (lastElementA.getTypeOfNode().equals("LiteralImpl")) {
+				nAS.append(inA.getLastElement()+ " ");	
+			} else {
+				nAS.append(lastElementA.toString().replaceFirst(".*/([^/?]+).*", "$1").replace("Category:", "") + " ");
+				//nAS.append(lastElementA.toString().replaceFirst(".*/([^/?]+).*", "$1") + " ");
+			}
+			
+			//nAS.append(inA.getLastElement()+ " ");
 			
 //			for (Node nA : inA.getNeighborhood()) {
 //				nAS.append(nA.toString() + " ");
@@ -194,7 +258,16 @@ public class Compare {
 		}
 		
 		for (InstanceNeighborhood inB : b.getInstanceNeighborhoodList()) {
-			nBS.append(inB.getLastPredicate() + " " + inB.getLastElement()+ " ");
+			
+			Node lastElementB = inB.getLastElement();
+			if (lastElementB.getTypeOfNode().equals("LiteralImpl")) {
+				nBS.append(inB.getLastElement()+ " ");	
+			} else {
+				nBS.append(lastElementB.toString().replaceFirst(".*/([^/?]+).*", "$1").replace("Category:", "") + " ");
+				//nBS.append(lastElementB.toString().replaceFirst(".*/([^/?]+).*", "$1") + " ");
+			}
+			
+			//nBS.append(inB.getLastElement()+ " ");
 			
 //			for (Node nB : inB.getNeighborhood()) {
 //				nBS.append(nB.toString() + " ");
@@ -405,6 +478,18 @@ public class Compare {
 	}
 	
 	/**
+	 * Similarity based on Cosine
+	 * 
+	 * @param s1 String 1
+	 * @param s2 String 2
+	 * @return Double score
+	 */
+	private static Double jaro(String s1, String s2){
+		JaroWinklerTFIDF jaro = new JaroWinklerTFIDF();
+		return jaro.score(s1, s2);
+	}
+	
+	/**
 	 * Distance based on Levenshtein
 	 * 
 	 * @param s1 String 1
@@ -423,22 +508,35 @@ public class Compare {
 	 * @param arlSecond
 	 * @return
 	 */
-	private static List<?> intersect(List<?> arlFirst, List<?> arlSecond) {
+	public static List<?> intersect(List<?> arlFirst, List<?> arlSecond) {
 		ArrayList<?> arlHold = new ArrayList<>(arlFirst);
 		arlHold.retainAll(arlSecond);
 		return arlHold;
 	}
 
-//	/**
-//	 * Union of two sets
-//	 * 
-//	 * @param arlFirst
-//	 * @param arlSecond
-//	 * @return
-//	 */
-//	private static List<?> union(List<?> arlFirst, List<?> arlSecond) {
-//		ArrayList<Object> arlHold = new ArrayList<>(arlFirst);
-//		arlHold.addAll(arlSecond);
-//		return arlHold;
-//	}
+	/**
+	 * Union of two sets
+	 * 
+	 * @param arlFirst
+	 * @param arlSecond
+	 * @return
+	 */
+	public static List<?> union(List<?> arlFirst, List<?> arlSecond) {
+		ArrayList<Object> arlHold = new ArrayList<>(arlFirst);
+		arlHold.addAll(arlSecond);
+		return arlHold;
+	}
+	
+	/**
+	 * Difference of two sets
+	 * 
+	 * @param arlFirst
+	 * @param arlSecond
+	 * @return
+	 */
+	public static List<?> diff(List<?> arlFirst, List<?> arlSecond) {
+		ArrayList<?> arlHold = new ArrayList<>(arlFirst);
+		arlHold.removeAll(arlSecond);
+		return arlHold;
+	}
 }
