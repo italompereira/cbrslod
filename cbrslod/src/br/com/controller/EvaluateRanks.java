@@ -20,6 +20,7 @@ import org.math.plot.plotObjects.BaseLabel;
 
 import br.com.model.DBPediaEndpoint;
 import br.com.model.Instance;
+import br.com.model.Predicate;
 import br.com.tools.NDCG1;
 import br.com.tools.Round;
 
@@ -29,15 +30,15 @@ public class EvaluateRanks {
 	static int countMax = 0;
 	static String toMax;
 	
-	public static void evaluateFilm(String to, String params, List<String> instanceList){
-		//evaluateMuseum(to, params, instanceList);
-		evaluateFilmCLByNDCG(to, params, instanceList);		
-		evaluateFilmCLByPrecisionRecall(to, params, instanceList);
+	public static void evaluateFilm(String to, String params, List<String> instanceList, List<Predicate> predicateList){
+		//evaluateMuseum(to, params, instanceList, predicateList);
+		evaluateFilmCLByNDCG(to, params, instanceList, predicateList);		
+		//evaluateFilmCLByPrecisionRecall(to, params, instanceList);
 	}
 	
-	public static void evaluateFilmCLByNDCG(String to, String params, List<String> instanceList){
+	public static void evaluateFilmCLByNDCG(String to, String params, List<String> instanceList, List<Predicate> predicateList){
 		
-		FileWriter fw, fwLog;
+		FileWriter fw, fwLog, fwPredicateList;
 		try {
 			File folder = new File(to);
 			folder.mkdir();
@@ -47,7 +48,14 @@ public class EvaluateRanks {
 			
 			System.out.println("**********************************************************************************************************"+params+"***************************************************************************************************");
 			fwLog.write("\n\n******************************************************************************************************"+params+"*******************************************************************************************************\n");
+			fwPredicateList = new FileWriter("./" + to + "/resultsPredicates.txt", true);
 			
+			fwPredicateList.write("\n\n******************************************************************************************************"+params+"*******************************************************************************************************\n");
+			
+			for (Predicate predicate : predicateList) {
+				fwPredicateList.write(predicate.toString()+"\n");
+			}
+			fwPredicateList.write("\n");
 			
 			Color dark = Color.BLUE;
 			Color red = Color.RED;
@@ -286,6 +294,7 @@ public class EvaluateRanks {
 			printGraph("Média "+params, to, lines, true);
 			
 			fwLog.close();
+			fwPredicateList.close();
 			fw.write(params + " Proposed |" + Arrays.toString(p1Total) + " == ");
 			fw.write(params + " TMDB |" + Arrays.toString(p2Total) + "\n");
 			fw.close();
@@ -614,18 +623,26 @@ public class EvaluateRanks {
 //		frame.dispose();
 	}
 	
-	public static void evaluateMuseum(String to, String params, List<String> instanceList){
+	public static void evaluateMuseum(String to, String params, List<String> instanceList, List<Predicate> predicateList){
 		
-		FileWriter fw, fwLog;
+		FileWriter fw, fwLog, fwPredicateList;
 		try {
 			File folder = new File(to);
 			folder.mkdir();
 			
-			fwLog = new FileWriter("./" + to + "/resultsLog.txt", true);
 			fw = new FileWriter("./" + to + "/results.txt", true);
+			fwLog = new FileWriter("./" + to + "/resultsLog.txt", true);
+			fwPredicateList = new FileWriter("./" + to + "/resultsPredicates.txt", true);
+			
 			
 			System.out.println("**********************************************************************************************************"+params+"***************************************************************************************************");
 			fwLog.write("\n\n******************************************************************************************************"+params+"*******************************************************************************************************\n");
+			fwPredicateList.write("\n\n******************************************************************************************************"+params+"*******************************************************************************************************\n");
+			
+			for (Predicate predicate : predicateList) {
+				fwPredicateList.write(predicate.toString()+"\n");
+			}
+			fwPredicateList.write("\n");
 			
 			Color dark = Color.BLUE;
 			Color gray = Color.RED;
@@ -883,6 +900,7 @@ public class EvaluateRanks {
 			
 
 			fwLog.close();
+			fwPredicateList.close();
 			fw.write(params + "|" + Arrays.toString(p1Total) + "\n");
 			fw.close();
 		} catch (IOException e) {

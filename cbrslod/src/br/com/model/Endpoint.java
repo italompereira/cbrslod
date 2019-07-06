@@ -50,6 +50,10 @@ public class Endpoint extends EndpointInterface{
 	 * Instances and predicates
 	 */
 	private List<Predicate> predicateList = new ArrayList<>();
+	public List<Predicate> getPredicateList() {
+		return predicateList;
+	}
+
 	private HashSet<Predicate> predicateSet = new HashSet<Predicate>();
 	private List<Instance> instanceList = new ArrayList<>();
 
@@ -59,8 +63,8 @@ public class Endpoint extends EndpointInterface{
 	 * Parameters
 	 */
 	private int numberOfLevels;
-	private double thresholdCoverage;
-	private double thresholdDiscriminability;
+	
+	private double infThresholdCoverage, supThresholdCoverage, infThresholdDiscriminability, supThresholdDiscriminability;
 		
 	private boolean updatePredicateCache = false;
 	private boolean updateInstanceCache = false;
@@ -71,7 +75,7 @@ public class Endpoint extends EndpointInterface{
 	 * 
 	 * @param domain Domain of the instances
 	 */
-    public Endpoint(String endPoint, String graph, String domain,String domainSparql, List<String> instanceFilter, int numberOfLevels, double thresholdCoverage, double thresholdDiscriminability) {
+    public Endpoint(String endPoint, String graph, String domain,String domainSparql, List<String> instanceFilter, int numberOfLevels, double infThresholdCoverage, double supThresholdCoverage, double infThresholdDiscriminability, double supThresholdDiscriminability) {
 		super();
 		
 		/**
@@ -85,8 +89,10 @@ public class Endpoint extends EndpointInterface{
 		this.pagesInstanceFilter = instanceFilter.size()/limitInstanceFilter;
 		
 		this.numberOfLevels = numberOfLevels;
-		this.thresholdCoverage = thresholdCoverage;
-		this.thresholdDiscriminability = thresholdDiscriminability;
+		this.infThresholdCoverage = infThresholdCoverage;
+		this.supThresholdCoverage = supThresholdCoverage;
+		this.infThresholdDiscriminability = infThresholdDiscriminability;
+		this.supThresholdDiscriminability = supThresholdDiscriminability;
 		
 		//Make a cache of instances
 		if (!getInstanceCache()) {
@@ -423,7 +429,7 @@ public class Endpoint extends EndpointInterface{
 			RDFNode object = qs.get("object");
 			
 			//Check if the predicate is present on predicates list
-			if (!predicateSet.contains(new Predicate(predicate.toString(), level))) {
+			if (!predicateSet.contains(new Predicate(predicate.toString(), level)) /*&& (level == this.numberOfLevels)*/) {
 				continue;
 			} 
 			
@@ -451,12 +457,18 @@ public class Endpoint extends EndpointInterface{
 			neighborhood.add(new Node(node, object.getClass().getSimpleName()));
 			
 			if (object instanceof Literal || level == this.numberOfLevels || predicate.toString().equals("http://dbpedia.org/ontology/location")) {
+				
+//				if (!predicateSet.contains(new Predicate(predicate.toString(), level))) {
+//					continue;
+//				} 
+				
 				instanceNeighborhoodList.add(new InstanceNeighborhood(neighborhood));
 				added = true;
 			} else			
 			if (level < this.numberOfLevels && !object.toString().equals("http://www.w3.org/2002/07/owl#Thing")) {
+				//int size = neighborhood.size(); 
 				boolean addedR = this.getInstanceNeighborhood(object.toString(), resource, predicate, instanceNeighborhoodList, neighborhood, level+1);
-				if (!addedR) {
+				if (!addedR /*&& (size != neighborhood.size())*/) {
 					instanceNeighborhoodList.add(new InstanceNeighborhood(neighborhood));
 					added = true;
 				}
@@ -755,9 +767,9 @@ public class Endpoint extends EndpointInterface{
 		//Sort by level and discriminability
 		Collections.sort(predicateList, comparator);
 		
-		for (Predicate predicate : predicateList) {
-			System.out.println(predicate);
-		}
+//		for (Predicate predicate : predicateList) {
+//			System.out.println(predicate);
+//		}
 		
 		System.out.println("Starting calc");
 		int count = 0;
@@ -871,9 +883,12 @@ public class Endpoint extends EndpointInterface{
 		//Filter the predicates list based on coverage and discriminability
 		predicateList = predicateList.stream()
 			.filter(
-					x -> x.getPredicateFrequency() >= this.thresholdCoverage 
-					&& x.getDiscriminability() >= this.thresholdDiscriminability
-					&& x.getLevel() <= this.numberOfLevels
+					x -> 
+					x.getPredicateFrequency() >= this.infThresholdCoverage &&
+					x.getPredicateFrequency() <= this.supThresholdCoverage &&
+					x.getDiscriminability() >= this.infThresholdDiscriminability &&
+					x.getDiscriminability() <= this.supThresholdDiscriminability &&
+					x.getLevel() <= this.numberOfLevels
 					)
 			.collect(Collectors.toList());
 		
